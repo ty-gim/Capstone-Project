@@ -1,0 +1,68 @@
+# Targets and controls are only used for labeling/visualization, data parsing treats them identically
+target_drugs:
+  - "SEMAGLUTIDE"
+control_drugs:
+  - "PHENTERMINE"
+  - "METFORMIN"
+  - "RIMEGEPANT"
+
+# Brand name mappings for survey data (MEPS)
+drug_mappings:
+  SEMAGLUTIDE:
+    - "SEMAGLUTIDE"
+    - "OZEMPIC"
+    - "WEGOVY"
+    - "RYBELSUS"
+  PHENTERMINE:
+    - "PHENTERMINE"
+    - "ADIPEX"
+    - "LOMAIRA"
+    - "QSYMIA"
+  METFORMIN:
+    - "METFORMIN"
+    - "GLUCOPHAGE"
+    - "FORTAMET"
+    - "GLUMETZA"
+  RIMEGEPANT:
+    - "RIMEGEPANT"
+    - "NURTEC"
+    - "VYDURA"
+
+cms_folder: "data/raw/cms_data"
+cms_files:
+  - "Medicare_Part_D_Prescribers_by_Provider_and_Drug_2020.csv"
+  - "Medicare_Part_D_Prescribers_by_Provider_and_Drug_2021.csv"
+  - "Medicare_Part_D_Prescribers_by_Provider_and_Drug_2022.csv"
+  - "Medicare_Part_D_Prescribers_by_Provider_and_Drug_2023.csv"
+  - "Medicare_Part_D_Prescribers_by_Provider_and_Drug_2024.csv"
+
+faers_folder: "data/raw/faers_ascii_data"
+faers_quarters:
+  - "faers_ascii_2020Q1/ASCII"
+  - "faers_ascii_2020Q2/ASCII"
+  - "faers_ascii_2020Q3/ASCII"
+  - "faers_ascii_2020Q4/ASCII"
+  - "faers_ascii_2021Q1/ASCII"
+  - "faers_ascii_2021Q2/ASCII"
+  - "faers_ascii_2021Q3/ASCII"
+  - "faers_ascii_2021Q4/ASCII"
+  - "faers_ascii_2022q1/ASCII"
+  - "faers_ascii_2022q2/ASCII"
+  - "faers_ascii_2022q3/ASCII"
+  - "faers_ascii_2022q4/ASCII"
+  - "faers_ascii_2023q1/ASCII"
+  - "faers_ascii_2023q2/ASCII"
+  - "faers_ascii_2023q3/ASCII"
+  - "faers_ascii_2023q4/ASCII"
+  - "faers_ascii_2024q1/ASCII"
+  - "faers_ascii_2024q2/ASCII"
+  - "faers_ascii_2024q3/ASCII"
+  - "faers_ascii_2024q4/ASCII"
+
+meps_folder: "data/raw/meps_data"
+meps_files:
+  - "h220adta/h220a.dta"
+  - "h229adta/h229a.dta"
+  - "h239adta/h239a.dta"
+  - "h248adta/h248a.dta"
+  - "h254adta/h254a.dta"

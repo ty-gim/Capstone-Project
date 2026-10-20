@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Ignore massive raw data and environment caches
+data/raw/
+.snakemake/
+__pycache__/
+.ipynb_checkpoints/
+processed/benchmarks/

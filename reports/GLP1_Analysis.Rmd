@@ -1,0 +1,112 @@
+---
+title: "GLP-1 Agonist Pharmacovigilance & Financial Motive Analysis"
+author: "Data Science Capstone"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    theme: cosmo
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(readr)
+```
+
+## 1. Introduction
+This report investigates the off-label overprescription of GLP-1 receptor agonists (Semaglutide) for cosmetic weight loss, analyzing the financial motives and the resulting disproportionate adverse events.
+
+```{r load_data}
+# Adjust the path depending on where you save this .Rmd file
+cms_data <- read_csv("../processed/cms_volume_output.csv")
+faers_data <- read_csv("../processed/faers_top5_visuals.csv")
+meps_data <- read_csv("../processed/meps_financial_output.csv")
+```
+
+## 2. The Result: Explosive Volume Growth
+By indexing Medicare Part D prescriptions to their 2020 baseline, we observe a massive, unnatural volume explosion for Semaglutide compared to standard metabolic controls.
+
+```{r volume_growth, fig.width=10, fig.height=6}
+cms_growth <- cms_data %>%
+  group_by(generic_name) %>%
+  arrange(year) %>%
+  mutate(
+    baseline_2020 = first(total_prescriptions),
+    pct_growth = ((total_prescriptions - baseline_2020) / baseline_2020) * 100
+  ) %>%
+  ungroup()
+
+ggplot(cms_growth, aes(x = year, y = pct_growth, color = generic_name, group = generic_name)) +
+  geom_line(size = 1.5) +
+  geom_point(size = 3) +
+  theme_minimal(base_size = 14) +
+  labs(
+    title = "The Result of Aggressive Marketing: Explosive Volume Growth",
+    subtitle = "Percent increase in Medicare Part D prescriptions relative to 2020 baseline",
+    x = "Year",
+    y = "Prescription Growth (%)",
+    color = "Drug Cohort"
+  ) +
+  theme(legend.position = "bottom")
+```
+
+## 3. The Motive: Astronomical Unit Economics
+Why is Semaglutide marketed so aggressively? MEPS data reveals that the average cost per prescription for Semaglutide is nearly 100x higher than standard controls like Metformin and Phentermine.
+
+```{r financial_motive, fig.width=10, fig.height=6}
+meps_2024 <- meps_data %>% filter(year == 2024)
+
+ggplot(meps_2024, aes(x = reorder(generic_name, avg_cost_per_prescription), y = avg_cost_per_prescription, fill = generic_name)) +
+  geom_bar(stat = "identity", width = 0.6) +
+  geom_text(aes(label = paste0("$", round(avg_cost_per_prescription, 0))), hjust = -0.2, size = 5) +
+  coord_flip() +
+  theme_minimal(base_size = 14) +
+  labs(
+    title = "The Financial Motive: Astronomical Unit Economics",
+    subtitle = "Average Cost per Prescription in 2024 (MEPS Data)",
+    x = "",
+    y = "Average Cost per Prescription ($)",
+    fill = "Drug Cohort"
+  ) +
+  theme(legend.position = "none") +
+  scale_y_continuous(limits = c(0, max(meps_2024$avg_cost_per_prescription) * 1.2))
+```
+
+## 4. The Smoking Gun: Off-Label Reporting in FAERS
+When we isolate the cohort of patients taking these drugs specifically for "Weight Loss", Semaglutide is the only drug where "Off label use" and "Product use in unapproved indication" dominate the top adverse events.
+
+```{r off_label_signal, fig.width=10, fig.height=6}
+off_label_counts <- faers_data %>%
+  filter(
+    grepl("Weight Loss", drug_and_indication),
+    adverse_event %in% c("Off label use", "Product use in unapproved indication")
+  ) %>%
+  group_by(drug_and_indication) %>%
+  summarise(total_off_label_reports = sum(cases, na.rm = TRUE), .groups = "drop")
+
+# Add missing drugs back as 0
+all_weight_loss_drugs <- unique(faers_data$drug_and_indication[grepl("Weight Loss", faers_data$drug_and_indication)])
+missing_drugs <- setdiff(all_weight_loss_drugs, off_label_counts$drug_and_indication)
+if(length(missing_drugs) > 0) {
+  off_label_counts <- bind_rows(off_label_counts, data.frame(drug_and_indication = missing_drugs, total_off_label_reports = 0))
+}
+
+ggplot(off_label_counts, aes(x = reorder(drug_and_indication, total_off_label_reports), y = total_off_label_reports, fill = drug_and_indication)) +
+  geom_bar(stat = "identity", width = 0.6) +
+  geom_text(aes(label = total_off_label_reports), hjust = -0.2, size = 5) +
+  coord_flip() +
+  theme_minimal(base_size = 14) +
+  labs(
+    title = "The Smoking Gun: Inappropriate Prescription Rates",
+    subtitle = "Total FAERS reports for 'Off label use' or 'Unapproved indication' (Top 5 AEs only)",
+    x = "",
+    y = "Total Adverse Event Reports",
+    fill = "Drug Cohort"
+  ) +
+  theme(legend.position = "none") +
+  scale_y_continuous(limits = c(0, max(off_label_counts$total_off_label_reports) * 1.2))
+```

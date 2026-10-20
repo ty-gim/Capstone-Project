@@ -1,0 +1,19 @@
+name: glp1_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - duckdb
+  - pandas
+  - numpy
+  - scipy
+  - statsmodels
+  - pyyaml
+  - snakemake
+  - r-base
+  - r-ggplot2
+  - r-dplyr
+  - r-tidyr
+  - r-readr
