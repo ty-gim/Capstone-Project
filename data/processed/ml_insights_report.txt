@@ -1,18 +1,27 @@
 =========================================================
-      CAPSTONE ML & STATISTICAL INSIGHTS REPORT          
+      CAPSTONE STATISTICAL INSIGHTS REPORT               
 =========================================================
 
-1. MACHINE LEARNING: LOGISTIC REGRESSION (RISK CLASSIFICATION)
+1. INFERENTIAL GROUPED-BINOMIAL GLM
 ---------------------------------------------------------
-Model: Misuse Cases ~ Indication + Year (Restricted to Semaglutide)
+Model: med_error_cases ~ Indication + Year + Reporter Type
+Note: Adjusted for stimulated reporting via reporter_type.
+Note: Standard errors are robust (HC0) to account for overdispersion.
 
 Model Coefficients (Log-Odds):
-  Intercept: -2.4169 (p=0.0000e+00) ***
-  C(indication, Treatment('Diabetes'))[T.Weight Loss]: 1.8985 (p=0.0000e+00) ***
-  year_centered: -0.0225 (p=2.2492e-01) 
+  Intercept: Coef=-3.4339 | OR=0.03 | (p=5.7377e-48) ***
+  C(indication, Treatment('Diabetes'))[T.Weight Loss]: Coef=-0.6786 | OR=0.51 | (p=2.4597e-02) *
+  C(reporter_type)[T.HP]: Coef=-1.3404 | OR=0.26 | (p=2.9134e-06) ***
+  C(reporter_type)[T.LW]: Coef=-18.7330 | OR=0.00 | (p=1.8528e-178) ***
+  C(reporter_type)[T.MD]: Coef=-1.3209 | OR=0.27 | (p=6.5727e-09) ***
+  C(reporter_type)[T.PH]: Coef=-0.9424 | OR=0.39 | (p=9.7589e-04) ***
+  year_centered: Coef=0.2120 | OR=1.24 | (p=1.1469e-03) **
 
-2. PHARMACOVIGILANCE: REPORTING ODDS RATIO (ROR)
+2. PHARMACOVIGILANCE: DISPROPORTIONALITY ANALYSIS
 ---------------------------------------------------------
+Metric: Within-drug indication-contrast reporting odds ratio (ROR)
 Comparison: Semaglutide (Weight Loss) vs. Semaglutide (Diabetes)
-Reporting Odds Ratio (ROR): 6.57
-95% Confidence Interval: [6.01, 7.18]
+Outcome: Medication Errors & Counterfeits (Excludes 'Off-label' to prevent circularity)
+
+Reporting Odds Ratio (ROR): 0.45
+95% Confidence Interval: [0.29, 0.69]

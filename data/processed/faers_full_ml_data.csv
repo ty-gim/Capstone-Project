@@ -1,182 +1,324 @@
-quarter_year,drug_and_indication,total_cases,gi_cases,misuse_cases,drug,role
-20Q1,METFORMIN (Diabetes),1529.0,202.0,38.0,METFORMIN,control
-20Q2,METFORMIN (Diabetes),1411.0,190.0,34.0,METFORMIN,control
-20Q3,METFORMIN (Diabetes),1337.0,174.0,53.0,METFORMIN,control
-20Q4,METFORMIN (Diabetes),1266.0,164.0,26.0,METFORMIN,control
-21Q1,METFORMIN (Diabetes),1168.0,139.0,53.0,METFORMIN,control
-21Q2,METFORMIN (Diabetes),831.0,116.0,51.0,METFORMIN,control
-21Q3,METFORMIN (Diabetes),1000.0,152.0,49.0,METFORMIN,control
-21Q4,METFORMIN (Diabetes),880.0,140.0,45.0,METFORMIN,control
-22Q1,METFORMIN (Diabetes),819.0,146.0,30.0,METFORMIN,control
-22Q2,METFORMIN (Diabetes),918.0,94.0,33.0,METFORMIN,control
-22Q3,METFORMIN (Diabetes),842.0,92.0,39.0,METFORMIN,control
-22Q4,METFORMIN (Diabetes),1059.0,119.0,41.0,METFORMIN,control
-23Q1,METFORMIN (Diabetes),933.0,108.0,38.0,METFORMIN,control
-23Q2,METFORMIN (Diabetes),845.0,129.0,32.0,METFORMIN,control
-23Q3,METFORMIN (Diabetes),839.0,101.0,43.0,METFORMIN,control
-23Q4,METFORMIN (Diabetes),1018.0,108.0,21.0,METFORMIN,control
-24Q1,METFORMIN (Diabetes),1025.0,120.0,24.0,METFORMIN,control
-24Q2,METFORMIN (Diabetes),769.0,87.0,23.0,METFORMIN,control
-24Q3,METFORMIN (Diabetes),807.0,103.0,27.0,METFORMIN,control
-24Q4,METFORMIN (Diabetes),922.0,93.0,37.0,METFORMIN,control
-20Q1,METFORMIN (Unknown/Other),1264.0,175.0,38.0,METFORMIN,control
-20Q2,METFORMIN (Unknown/Other),858.0,103.0,26.0,METFORMIN,control
-20Q3,METFORMIN (Unknown/Other),898.0,107.0,13.0,METFORMIN,control
-20Q4,METFORMIN (Unknown/Other),948.0,110.0,38.0,METFORMIN,control
-21Q1,METFORMIN (Unknown/Other),1073.0,151.0,44.0,METFORMIN,control
-21Q2,METFORMIN (Unknown/Other),782.0,90.0,36.0,METFORMIN,control
-21Q3,METFORMIN (Unknown/Other),746.0,67.0,47.0,METFORMIN,control
-21Q4,METFORMIN (Unknown/Other),806.0,98.0,44.0,METFORMIN,control
-22Q1,METFORMIN (Unknown/Other),756.0,103.0,33.0,METFORMIN,control
-22Q2,METFORMIN (Unknown/Other),644.0,82.0,65.0,METFORMIN,control
-22Q3,METFORMIN (Unknown/Other),725.0,112.0,58.0,METFORMIN,control
-22Q4,METFORMIN (Unknown/Other),879.0,108.0,48.0,METFORMIN,control
-23Q1,METFORMIN (Unknown/Other),994.0,125.0,45.0,METFORMIN,control
-23Q2,METFORMIN (Unknown/Other),619.0,84.0,36.0,METFORMIN,control
-23Q3,METFORMIN (Unknown/Other),786.0,111.0,34.0,METFORMIN,control
-23Q4,METFORMIN (Unknown/Other),1045.0,135.0,39.0,METFORMIN,control
-24Q1,METFORMIN (Unknown/Other),857.0,104.0,46.0,METFORMIN,control
-24Q2,METFORMIN (Unknown/Other),671.0,106.0,43.0,METFORMIN,control
-24Q3,METFORMIN (Unknown/Other),651.0,107.0,27.0,METFORMIN,control
-24Q4,METFORMIN (Unknown/Other),701.0,91.0,36.0,METFORMIN,control
-20Q1,METFORMIN (Weight Loss),10.0,3.0,5.0,METFORMIN,control
-20Q2,METFORMIN (Weight Loss),9.0,3.0,8.0,METFORMIN,control
-20Q3,METFORMIN (Weight Loss),8.0,3.0,8.0,METFORMIN,control
-20Q4,METFORMIN (Weight Loss),13.0,3.0,4.0,METFORMIN,control
-21Q1,METFORMIN (Weight Loss),9.0,0.0,6.0,METFORMIN,control
-21Q2,METFORMIN (Weight Loss),14.0,3.0,6.0,METFORMIN,control
-21Q3,METFORMIN (Weight Loss),5.0,0.0,1.0,METFORMIN,control
-21Q4,METFORMIN (Weight Loss),1.0,1.0,1.0,METFORMIN,control
-22Q1,METFORMIN (Weight Loss),4.0,0.0,3.0,METFORMIN,control
-22Q2,METFORMIN (Weight Loss),19.0,3.0,10.0,METFORMIN,control
-22Q3,METFORMIN (Weight Loss),2.0,2.0,1.0,METFORMIN,control
-22Q4,METFORMIN (Weight Loss),5.0,0.0,2.0,METFORMIN,control
-23Q1,METFORMIN (Weight Loss),5.0,1.0,3.0,METFORMIN,control
-23Q2,METFORMIN (Weight Loss),17.0,0.0,8.0,METFORMIN,control
-23Q3,METFORMIN (Weight Loss),5.0,0.0,3.0,METFORMIN,control
-23Q4,METFORMIN (Weight Loss),18.0,0.0,16.0,METFORMIN,control
-24Q1,METFORMIN (Weight Loss),11.0,0.0,3.0,METFORMIN,control
-24Q2,METFORMIN (Weight Loss),15.0,1.0,12.0,METFORMIN,control
-24Q3,METFORMIN (Weight Loss),10.0,0.0,1.0,METFORMIN,control
-24Q4,METFORMIN (Weight Loss),8.0,2.0,0.0,METFORMIN,control
-22Q3,PHENTERMINE (Diabetes),1.0,0.0,1.0,PHENTERMINE,control
-24Q4,PHENTERMINE (Diabetes),1.0,0.0,0.0,PHENTERMINE,control
-20Q1,PHENTERMINE (Unknown/Other),29.0,1.0,1.0,PHENTERMINE,control
-20Q2,PHENTERMINE (Unknown/Other),21.0,2.0,1.0,PHENTERMINE,control
-20Q3,PHENTERMINE (Unknown/Other),36.0,2.0,3.0,PHENTERMINE,control
-20Q4,PHENTERMINE (Unknown/Other),17.0,2.0,5.0,PHENTERMINE,control
-21Q1,PHENTERMINE (Unknown/Other),15.0,1.0,0.0,PHENTERMINE,control
-21Q2,PHENTERMINE (Unknown/Other),16.0,2.0,1.0,PHENTERMINE,control
-21Q3,PHENTERMINE (Unknown/Other),59.0,7.0,8.0,PHENTERMINE,control
-21Q4,PHENTERMINE (Unknown/Other),16.0,2.0,0.0,PHENTERMINE,control
-22Q1,PHENTERMINE (Unknown/Other),15.0,0.0,0.0,PHENTERMINE,control
-22Q2,PHENTERMINE (Unknown/Other),25.0,0.0,0.0,PHENTERMINE,control
-22Q3,PHENTERMINE (Unknown/Other),141.0,6.0,4.0,PHENTERMINE,control
-22Q4,PHENTERMINE (Unknown/Other),28.0,0.0,2.0,PHENTERMINE,control
-23Q1,PHENTERMINE (Unknown/Other),42.0,0.0,1.0,PHENTERMINE,control
-23Q2,PHENTERMINE (Unknown/Other),30.0,1.0,1.0,PHENTERMINE,control
-23Q3,PHENTERMINE (Unknown/Other),575.0,16.0,8.0,PHENTERMINE,control
-23Q4,PHENTERMINE (Unknown/Other),33.0,3.0,0.0,PHENTERMINE,control
-24Q1,PHENTERMINE (Unknown/Other),41.0,2.0,0.0,PHENTERMINE,control
-24Q2,PHENTERMINE (Unknown/Other),72.0,2.0,1.0,PHENTERMINE,control
-24Q3,PHENTERMINE (Unknown/Other),904.0,28.0,6.0,PHENTERMINE,control
-24Q4,PHENTERMINE (Unknown/Other),48.0,1.0,1.0,PHENTERMINE,control
-20Q1,PHENTERMINE (Weight Loss),23.0,1.0,2.0,PHENTERMINE,control
-20Q2,PHENTERMINE (Weight Loss),16.0,1.0,0.0,PHENTERMINE,control
-20Q3,PHENTERMINE (Weight Loss),177.0,9.0,3.0,PHENTERMINE,control
-20Q4,PHENTERMINE (Weight Loss),9.0,1.0,2.0,PHENTERMINE,control
-21Q1,PHENTERMINE (Weight Loss),17.0,1.0,0.0,PHENTERMINE,control
-21Q2,PHENTERMINE (Weight Loss),46.0,6.0,0.0,PHENTERMINE,control
-21Q3,PHENTERMINE (Weight Loss),208.0,13.0,3.0,PHENTERMINE,control
-21Q4,PHENTERMINE (Weight Loss),33.0,1.0,2.0,PHENTERMINE,control
-22Q1,PHENTERMINE (Weight Loss),12.0,1.0,0.0,PHENTERMINE,control
-22Q2,PHENTERMINE (Weight Loss),32.0,3.0,0.0,PHENTERMINE,control
-22Q3,PHENTERMINE (Weight Loss),199.0,13.0,1.0,PHENTERMINE,control
-22Q4,PHENTERMINE (Weight Loss),14.0,0.0,0.0,PHENTERMINE,control
-23Q1,PHENTERMINE (Weight Loss),26.0,2.0,0.0,PHENTERMINE,control
-23Q2,PHENTERMINE (Weight Loss),23.0,1.0,1.0,PHENTERMINE,control
-23Q3,PHENTERMINE (Weight Loss),163.0,9.0,2.0,PHENTERMINE,control
-23Q4,PHENTERMINE (Weight Loss),23.0,0.0,1.0,PHENTERMINE,control
-24Q1,PHENTERMINE (Weight Loss),9.0,0.0,0.0,PHENTERMINE,control
-24Q2,PHENTERMINE (Weight Loss),33.0,0.0,1.0,PHENTERMINE,control
-24Q3,PHENTERMINE (Weight Loss),124.0,8.0,1.0,PHENTERMINE,control
-24Q4,PHENTERMINE (Weight Loss),26.0,3.0,0.0,PHENTERMINE,control
-20Q2,RIMEGEPANT (Unknown/Other),43.0,10.0,2.0,RIMEGEPANT,control
-20Q3,RIMEGEPANT (Unknown/Other),11.0,2.0,0.0,RIMEGEPANT,control
-20Q4,RIMEGEPANT (Unknown/Other),553.0,65.0,6.0,RIMEGEPANT,control
-21Q1,RIMEGEPANT (Unknown/Other),332.0,45.0,2.0,RIMEGEPANT,control
-21Q2,RIMEGEPANT (Unknown/Other),338.0,32.0,4.0,RIMEGEPANT,control
-21Q3,RIMEGEPANT (Unknown/Other),331.0,47.0,6.0,RIMEGEPANT,control
-21Q4,RIMEGEPANT (Unknown/Other),729.0,111.0,15.0,RIMEGEPANT,control
-22Q1,RIMEGEPANT (Unknown/Other),32.0,1.0,1.0,RIMEGEPANT,control
-22Q2,RIMEGEPANT (Unknown/Other),1257.0,155.0,49.0,RIMEGEPANT,control
-22Q3,RIMEGEPANT (Unknown/Other),42.0,8.0,1.0,RIMEGEPANT,control
-22Q4,RIMEGEPANT (Unknown/Other),1675.0,178.0,42.0,RIMEGEPANT,control
-23Q1,RIMEGEPANT (Unknown/Other),582.0,80.0,40.0,RIMEGEPANT,control
-23Q2,RIMEGEPANT (Unknown/Other),411.0,48.0,45.0,RIMEGEPANT,control
-23Q3,RIMEGEPANT (Unknown/Other),242.0,32.0,12.0,RIMEGEPANT,control
-23Q4,RIMEGEPANT (Unknown/Other),227.0,30.0,17.0,RIMEGEPANT,control
-24Q1,RIMEGEPANT (Unknown/Other),277.0,21.0,24.0,RIMEGEPANT,control
-24Q2,RIMEGEPANT (Unknown/Other),265.0,17.0,24.0,RIMEGEPANT,control
-24Q3,RIMEGEPANT (Unknown/Other),325.0,34.0,31.0,RIMEGEPANT,control
-24Q4,RIMEGEPANT (Unknown/Other),308.0,38.0,21.0,RIMEGEPANT,control
-20Q1,SEMAGLUTIDE (Diabetes),661.0,237.0,63.0,SEMAGLUTIDE,target
-20Q2,SEMAGLUTIDE (Diabetes),640.0,252.0,71.0,SEMAGLUTIDE,target
-20Q3,SEMAGLUTIDE (Diabetes),202.0,81.0,4.0,SEMAGLUTIDE,target
-20Q4,SEMAGLUTIDE (Diabetes),231.0,77.0,2.0,SEMAGLUTIDE,target
-21Q1,SEMAGLUTIDE (Diabetes),440.0,138.0,28.0,SEMAGLUTIDE,target
-21Q2,SEMAGLUTIDE (Diabetes),148.0,34.0,4.0,SEMAGLUTIDE,target
-21Q3,SEMAGLUTIDE (Diabetes),418.0,143.0,25.0,SEMAGLUTIDE,target
-21Q4,SEMAGLUTIDE (Diabetes),161.0,43.0,8.0,SEMAGLUTIDE,target
-22Q1,SEMAGLUTIDE (Diabetes),474.0,143.0,40.0,SEMAGLUTIDE,target
-22Q2,SEMAGLUTIDE (Diabetes),222.0,51.0,11.0,SEMAGLUTIDE,target
-22Q3,SEMAGLUTIDE (Diabetes),643.0,180.0,40.0,SEMAGLUTIDE,target
-22Q4,SEMAGLUTIDE (Diabetes),200.0,41.0,6.0,SEMAGLUTIDE,target
-23Q1,SEMAGLUTIDE (Diabetes),762.0,250.0,60.0,SEMAGLUTIDE,target
-23Q2,SEMAGLUTIDE (Diabetes),295.0,82.0,11.0,SEMAGLUTIDE,target
-23Q3,SEMAGLUTIDE (Diabetes),1034.0,337.0,94.0,SEMAGLUTIDE,target
-23Q4,SEMAGLUTIDE (Diabetes),347.0,75.0,17.0,SEMAGLUTIDE,target
-24Q1,SEMAGLUTIDE (Diabetes),1047.0,294.0,82.0,SEMAGLUTIDE,target
-24Q2,SEMAGLUTIDE (Diabetes),481.0,108.0,34.0,SEMAGLUTIDE,target
-24Q3,SEMAGLUTIDE (Diabetes),1992.0,502.0,231.0,SEMAGLUTIDE,target
-24Q4,SEMAGLUTIDE (Diabetes),736.0,150.0,34.0,SEMAGLUTIDE,target
-20Q1,SEMAGLUTIDE (Unknown/Other),464.0,98.0,46.0,SEMAGLUTIDE,target
-20Q2,SEMAGLUTIDE (Unknown/Other),408.0,109.0,43.0,SEMAGLUTIDE,target
-20Q3,SEMAGLUTIDE (Unknown/Other),136.0,40.0,3.0,SEMAGLUTIDE,target
-20Q4,SEMAGLUTIDE (Unknown/Other),234.0,49.0,10.0,SEMAGLUTIDE,target
-21Q1,SEMAGLUTIDE (Unknown/Other),807.0,207.0,56.0,SEMAGLUTIDE,target
-21Q2,SEMAGLUTIDE (Unknown/Other),190.0,39.0,14.0,SEMAGLUTIDE,target
-21Q3,SEMAGLUTIDE (Unknown/Other),1177.0,327.0,86.0,SEMAGLUTIDE,target
-21Q4,SEMAGLUTIDE (Unknown/Other),569.0,130.0,25.0,SEMAGLUTIDE,target
-22Q1,SEMAGLUTIDE (Unknown/Other),1572.0,401.0,103.0,SEMAGLUTIDE,target
-22Q2,SEMAGLUTIDE (Unknown/Other),828.0,176.0,51.0,SEMAGLUTIDE,target
-22Q3,SEMAGLUTIDE (Unknown/Other),1265.0,288.0,116.0,SEMAGLUTIDE,target
-22Q4,SEMAGLUTIDE (Unknown/Other),315.0,66.0,34.0,SEMAGLUTIDE,target
-23Q1,SEMAGLUTIDE (Unknown/Other),1766.0,410.0,208.0,SEMAGLUTIDE,target
-23Q2,SEMAGLUTIDE (Unknown/Other),444.0,91.0,40.0,SEMAGLUTIDE,target
-23Q3,SEMAGLUTIDE (Unknown/Other),2220.0,498.0,271.0,SEMAGLUTIDE,target
-23Q4,SEMAGLUTIDE (Unknown/Other),525.0,88.0,53.0,SEMAGLUTIDE,target
-24Q1,SEMAGLUTIDE (Unknown/Other),2644.0,460.0,273.0,SEMAGLUTIDE,target
-24Q2,SEMAGLUTIDE (Unknown/Other),795.0,153.0,89.0,SEMAGLUTIDE,target
-24Q3,SEMAGLUTIDE (Unknown/Other),3581.0,677.0,473.0,SEMAGLUTIDE,target
-24Q4,SEMAGLUTIDE (Unknown/Other),981.0,185.0,131.0,SEMAGLUTIDE,target
-20Q1,SEMAGLUTIDE (Weight Loss),37.0,5.0,11.0,SEMAGLUTIDE,target
-20Q2,SEMAGLUTIDE (Weight Loss),28.0,6.0,15.0,SEMAGLUTIDE,target
-20Q3,SEMAGLUTIDE (Weight Loss),14.0,3.0,8.0,SEMAGLUTIDE,target
-20Q4,SEMAGLUTIDE (Weight Loss),18.0,7.0,14.0,SEMAGLUTIDE,target
-21Q1,SEMAGLUTIDE (Weight Loss),32.0,12.0,25.0,SEMAGLUTIDE,target
-21Q2,SEMAGLUTIDE (Weight Loss),27.0,9.0,18.0,SEMAGLUTIDE,target
-21Q3,SEMAGLUTIDE (Weight Loss),77.0,30.0,33.0,SEMAGLUTIDE,target
-21Q4,SEMAGLUTIDE (Weight Loss),107.0,32.0,25.0,SEMAGLUTIDE,target
-22Q1,SEMAGLUTIDE (Weight Loss),211.0,60.0,65.0,SEMAGLUTIDE,target
-22Q2,SEMAGLUTIDE (Weight Loss),250.0,66.0,51.0,SEMAGLUTIDE,target
-22Q3,SEMAGLUTIDE (Weight Loss),153.0,43.0,99.0,SEMAGLUTIDE,target
-22Q4,SEMAGLUTIDE (Weight Loss),74.0,18.0,45.0,SEMAGLUTIDE,target
-23Q1,SEMAGLUTIDE (Weight Loss),313.0,102.0,172.0,SEMAGLUTIDE,target
-23Q2,SEMAGLUTIDE (Weight Loss),194.0,44.0,55.0,SEMAGLUTIDE,target
-23Q3,SEMAGLUTIDE (Weight Loss),603.0,159.0,226.0,SEMAGLUTIDE,target
-23Q4,SEMAGLUTIDE (Weight Loss),281.0,70.0,89.0,SEMAGLUTIDE,target
-24Q1,SEMAGLUTIDE (Weight Loss),773.0,167.0,235.0,SEMAGLUTIDE,target
-24Q2,SEMAGLUTIDE (Weight Loss),333.0,72.0,99.0,SEMAGLUTIDE,target
-24Q3,SEMAGLUTIDE (Weight Loss),1210.0,275.0,447.0,SEMAGLUTIDE,target
-24Q4,SEMAGLUTIDE (Weight Loss),551.0,120.0,151.0,SEMAGLUTIDE,target
+year,reporter_type,drug,indication,total_cases,off_label_cases,med_error_cases,gi_cases,role
+2003,HP,METFORMIN,Diabetes,1,0.0,0.0,1.0,control
+2009,HP,METFORMIN,Diabetes,2,0.0,0.0,1.0,control
+2009,HP,METFORMIN,Other/Unknown,3,0.0,0.0,0.0,control
+2010,HP,METFORMIN,Diabetes,2,0.0,0.0,0.0,control
+2010,PH,METFORMIN,Diabetes,1,0.0,0.0,0.0,control
+2010,MD,METFORMIN,Diabetes,1,0.0,0.0,0.0,control
+2011,HP,METFORMIN,Diabetes,5,0.0,0.0,0.0,control
+2011,MD,METFORMIN,Diabetes,1,0.0,0.0,0.0,control
+2011,HP,METFORMIN,Other/Unknown,1,0.0,0.0,0.0,control
+2011,MD,METFORMIN,Other/Unknown,1,1.0,0.0,0.0,control
+2012,MD,METFORMIN,Diabetes,1,0.0,1.0,1.0,control
+2012,CN,METFORMIN,Diabetes,1,0.0,0.0,1.0,control
+2012,HP,METFORMIN,Diabetes,1,0.0,0.0,0.0,control
+2012,MD,METFORMIN,Other/Unknown,1,0.0,0.0,0.0,control
+2012,HP,METFORMIN,Other/Unknown,1,0.0,0.0,0.0,control
+2013,CN,METFORMIN,Diabetes,6,0.0,0.0,2.0,control
+2013,HP,METFORMIN,Diabetes,1,0.0,0.0,0.0,control
+2013,HP,METFORMIN,Other/Unknown,4,0.0,0.0,0.0,control
+2013,CN,METFORMIN,Other/Unknown,1,0.0,0.0,0.0,control
+2013,MD,METFORMIN,Other/Unknown,1,0.0,0.0,0.0,control
+2014,HP,METFORMIN,Diabetes,5,0.0,0.0,0.0,control
+2014,LW,METFORMIN,Diabetes,2,0.0,0.0,0.0,control
+2014,CN,METFORMIN,Diabetes,5,0.0,0.0,1.0,control
+2014,PH,METFORMIN,Other/Unknown,1,0.0,0.0,0.0,control
+2014,HP,METFORMIN,Other/Unknown,2,0.0,0.0,0.0,control
+2014,CN,METFORMIN,Other/Unknown,1,0.0,0.0,0.0,control
+2015,,METFORMIN,Diabetes,1,0.0,1.0,0.0,control
+2015,CN,METFORMIN,Diabetes,3,0.0,1.0,2.0,control
+2015,MD,METFORMIN,Diabetes,1,0.0,0.0,0.0,control
+2015,HP,METFORMIN,Diabetes,3,0.0,0.0,0.0,control
+2015,PH,METFORMIN,Diabetes,3,0.0,0.0,0.0,control
+2015,HP,METFORMIN,Other/Unknown,3,0.0,1.0,1.0,control
+2015,PH,METFORMIN,Other/Unknown,2,0.0,0.0,0.0,control
+2015,CN,METFORMIN,Other/Unknown,1,0.0,0.0,0.0,control
+2015,MD,METFORMIN,Other/Unknown,3,0.0,0.0,0.0,control
+2015,MD,PHENTERMINE,Other/Unknown,1,0.0,0.0,1.0,control
+2015,CN,PHENTERMINE,Other/Unknown,1,0.0,0.0,0.0,control
+2016,LW,METFORMIN,Diabetes,1,0.0,0.0,0.0,control
+2016,,METFORMIN,Diabetes,2,0.0,0.0,0.0,control
+2016,HP,METFORMIN,Diabetes,7,0.0,1.0,2.0,control
+2016,CN,METFORMIN,Diabetes,5,0.0,1.0,1.0,control
+2016,MD,METFORMIN,Diabetes,11,0.0,0.0,4.0,control
+2016,PH,METFORMIN,Diabetes,1,0.0,0.0,0.0,control
+2016,PH,METFORMIN,Other/Unknown,3,0.0,0.0,0.0,control
+2016,HP,METFORMIN,Other/Unknown,5,0.0,0.0,0.0,control
+2016,MD,METFORMIN,Other/Unknown,8,0.0,0.0,2.0,control
+2017,MD,METFORMIN,Diabetes,19,2.0,1.0,1.0,control
+2017,PH,METFORMIN,Diabetes,3,0.0,3.0,0.0,control
+2017,CN,METFORMIN,Diabetes,9,0.0,0.0,4.0,control
+2017,HP,METFORMIN,Diabetes,19,1.0,1.0,5.0,control
+2017,CN,METFORMIN,Other/Unknown,10,1.0,0.0,4.0,control
+2017,HP,METFORMIN,Other/Unknown,13,0.0,3.0,2.0,control
+2017,PH,METFORMIN,Other/Unknown,3,0.0,0.0,0.0,control
+2017,MD,METFORMIN,Other/Unknown,8,1.0,1.0,1.0,control
+2018,PH,METFORMIN,Diabetes,7,0.0,1.0,1.0,control
+2018,,METFORMIN,Diabetes,10,0.0,0.0,0.0,control
+2018,HP,METFORMIN,Diabetes,48,4.0,1.0,9.0,control
+2018,MD,METFORMIN,Diabetes,44,5.0,0.0,9.0,control
+2018,CN,METFORMIN,Diabetes,20,4.0,2.0,3.0,control
+2018,MD,METFORMIN,Other/Unknown,31,3.0,3.0,2.0,control
+2018,CN,METFORMIN,Other/Unknown,12,1.0,1.0,7.0,control
+2018,,METFORMIN,Other/Unknown,12,0.0,0.0,0.0,control
+2018,HP,METFORMIN,Other/Unknown,50,7.0,5.0,5.0,control
+2018,LW,METFORMIN,Other/Unknown,1,0.0,0.0,0.0,control
+2018,PH,METFORMIN,Other/Unknown,4,0.0,0.0,0.0,control
+2018,HP,PHENTERMINE,Other/Unknown,2,0.0,0.0,0.0,control
+2018,CN,SEMAGLUTIDE,Diabetes,1,0.0,0.0,0.0,target
+2018,MD,SEMAGLUTIDE,Other/Unknown,1,0.0,0.0,1.0,target
+2018,HP,SEMAGLUTIDE,Other/Unknown,1,0.0,0.0,0.0,target
+2019,MD,METFORMIN,Diabetes,131,3.0,4.0,24.0,control
+2019,,METFORMIN,Diabetes,7,0.0,0.0,1.0,control
+2019,HP,METFORMIN,Diabetes,174,9.0,6.0,34.0,control
+2019,CN,METFORMIN,Diabetes,94,6.0,6.0,19.0,control
+2019,PH,METFORMIN,Diabetes,33,1.0,4.0,3.0,control
+2019,PH,METFORMIN,Other/Unknown,13,4.0,4.0,0.0,control
+2019,CN,METFORMIN,Other/Unknown,61,3.0,1.0,16.0,control
+2019,MD,METFORMIN,Other/Unknown,52,5.0,4.0,7.0,control
+2019,,METFORMIN,Other/Unknown,1,0.0,0.0,0.0,control
+2019,HP,METFORMIN,Other/Unknown,125,10.0,8.0,32.0,control
+2019,LW,METFORMIN,Other/Unknown,2,0.0,0.0,0.0,control
+2019,CN,PHENTERMINE,Other/Unknown,3,0.0,0.0,0.0,control
+2019,MD,PHENTERMINE,Other/Unknown,4,0.0,0.0,1.0,control
+2019,HP,PHENTERMINE,Other/Unknown,4,0.0,0.0,0.0,control
+2019,HP,SEMAGLUTIDE,Diabetes,2,0.0,0.0,1.0,target
+2019,MD,SEMAGLUTIDE,Diabetes,19,1.0,0.0,7.0,target
+2019,CN,SEMAGLUTIDE,Diabetes,32,3.0,2.0,10.0,target
+2019,LW,SEMAGLUTIDE,Diabetes,1,0.0,0.0,0.0,target
+2019,PH,SEMAGLUTIDE,Diabetes,7,0.0,0.0,1.0,target
+2019,CN,SEMAGLUTIDE,Other/Unknown,7,1.0,1.0,2.0,target
+2019,HP,SEMAGLUTIDE,Other/Unknown,4,0.0,0.0,3.0,target
+2019,MD,SEMAGLUTIDE,Other/Unknown,6,0.0,0.0,1.0,target
+2019,MD,SEMAGLUTIDE,Weight Loss,1,0.0,0.0,0.0,target
+2020,,METFORMIN,Diabetes,82,7.0,3.0,12.0,control
+2020,LW,METFORMIN,Diabetes,11,0.0,0.0,2.0,control
+2020,MD,METFORMIN,Diabetes,1470,22.0,47.0,145.0,control
+2020,CN,METFORMIN,Diabetes,1178,22.0,41.0,209.0,control
+2020,HP,METFORMIN,Diabetes,1466,28.0,67.0,162.0,control
+2020,PH,METFORMIN,Diabetes,618,1.0,63.0,73.0,control
+2020,MD,METFORMIN,Other/Unknown,900,16.0,64.0,69.0,control
+2020,LW,METFORMIN,Other/Unknown,4,0.0,0.0,0.0,control
+2020,PH,METFORMIN,Other/Unknown,301,5.0,7.0,25.0,control
+2020,CN,METFORMIN,Other/Unknown,1030,29.0,20.0,185.0,control
+2020,HP,METFORMIN,Other/Unknown,1185,45.0,64.0,124.0,control
+2020,,METFORMIN,Other/Unknown,157,2.0,0.0,26.0,control
+2020,HP,PHENTERMINE,Other/Unknown,45,6.0,2.0,3.0,control
+2020,PH,PHENTERMINE,Other/Unknown,6,1.0,0.0,0.0,control
+2020,,PHENTERMINE,Other/Unknown,11,0.0,0.0,0.0,control
+2020,CN,PHENTERMINE,Other/Unknown,204,3.0,4.0,14.0,control
+2020,MD,PHENTERMINE,Other/Unknown,32,1.0,1.0,0.0,control
+2020,PH,PHENTERMINE,Weight Loss,1,0.0,0.0,0.0,control
+2020,CN,PHENTERMINE,Weight Loss,7,0.0,1.0,0.0,control
+2020,MD,PHENTERMINE,Weight Loss,2,0.0,0.0,0.0,control
+2020,HP,PHENTERMINE,Weight Loss,6,0.0,0.0,0.0,control
+2020,CN,RIMEGEPANT,Other/Unknown,583,6.0,10.0,74.0,control
+2020,MD,RIMEGEPANT,Other/Unknown,6,1.0,0.0,0.0,control
+2020,HP,RIMEGEPANT,Other/Unknown,7,0.0,0.0,0.0,control
+2020,,RIMEGEPANT,Other/Unknown,2,0.0,0.0,1.0,control
+2020,PH,RIMEGEPANT,Other/Unknown,4,0.0,0.0,1.0,control
+2020,HP,SEMAGLUTIDE,Diabetes,146,2.0,3.0,40.0,target
+2020,MD,SEMAGLUTIDE,Diabetes,220,4.0,1.0,53.0,target
+2020,CN,SEMAGLUTIDE,Diabetes,1022,117.0,45.0,387.0,target
+2020,PH,SEMAGLUTIDE,Diabetes,54,2.0,0.0,13.0,target
+2020,,SEMAGLUTIDE,Diabetes,2,0.0,0.0,0.0,target
+2020,HP,SEMAGLUTIDE,Other/Unknown,255,9.0,2.0,65.0,target
+2020,PH,SEMAGLUTIDE,Other/Unknown,48,1.0,1.0,7.0,target
+2020,CN,SEMAGLUTIDE,Other/Unknown,597,108.0,19.0,159.0,target
+2020,,SEMAGLUTIDE,Other/Unknown,1,0.0,0.0,0.0,target
+2020,MD,SEMAGLUTIDE,Other/Unknown,307,14.0,1.0,48.0,target
+2020,MD,SEMAGLUTIDE,Weight Loss,5,4.0,0.0,3.0,target
+2020,CN,SEMAGLUTIDE,Weight Loss,6,4.0,0.0,2.0,target
+2020,HP,SEMAGLUTIDE,Weight Loss,2,2.0,0.0,0.0,target
+2021,PH,METFORMIN,Diabetes,310,4.0,15.0,50.0,control
+2021,MD,METFORMIN,Diabetes,1053,19.0,26.0,113.0,control
+2021,HP,METFORMIN,Diabetes,1131,28.0,57.0,107.0,control
+2021,CN,METFORMIN,Diabetes,875,48.0,46.0,191.0,control
+2021,LW,METFORMIN,Diabetes,5,0.0,0.0,0.0,control
+2021,,METFORMIN,Diabetes,42,4.0,1.0,4.0,control
+2021,HP,METFORMIN,Other/Unknown,974,59.0,63.0,118.0,control
+2021,MD,METFORMIN,Other/Unknown,717,11.0,48.0,42.0,control
+2021,,METFORMIN,Other/Unknown,108,4.0,2.0,27.0,control
+2021,PH,METFORMIN,Other/Unknown,216,2.0,6.0,18.0,control
+2021,CN,METFORMIN,Other/Unknown,1094,42.0,21.0,157.0,control
+2021,LW,METFORMIN,Other/Unknown,8,0.0,1.0,0.0,control
+2021,HP,METFORMIN,Weight Loss,13,7.0,0.0,0.0,control
+2021,CN,METFORMIN,Weight Loss,1,0.0,0.0,0.0,control
+2021,,PHENTERMINE,Other/Unknown,18,0.0,0.0,2.0,control
+2021,HP,PHENTERMINE,Other/Unknown,51,2.0,0.0,3.0,control
+2021,PH,PHENTERMINE,Other/Unknown,11,0.0,0.0,0.0,control
+2021,MD,PHENTERMINE,Other/Unknown,26,0.0,0.0,1.0,control
+2021,CN,PHENTERMINE,Other/Unknown,263,8.0,4.0,20.0,control
+2021,,PHENTERMINE,Weight Loss,2,0.0,0.0,0.0,control
+2021,PH,PHENTERMINE,Weight Loss,4,0.0,0.0,0.0,control
+2021,CN,PHENTERMINE,Weight Loss,4,0.0,0.0,1.0,control
+2021,MD,PHENTERMINE,Weight Loss,2,0.0,0.0,0.0,control
+2021,HP,PHENTERMINE,Weight Loss,9,0.0,0.0,1.0,control
+2021,MD,RIMEGEPANT,Other/Unknown,74,2.0,0.0,10.0,control
+2021,PH,RIMEGEPANT,Other/Unknown,30,2.0,0.0,6.0,control
+2021,,RIMEGEPANT,Other/Unknown,7,0.0,0.0,0.0,control
+2021,HP,RIMEGEPANT,Other/Unknown,52,1.0,1.0,12.0,control
+2021,CN,RIMEGEPANT,Other/Unknown,1533,17.0,28.0,205.0,control
+2021,HP,SEMAGLUTIDE,Diabetes,92,0.0,2.0,18.0,target
+2021,CN,SEMAGLUTIDE,Diabetes,651,47.0,20.0,247.0,target
+2021,,SEMAGLUTIDE,Diabetes,8,0.0,0.0,1.0,target
+2021,PH,SEMAGLUTIDE,Diabetes,68,1.0,1.0,18.0,target
+2021,MD,SEMAGLUTIDE,Diabetes,243,9.0,3.0,50.0,target
+2021,,SEMAGLUTIDE,Dual Indication,1,0.0,0.0,0.0,target
+2021,MD,SEMAGLUTIDE,Dual Indication,1,0.0,0.0,0.0,target
+2021,CN,SEMAGLUTIDE,Other/Unknown,1813,181.0,70.0,534.0,target
+2021,,SEMAGLUTIDE,Other/Unknown,10,1.0,0.0,3.0,target
+2021,HP,SEMAGLUTIDE,Other/Unknown,339,16.0,5.0,87.0,target
+2021,PH,SEMAGLUTIDE,Other/Unknown,102,8.0,4.0,22.0,target
+2021,MD,SEMAGLUTIDE,Other/Unknown,494,39.0,4.0,82.0,target
+2021,PH,SEMAGLUTIDE,Weight Loss,1,1.0,0.0,1.0,target
+2021,MD,SEMAGLUTIDE,Weight Loss,28,10.0,0.0,5.0,target
+2021,HP,SEMAGLUTIDE,Weight Loss,5,1.0,0.0,1.0,target
+2021,CN,SEMAGLUTIDE,Weight Loss,22,3.0,0.0,9.0,target
+2021,,SEMAGLUTIDE,Weight Loss,2,0.0,0.0,2.0,target
+2022,LW,METFORMIN,Diabetes,2,0.0,0.0,0.0,control
+2022,,METFORMIN,Diabetes,3,0.0,0.0,1.0,control
+2022,PH,METFORMIN,Diabetes,387,0.0,9.0,34.0,control
+2022,MD,METFORMIN,Diabetes,1372,26.0,50.0,110.0,control
+2022,CN,METFORMIN,Diabetes,552,34.0,37.0,116.0,control
+2022,HP,METFORMIN,Diabetes,963,22.0,45.0,120.0,control
+2022,MD,METFORMIN,Other/Unknown,562,21.0,41.0,60.0,control
+2022,PH,METFORMIN,Other/Unknown,361,5.0,20.0,44.0,control
+2022,HP,METFORMIN,Other/Unknown,778,72.0,85.0,70.0,control
+2022,LW,METFORMIN,Other/Unknown,5,0.0,0.0,0.0,control
+2022,CN,METFORMIN,Other/Unknown,850,40.0,34.0,130.0,control
+2022,,METFORMIN,Other/Unknown,88,0.0,1.0,20.0,control
+2022,HP,METFORMIN,Weight Loss,6,1.0,0.0,0.0,control
+2022,MD,METFORMIN,Weight Loss,1,1.0,0.0,1.0,control
+2022,CN,PHENTERMINE,Diabetes,1,1.0,0.0,0.0,control
+2022,MD,PHENTERMINE,Other/Unknown,9,0.0,0.0,0.0,control
+2022,CN,PHENTERMINE,Other/Unknown,378,4.0,4.0,20.0,control
+2022,HP,PHENTERMINE,Other/Unknown,36,1.0,1.0,1.0,control
+2022,,PHENTERMINE,Other/Unknown,14,0.0,0.0,0.0,control
+2022,PH,PHENTERMINE,Other/Unknown,8,0.0,0.0,0.0,control
+2022,CN,PHENTERMINE,Weight Loss,3,0.0,0.0,0.0,control
+2022,HP,PHENTERMINE,Weight Loss,6,0.0,0.0,0.0,control
+2022,PH,PHENTERMINE,Weight Loss,2,0.0,0.0,0.0,control
+2022,,PHENTERMINE,Weight Loss,1,0.0,0.0,0.0,control
+2022,MD,PHENTERMINE,Weight Loss,2,0.0,0.0,0.0,control
+2022,HP,RIMEGEPANT,Other/Unknown,244,10.0,0.0,26.0,control
+2022,MD,RIMEGEPANT,Other/Unknown,151,11.0,0.0,21.0,control
+2022,CN,RIMEGEPANT,Other/Unknown,2529,65.0,14.0,284.0,control
+2022,,RIMEGEPANT,Other/Unknown,4,0.0,0.0,0.0,control
+2022,PH,RIMEGEPANT,Other/Unknown,19,2.0,0.0,2.0,control
+2022,PH,SEMAGLUTIDE,Diabetes,97,1.0,0.0,22.0,target
+2022,MD,SEMAGLUTIDE,Diabetes,343,14.0,0.0,68.0,target
+2022,CN,SEMAGLUTIDE,Diabetes,858,65.0,27.0,245.0,target
+2022,HP,SEMAGLUTIDE,Diabetes,112,4.0,2.0,39.0,target
+2022,,SEMAGLUTIDE,Diabetes,3,0.0,0.0,1.0,target
+2022,CN,SEMAGLUTIDE,Dual Indication,1,0.0,0.0,1.0,target
+2022,HP,SEMAGLUTIDE,Other/Unknown,373,24.0,5.0,67.0,target
+2022,MD,SEMAGLUTIDE,Other/Unknown,613,50.0,9.0,99.0,target
+2022,,SEMAGLUTIDE,Other/Unknown,4,0.0,0.0,0.0,target
+2022,PH,SEMAGLUTIDE,Other/Unknown,129,11.0,5.0,25.0,target
+2022,CN,SEMAGLUTIDE,Other/Unknown,2998,402.0,139.0,822.0,target
+2022,PH,SEMAGLUTIDE,Weight Loss,3,1.0,0.0,0.0,target
+2022,CN,SEMAGLUTIDE,Weight Loss,59,15.0,0.0,21.0,target
+2022,,SEMAGLUTIDE,Weight Loss,2,0.0,0.0,2.0,target
+2022,MD,SEMAGLUTIDE,Weight Loss,52,21.0,1.0,6.0,target
+2022,HP,SEMAGLUTIDE,Weight Loss,8,3.0,0.0,2.0,target
+2023,HP,METFORMIN,Diabetes,1117,27.0,53.0,76.0,control
+2023,PH,METFORMIN,Diabetes,332,7.0,23.0,26.0,control
+2023,CN,METFORMIN,Diabetes,444,16.0,21.0,82.0,control
+2023,MD,METFORMIN,Diabetes,1333,19.0,71.0,173.0,control
+2023,,METFORMIN,Diabetes,4,0.0,0.0,0.0,control
+2023,HP,METFORMIN,Other/Unknown,822,49.0,79.0,90.0,control
+2023,PH,METFORMIN,Other/Unknown,314,5.0,9.0,35.0,control
+2023,LW,METFORMIN,Other/Unknown,1,0.0,0.0,0.0,control
+2023,MD,METFORMIN,Other/Unknown,948,35.0,29.0,70.0,control
+2023,,METFORMIN,Other/Unknown,21,0.0,0.0,3.0,control
+2023,CN,METFORMIN,Other/Unknown,1025,30.0,25.0,189.0,control
+2023,MD,METFORMIN,Weight Loss,1,0.0,0.0,0.0,control
+2023,HP,METFORMIN,Weight Loss,3,1.0,0.0,0.0,control
+2023,CN,PHENTERMINE,Other/Unknown,813,11.0,5.0,27.0,control
+2023,PH,PHENTERMINE,Other/Unknown,7,0.0,0.0,1.0,control
+2023,MD,PHENTERMINE,Other/Unknown,15,0.0,0.0,1.0,control
+2023,,PHENTERMINE,Other/Unknown,3,0.0,0.0,0.0,control
+2023,HP,PHENTERMINE,Other/Unknown,51,1.0,1.0,2.0,control
+2023,CN,PHENTERMINE,Weight Loss,6,0.0,0.0,1.0,control
+2023,PH,PHENTERMINE,Weight Loss,1,0.0,0.0,0.0,control
+2023,,PHENTERMINE,Weight Loss,2,0.0,0.0,0.0,control
+2023,HP,PHENTERMINE,Weight Loss,11,0.0,0.0,0.0,control
+2023,MD,PHENTERMINE,Weight Loss,2,0.0,0.0,0.0,control
+2023,MD,RIMEGEPANT,Other/Unknown,136,10.0,0.0,15.0,control
+2023,CN,RIMEGEPANT,Other/Unknown,1050,74.0,18.0,142.0,control
+2023,PH,RIMEGEPANT,Other/Unknown,30,2.0,2.0,7.0,control
+2023,,RIMEGEPANT,Other/Unknown,1,0.0,0.0,0.0,control
+2023,HP,RIMEGEPANT,Other/Unknown,191,13.0,1.0,15.0,control
+2023,MD,SEMAGLUTIDE,Diabetes,381,14.0,5.0,84.0,target
+2023,,SEMAGLUTIDE,Diabetes,16,2.0,0.0,2.0,target
+2023,LW,SEMAGLUTIDE,Diabetes,2,0.0,0.0,1.0,target
+2023,CN,SEMAGLUTIDE,Diabetes,1577,141.0,88.0,533.0,target
+2023,PH,SEMAGLUTIDE,Diabetes,157,3.0,2.0,38.0,target
+2023,HP,SEMAGLUTIDE,Diabetes,151,8.0,1.0,42.0,target
+2023,CN,SEMAGLUTIDE,Dual Indication,4,0.0,0.0,0.0,target
+2023,MD,SEMAGLUTIDE,Dual Indication,2,0.0,0.0,0.0,target
+2023,HP,SEMAGLUTIDE,Other/Unknown,546,45.0,11.0,91.0,target
+2023,LW,SEMAGLUTIDE,Other/Unknown,1,1.0,0.0,1.0,target
+2023,CN,SEMAGLUTIDE,Other/Unknown,3811,768.0,192.0,1013.0,target
+2023,MD,SEMAGLUTIDE,Other/Unknown,1034,109.0,16.0,123.0,target
+2023,PH,SEMAGLUTIDE,Other/Unknown,219,19.0,6.0,46.0,target
+2023,,SEMAGLUTIDE,Other/Unknown,33,0.0,0.0,7.0,target
+2023,,SEMAGLUTIDE,Weight Loss,2,0.0,0.0,0.0,target
+2023,CN,SEMAGLUTIDE,Weight Loss,128,32.0,2.0,47.0,target
+2023,MD,SEMAGLUTIDE,Weight Loss,135,38.0,3.0,21.0,target
+2023,HP,SEMAGLUTIDE,Weight Loss,40,12.0,1.0,14.0,target
+2023,PH,SEMAGLUTIDE,Weight Loss,19,10.0,1.0,7.0,target
+2024,MD,METFORMIN,Diabetes,1386,14.0,50.0,147.0,control
+2024,,METFORMIN,Diabetes,55,2.0,1.0,6.0,control
+2024,CN,METFORMIN,Diabetes,351,12.0,22.0,74.0,control
+2024,PH,METFORMIN,Diabetes,430,2.0,12.0,46.0,control
+2024,LW,METFORMIN,Diabetes,1,0.0,1.0,0.0,control
+2024,HP,METFORMIN,Diabetes,916,20.0,36.0,64.0,control
+2024,,METFORMIN,Other/Unknown,59,1.0,2.0,8.0,control
+2024,MD,METFORMIN,Other/Unknown,663,16.0,27.0,58.0,control
+2024,PH,METFORMIN,Other/Unknown,268,9.0,2.0,24.0,control
+2024,HP,METFORMIN,Other/Unknown,745,31.0,49.0,97.0,control
+2024,CN,METFORMIN,Other/Unknown,857,37.0,19.0,148.0,control
+2024,LW,METFORMIN,Other/Unknown,2,0.0,0.0,0.0,control
+2024,MD,METFORMIN,Weight Loss,7,0.0,1.0,0.0,control
+2024,HP,METFORMIN,Weight Loss,5,0.0,0.0,0.0,control
+2024,CN,METFORMIN,Weight Loss,1,0.0,0.0,0.0,control
+2024,HP,PHENTERMINE,Diabetes,1,0.0,0.0,0.0,control
+2024,PH,PHENTERMINE,Other/Unknown,8,1.0,0.0,0.0,control
+2024,HP,PHENTERMINE,Other/Unknown,63,1.0,1.0,3.0,control
+2024,MD,PHENTERMINE,Other/Unknown,30,2.0,1.0,0.0,control
+2024,,PHENTERMINE,Other/Unknown,7,0.0,1.0,0.0,control
+2024,CN,PHENTERMINE,Other/Unknown,1126,3.0,2.0,39.0,control
+2024,HP,PHENTERMINE,Weight Loss,3,0.0,0.0,1.0,control
+2024,PH,PHENTERMINE,Weight Loss,1,0.0,0.0,0.0,control
+2024,MD,PHENTERMINE,Weight Loss,4,0.0,0.0,1.0,control
+2024,CN,PHENTERMINE,Weight Loss,5,0.0,0.0,0.0,control
+2024,,PHENTERMINE,Weight Loss,2,0.0,0.0,0.0,control
+2024,PH,RIMEGEPANT,Other/Unknown,33,2.0,0.0,4.0,control
+2024,,RIMEGEPANT,Other/Unknown,1,0.0,0.0,0.0,control
+2024,HP,RIMEGEPANT,Other/Unknown,126,11.0,4.0,6.0,control
+2024,CN,RIMEGEPANT,Other/Unknown,809,51.0,12.0,83.0,control
+2024,MD,RIMEGEPANT,Other/Unknown,154,20.0,1.0,10.0,control
+2024,MD,SEMAGLUTIDE,Diabetes,444,19.0,10.0,91.0,target
+2024,HP,SEMAGLUTIDE,Diabetes,247,5.0,3.0,77.0,target
+2024,PH,SEMAGLUTIDE,Diabetes,212,6.0,7.0,32.0,target
+2024,CN,SEMAGLUTIDE,Diabetes,2947,284.0,221.0,738.0,target
+2024,LW,SEMAGLUTIDE,Diabetes,2,0.0,0.0,1.0,target
+2024,,SEMAGLUTIDE,Diabetes,14,0.0,0.0,2.0,target
+2024,MD,SEMAGLUTIDE,Dual Indication,1,0.0,0.0,0.0,target
+2024,HP,SEMAGLUTIDE,Dual Indication,1,0.0,0.0,0.0,target
+2024,CN,SEMAGLUTIDE,Dual Indication,3,0.0,0.0,1.0,target
+2024,PH,SEMAGLUTIDE,Dual Indication,5,0.0,0.0,1.0,target
+2024,,SEMAGLUTIDE,Dual Indication,1,0.0,0.0,1.0,target
+2024,,SEMAGLUTIDE,Other/Unknown,26,0.0,2.0,4.0,target
+2024,LW,SEMAGLUTIDE,Other/Unknown,2,0.0,0.0,2.0,target
+2024,PH,SEMAGLUTIDE,Other/Unknown,382,36.0,8.0,65.0,target
+2024,CN,SEMAGLUTIDE,Other/Unknown,6608,1276.0,407.0,1412.0,target
+2024,MD,SEMAGLUTIDE,Other/Unknown,1358,119.0,25.0,152.0,target
+2024,HP,SEMAGLUTIDE,Other/Unknown,968,92.0,24.0,146.0,target
+2024,MD,SEMAGLUTIDE,Weight Loss,149,35.0,4.0,13.0,target
+2024,,SEMAGLUTIDE,Weight Loss,8,0.0,0.0,3.0,target
+2024,PH,SEMAGLUTIDE,Weight Loss,30,8.0,3.0,5.0,target
+2024,CN,SEMAGLUTIDE,Weight Loss,302,71.0,7.0,71.0,target
+2024,HP,SEMAGLUTIDE,Weight Loss,84,19.0,0.0,14.0,target

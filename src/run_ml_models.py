@@ -5,49 +5,54 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
 def run_logistic_regression(faers_df):
-    # Extract year as a continuous variable
-    faers_df['year_num'] = faers_df['quarter_year'].str[:2].astype(int)
-    # Center the year to 2020 (0) to fix the intercept issue Claude found
-    faers_df['year_centered'] = faers_df['year_num'] - 20
+    # 1. Filter for Semaglutide and valid indications
+    df = faers_df[(faers_df['drug'] == 'SEMAGLUTIDE') &
+                  (faers_df['indication'].isin(['Weight Loss', 'Diabetes']))].copy()
 
-    faers_df['indication'] = 'Unknown'
-    faers_df.loc[faers_df['drug_and_indication'].str.contains('Weight Loss'), 'indication'] = 'Weight Loss'
-    faers_df.loc[faers_df['drug_and_indication'].str.contains('Diabetes'), 'indication'] = 'Diabetes'
-
-    model_df = faers_df[faers_df['indication'] != 'Unknown'].copy()
-
-    # CLAUDE FIX: GLM requires a 2D array of [successes, failures] for binomial data
-    model_df['failures'] = model_df['total_cases'] - model_df['misuse_cases']
-
-    # We restrict to Semaglutide to test the interaction of the indication directly
-    sema_df = model_df[model_df['drug'] == 'SEMAGLUTIDE'].copy()
-
-    if len(sema_df) == 0:
+    if len(df) == 0:
         return None
 
+    # 2. Center year to 2020 for a meaningful intercept
+    df['year'] = pd.to_numeric(df['year'], errors='coerce')
+    df = df.dropna(subset=['year'])
+    df['year_centered'] = df['year'] - 2020
+
+    # 3. Define the outcome: Medication Errors (Avoids definitional circularity of 'Off-label')
+    df['failures'] = df['total_cases'] - df['med_error_cases']
+
+    # 4. Fit Grouped Binomial GLM
+    # We include C(reporter_type) to adjust for stimulated reporting (media/lawyers)
+    # We use cov_type='HC0' (Robust Standard Errors) to account for overdispersion/clustering
     model = smf.glm(
-        formula="misuse_cases + failures ~ C(indication, Treatment('Diabetes')) + year_centered",
-        data=sema_df,
+        formula="med_error_cases + failures ~ C(indication, Treatment('Diabetes')) + year_centered + C(reporter_type)",
+        data=df,
         family=sm.families.Binomial()
-    ).fit()
+    ).fit(cov_type='HC0')
 
     return model
 
 def calculate_reporting_odds_ratio(faers_df):
-    wl_df = faers_df[faers_df['drug_and_indication'] == 'SEMAGLUTIDE (Weight Loss)']
-    a = wl_df['misuse_cases'].sum()
-    b = wl_df['total_cases'].sum() - a
+    # Filter for Semaglutide and valid indications
+    df = faers_df[(faers_df['drug'] == 'SEMAGLUTIDE') &
+                  (faers_df['indication'].isin(['Weight Loss', 'Diabetes']))].copy()
 
-    dm_df = faers_df[faers_df['drug_and_indication'] == 'SEMAGLUTIDE (Diabetes)']
-    c = dm_df['misuse_cases'].sum()
-    d = dm_df['total_cases'].sum() - c
+    # Aggregate across years and reporter types for the crude ROR
+    agg = df.groupby('indication')[['med_error_cases', 'total_cases']].sum()
 
-    # CLAUDE FIX: Haldane 0.5 correction for zero cells
+    if 'Weight Loss' not in agg.index or 'Diabetes' not in agg.index:
+        return np.nan, np.nan, np.nan
+
+    a = agg.loc['Weight Loss', 'med_error_cases']
+    b = agg.loc['Weight Loss', 'total_cases'] - a
+
+    c = agg.loc['Diabetes', 'med_error_cases']
+    d = agg.loc['Diabetes', 'total_cases'] - c
+
+    # Haldane-Anscombe 0.5 correction for zero cells
     if a == 0 or b == 0 or c == 0 or d == 0:
         a, b, c, d = a + 0.5, b + 0.5, c + 0.5, d + 0.5
 
     ror = (a * d) / (b * c)
-
     se_ln_ror = np.sqrt(1/a + 1/b + 1/c + 1/d)
     ci_lower = np.exp(np.log(ror) - 1.96 * se_ln_ror)
     ci_upper = np.exp(np.log(ror) + 1.96 * se_ln_ror)
@@ -56,7 +61,7 @@ def calculate_reporting_odds_ratio(faers_df):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--cms_file', required=True)
+    parser.add_argument('--cms_file', required=True) # Kept to satisfy current Snakefile
     parser.add_argument('--faers_file', required=True)
     parser.add_argument('--output_report', required=True)
     args = parser.parse_args()
@@ -68,30 +73,44 @@ def main():
 
     report = []
     report.append("=========================================================")
-    report.append("      CAPSTONE ML & STATISTICAL INSIGHTS REPORT          ")
+    report.append("      CAPSTONE STATISTICAL INSIGHTS REPORT               ")
     report.append("=========================================================\n")
 
-    report.append("1. MACHINE LEARNING: LOGISTIC REGRESSION (RISK CLASSIFICATION)")
+    report.append("1. INFERENTIAL GROUPED-BINOMIAL GLM")
     report.append("---------------------------------------------------------")
-    report.append("Model: Misuse Cases ~ Indication + Year (Restricted to Semaglutide)")
+    report.append("Model: med_error_cases ~ Indication + Year + Reporter Type")
+    report.append("Note: Adjusted for stimulated reporting via reporter_type.")
+    report.append("Note: Standard errors are robust (HC0) to account for overdispersion.\n")
+
     if log_model:
-        report.append("\nModel Coefficients (Log-Odds):")
+        report.append("Model Coefficients (Log-Odds):")
+        # Extract robust standard errors and p-values
         for index, row in log_model.summary2().tables[1].iterrows():
             coef = row['Coef.']
             pval = row['P>|z|']
+            # Convert log-odds to Odds Ratio for easier interpretation
+            odds_ratio = np.exp(coef)
             sig = "***" if pval < 0.001 else "**" if pval < 0.01 else "*" if pval < 0.05 else ""
-            report.append(f"  {index}: {coef:.4f} (p={pval:.4e}) {sig}")
+            report.append(f"  {index}: Coef={coef:.4f} | OR={odds_ratio:.2f} | (p={pval:.4e}) {sig}")
     else:
         report.append("Insufficient data to fit model.")
 
-    report.append("\n2. PHARMACOVIGILANCE: REPORTING ODDS RATIO (ROR)")
+    report.append("\n2. PHARMACOVIGILANCE: DISPROPORTIONALITY ANALYSIS")
     report.append("---------------------------------------------------------")
+    report.append("Metric: Within-drug indication-contrast reporting odds ratio (ROR)")
     report.append("Comparison: Semaglutide (Weight Loss) vs. Semaglutide (Diabetes)")
-    report.append(f"Reporting Odds Ratio (ROR): {ror:.2f}")
-    report.append(f"95% Confidence Interval: [{ci_low:.2f}, {ci_high:.2f}]")
+    report.append("Outcome: Medication Errors & Counterfeits (Excludes 'Off-label' to prevent circularity)\n")
+
+    if not np.isnan(ror):
+        report.append(f"Reporting Odds Ratio (ROR): {ror:.2f}")
+        report.append(f"95% Confidence Interval: [{ci_low:.2f}, {ci_high:.2f}]")
+    else:
+        report.append("Insufficient data to calculate ROR.")
 
     with open(args.output_report, 'w') as f:
         f.write("\n".join(report))
+
+    print(f"Statistical report successfully generated at {args.output_report}")
 
 if __name__ == "__main__":
     main()
