@@ -5,67 +5,46 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
 def run_logistic_regression(faers_df):
-    """
-    Fits a Logistic Regression model to predict the probability of an
-    'Inappropriate Use / Access' adverse event based on Drug, Indication, and Time.
-    """
-    # Define the signal based on MedDRA Preferred Terms related to access/administration
-    inappropriate_use_terms = [
-        'Off label use',
-        'Product use in unapproved indication',
-        'Prescription drug used without a prescription',
-        'Suspected counterfeit product',
-        'Medication error',
-        'Intentional product misuse'
-    ]
-
-    # Create the binary target variable
-    faers_df['is_inappropriate_use'] = faers_df['adverse_event'].isin(inappropriate_use_terms).astype(int)
-
-    # Extract year as a continuous variable for the model
+    # Extract year as a continuous variable
     faers_df['year_num'] = faers_df['quarter_year'].str[:2].astype(int)
+    # Center the year to 2020 (0) to fix the intercept issue Claude found
+    faers_df['year_centered'] = faers_df['year_num'] - 20
 
-    # Extract indication cleanly
     faers_df['indication'] = 'Unknown'
     faers_df.loc[faers_df['drug_and_indication'].str.contains('Weight Loss'), 'indication'] = 'Weight Loss'
     faers_df.loc[faers_df['drug_and_indication'].str.contains('Diabetes'), 'indication'] = 'Diabetes'
 
-    # Filter out Unknowns for a clean model
     model_df = faers_df[faers_df['indication'] != 'Unknown'].copy()
 
-    # Fit the Logistic Regression (Binomial GLM)
-    # Formula: is_inappropriate_use ~ drug + indication + year_num
+    # CLAUDE FIX: GLM requires a 2D array of [successes, failures] for binomial data
+    model_df['failures'] = model_df['total_cases'] - model_df['misuse_cases']
+
+    # We restrict to Semaglutide to test the interaction of the indication directly
+    sema_df = model_df[model_df['drug'] == 'SEMAGLUTIDE'].copy()
+
+    if len(sema_df) == 0:
+        return None
+
     model = smf.glm(
-        formula="is_inappropriate_use ~ C(drug, Treatment('METFORMIN')) + C(indication, Treatment('Diabetes')) + year_num",
-        data=model_df,
-        family=sm.families.Binomial(),
-        freq_weights=model_df['cases']
+        formula="misuse_cases + failures ~ C(indication, Treatment('Diabetes')) + year_centered",
+        data=sema_df,
+        family=sm.families.Binomial()
     ).fit()
 
     return model
 
 def calculate_reporting_odds_ratio(faers_df):
-    """
-    Calculates the Reporting Odds Ratio (ROR) with 95% Confidence Intervals
-    for Inappropriate Use events: Semaglutide (Weight Loss) vs Semaglutide (Diabetes).
-    """
-    inappropriate_use_terms = [
-        'Off label use', 'Product use in unapproved indication',
-        'Prescription drug used without a prescription', 'Suspected counterfeit product'
-    ]
-
-    # Cohort 1: Semaglutide Weight Loss
     wl_df = faers_df[faers_df['drug_and_indication'] == 'SEMAGLUTIDE (Weight Loss)']
-    a = wl_df[wl_df['adverse_event'].isin(inappropriate_use_terms)]['cases'].sum()
-    b = wl_df[~wl_df['adverse_event'].isin(inappropriate_use_terms)]['cases'].sum()
+    a = wl_df['misuse_cases'].sum()
+    b = wl_df['total_cases'].sum() - a
 
-    # Cohort 2: Semaglutide Diabetes
     dm_df = faers_df[faers_df['drug_and_indication'] == 'SEMAGLUTIDE (Diabetes)']
-    c = dm_df[dm_df['adverse_event'].isin(inappropriate_use_terms)]['cases'].sum()
-    d = dm_df[~dm_df['adverse_event'].isin(inappropriate_use_terms)]['cases'].sum()
+    c = dm_df['misuse_cases'].sum()
+    d = dm_df['total_cases'].sum() - c
 
-    if b == 0 or c == 0 or d == 0:
-        return None, None, None
+    # CLAUDE FIX: Haldane 0.5 correction for zero cells
+    if a == 0 or b == 0 or c == 0 or d == 0:
+        a, b, c, d = a + 0.5, b + 0.5, c + 0.5, d + 0.5
 
     ror = (a * d) / (b * c)
 
@@ -94,34 +73,22 @@ def main():
 
     report.append("1. MACHINE LEARNING: LOGISTIC REGRESSION (RISK CLASSIFICATION)")
     report.append("---------------------------------------------------------")
-    report.append("Model: is_inappropriate_use ~ Drug + Indication + Year")
-    report.append("Objective: Predict the probability that an adverse event is related to inappropriate use or administration.")
-    report.append("\nModel Coefficients (Log-Odds):")
+    report.append("Model: Misuse Cases ~ Indication + Year (Restricted to Semaglutide)")
+    if log_model:
+        report.append("\nModel Coefficients (Log-Odds):")
+        for index, row in log_model.summary2().tables[1].iterrows():
+            coef = row['Coef.']
+            pval = row['P>|z|']
+            sig = "***" if pval < 0.001 else "**" if pval < 0.01 else "*" if pval < 0.05 else ""
+            report.append(f"  {index}: {coef:.4f} (p={pval:.4e}) {sig}")
+    else:
+        report.append("Insufficient data to fit model.")
 
-    for index, row in log_model.summary2().tables[1].iterrows():
-        coef = row['Coef.']
-        pval = row['P>|z|']
-        sig = "***" if pval < 0.001 else "**" if pval < 0.01 else "*" if pval < 0.05 else ""
-        report.append(f"  {index}: {coef:.4f} (p={pval:.4e}) {sig}")
-
-    report.append("\nInterpretation:")
-    report.append("Positive coefficients indicate a higher probability of inappropriate use events.")
-    report.append("If 'Indication[T.Weight Loss]' is positive and significant, it suggests the weight-loss")
-    report.append("indication is an independent predictor of these events, controlling for the drug itself.\n")
-
-    report.append("2. PHARMACOVIGILANCE: REPORTING ODDS RATIO (ROR)")
+    report.append("\n2. PHARMACOVIGILANCE: REPORTING ODDS RATIO (ROR)")
     report.append("---------------------------------------------------------")
     report.append("Comparison: Semaglutide (Weight Loss) vs. Semaglutide (Diabetes)")
-    report.append("Outcome: Inappropriate Use and Administration Events")
-    if ror:
-        report.append(f"Reporting Odds Ratio (ROR): {ror:.2f}")
-        report.append(f"95% Confidence Interval: [{ci_low:.2f}, {ci_high:.2f}]")
-        if ci_low > 1.0:
-            report.append("Conclusion: STATISTICALLY SIGNIFICANT SIGNAL DETECTED.")
-            report.append("Patients taking Semaglutide for weight loss have significantly higher odds")
-            report.append("of reporting inappropriate use events than patients taking it for diabetes.")
-    else:
-        report.append("Insufficient data to calculate ROR.")
+    report.append(f"Reporting Odds Ratio (ROR): {ror:.2f}")
+    report.append(f"95% Confidence Interval: [{ci_low:.2f}, {ci_high:.2f}]")
 
     with open(args.output_report, 'w') as f:
         f.write("\n".join(report))

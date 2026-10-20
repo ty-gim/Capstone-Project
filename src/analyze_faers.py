@@ -52,7 +52,6 @@ def build_faers_query(targets, controls, drug_mappings, faers_folder, faers_quar
 
         all_conds = " OR ".join(where_conditions)
 
-        # CLAUDE FIX: Explicitly define Diabetes vs Weight Loss vs Unknown
         if indi_file and id_cols['indi'] and 'indi_pt' in headers['indi'] and 'indi_drug_seq' in headers['indi'] and 'drug_seq' in headers['drug']:
             indi_join = f"""
             LEFT JOIN (
@@ -76,32 +75,35 @@ def build_faers_query(targets, controls, drug_mappings, faers_folder, faers_quar
             indi_join = ""
             indication_logic = "' (Unknown/Other)'"
 
+        # CLAUDE FIX: Aggregate at the CASE level to prevent double-counting PTs
         q_sql = f"""
         SELECT
             '{quarter_str}' AS quarter_year,
             CASE
                 {case_when}
             END || {indication_logic} AS drug_and_indication,
-            r.pt AS adverse_event,
-            COUNT(DISTINCT d.{id_cols['drug']}) AS cases
+            COUNT(DISTINCT d.{id_cols['drug']}) AS total_cases,
+            COUNT(DISTINCT CASE WHEN r.pt IN ('Nausea', 'Vomiting', 'Diarrhoea') THEN d.{id_cols['drug']} END) AS gi_cases,
+            COUNT(DISTINCT CASE WHEN r.pt IN ('Off label use', 'Product use in unapproved indication', 'Prescription drug used without a prescription', 'Suspected counterfeit product', 'Medication error', 'Intentional product misuse') THEN d.{id_cols['drug']} END) AS misuse_cases
         FROM read_csv('{drug_file}', delim='$', quote='', header=True, ignore_errors=True, normalize_names=True, all_varchar=True) AS d
         JOIN read_csv('{reac_file}', delim='$', quote='', header=True, ignore_errors=True, normalize_names=True, all_varchar=True) AS r
           ON d.{id_cols['drug']} = r.{id_cols['reac']}
         {indi_join}
         WHERE TRIM(d.role_cod) = 'PS'
           AND ({all_conds})
-        GROUP BY 1, 2, 3
+        GROUP BY 1, 2
         """
         quarter_queries.append(q_sql)
 
     union_query = " UNION ALL ".join(quarter_queries)
 
-    # Output the FULL dataset for ML
+    # Output the aggregated dataset for ML
     full_query = f"""
-    WITH AECounts AS ({union_query})
-    SELECT quarter_year, drug_and_indication, adverse_event, SUM(cases) as cases
-    FROM AECounts
-    GROUP BY quarter_year, drug_and_indication, adverse_event
+    WITH CaseCounts AS ({union_query})
+    SELECT quarter_year, drug_and_indication, SUM(total_cases) as total_cases, SUM(gi_cases) as gi_cases, SUM(misuse_cases) as misuse_cases
+    FROM CaseCounts
+    GROUP BY quarter_year, drug_and_indication
+    ORDER BY drug_and_indication, quarter_year
     """
     return full_query
 
@@ -132,16 +134,9 @@ def main():
     full_df['drug'] = full_df['drug_and_indication'].str.rsplit(' (', n=1).str[0]
     full_df['role'] = full_df['drug'].map(role_map)
 
-    # Save full data for ML
+    # Save full data for ML and Visuals (We no longer need the Top 5 wide format!)
     full_df.to_csv(args.output_ml, index=False)
-
-    # CLAUDE FIX: Deterministic Tie-Breaking for the Top 5 Visuals
-    # Sort by cases descending, then adverse_event alphabetically ascending
-    full_df = full_df.sort_values(['quarter_year', 'drug_and_indication', 'cases', 'adverse_event'], ascending=[True, True, False, True])
-    full_df['ae_rank'] = full_df.groupby(['quarter_year', 'drug_and_indication']).cumcount() + 1
-
-    top5_df = full_df[full_df['ae_rank'] <= 5]
-    top5_df.to_csv(args.output_visuals, index=False)
+    full_df.to_csv(args.output_visuals, index=False)
 
 if __name__ == "__main__":
     main()

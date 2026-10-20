@@ -4,27 +4,15 @@
 
 1. MACHINE LEARNING: LOGISTIC REGRESSION (RISK CLASSIFICATION)
 ---------------------------------------------------------
-Model: is_inappropriate_use ~ Drug + Indication + Year
-Objective: Predict the probability that an adverse event is related to inappropriate use or administration.
+Model: Misuse Cases ~ Indication + Year (Restricted to Semaglutide)
 
 Model Coefficients (Log-Odds):
-  Intercept: -4.0933 (p=1.1280e-42) ***
-  C(drug, Treatment('METFORMIN'))[T.PHENTERMINE]: -2.3519 (p=1.5277e-24) ***
-  C(drug, Treatment('METFORMIN'))[T.SEMAGLUTIDE]: 0.6911 (p=1.1280e-46) ***
-  C(indication, Treatment('Diabetes'))[T.Weight Loss]: 1.7251 (p=0.0000e+00) ***
-  year_num: -0.0181 (p=1.8678e-01) 
-
-Interpretation:
-Positive coefficients indicate a higher probability of inappropriate use events.
-If 'Indication[T.Weight Loss]' is positive and significant, it suggests the weight-loss
-indication is an independent predictor of these events, controlling for the drug itself.
+  Intercept: -2.4169 (p=0.0000e+00) ***
+  C(indication, Treatment('Diabetes'))[T.Weight Loss]: 1.8985 (p=0.0000e+00) ***
+  year_centered: -0.0225 (p=2.2492e-01) 
 
 2. PHARMACOVIGILANCE: REPORTING ODDS RATIO (ROR)
 ---------------------------------------------------------
 Comparison: Semaglutide (Weight Loss) vs. Semaglutide (Diabetes)
-Outcome: Inappropriate Use and Administration Events
-Reporting Odds Ratio (ROR): 5.03
-95% Confidence Interval: [4.63, 5.46]
-Conclusion: STATISTICALLY SIGNIFICANT SIGNAL DETECTED.
-Patients taking Semaglutide for weight loss have significantly higher odds
-of reporting inappropriate use events than patients taking it for diabetes.
+Reporting Odds Ratio (ROR): 6.57
+95% Confidence Interval: [6.01, 7.18]

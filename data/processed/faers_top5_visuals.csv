@@ -1,902 +1,182 @@
-quarter_year,drug_and_indication,adverse_event,cases,drug,role,ae_rank
-20Q1,METFORMIN (Diabetes),Lactic acidosis,311.0,METFORMIN,control,1
-20Q1,METFORMIN (Diabetes),Acute kidney injury,222.0,METFORMIN,control,2
-20Q1,METFORMIN (Diabetes),Metabolic acidosis,138.0,METFORMIN,control,3
-20Q1,METFORMIN (Diabetes),Diarrhoea,124.0,METFORMIN,control,4
-20Q1,METFORMIN (Diabetes),Vomiting,89.0,METFORMIN,control,5
-20Q1,METFORMIN (Unknown/Other),Diarrhoea,123.0,METFORMIN,control,1
-20Q1,METFORMIN (Unknown/Other),Lactic acidosis,108.0,METFORMIN,control,2
-20Q1,METFORMIN (Unknown/Other),Completed suicide,92.0,METFORMIN,control,3
-20Q1,METFORMIN (Unknown/Other),Drug ineffective,83.0,METFORMIN,control,4
-20Q1,METFORMIN (Unknown/Other),Toxicity to various agents,80.0,METFORMIN,control,5
-20Q1,METFORMIN (Weight Loss),Off label use,5.0,METFORMIN,control,1
-20Q1,METFORMIN (Weight Loss),Product use in unapproved indication,5.0,METFORMIN,control,2
-20Q1,METFORMIN (Weight Loss),Headache,4.0,METFORMIN,control,3
-20Q1,METFORMIN (Weight Loss),Anovulatory cycle,3.0,METFORMIN,control,4
-20Q1,METFORMIN (Weight Loss),Bronchitis,3.0,METFORMIN,control,5
-20Q1,PHENTERMINE (Unknown/Other),Drug-induced liver injury,5.0,PHENTERMINE,control,1
-20Q1,PHENTERMINE (Unknown/Other),Drug ineffective,4.0,PHENTERMINE,control,2
-20Q1,PHENTERMINE (Unknown/Other),Cholestatic liver injury,3.0,PHENTERMINE,control,3
-20Q1,PHENTERMINE (Unknown/Other),Anxiety,2.0,PHENTERMINE,control,4
-20Q1,PHENTERMINE (Unknown/Other),Dizziness,2.0,PHENTERMINE,control,5
-20Q1,PHENTERMINE (Weight Loss),Pseudomembranous colitis,5.0,PHENTERMINE,control,1
-20Q1,PHENTERMINE (Weight Loss),Intestinal ischaemia,4.0,PHENTERMINE,control,2
-20Q1,PHENTERMINE (Weight Loss),Hypertension,3.0,PHENTERMINE,control,3
-20Q1,PHENTERMINE (Weight Loss),Abdominal pain,2.0,PHENTERMINE,control,4
-20Q1,PHENTERMINE (Weight Loss),Acute kidney injury,2.0,PHENTERMINE,control,5
-20Q1,SEMAGLUTIDE (Diabetes),Nausea,174.0,SEMAGLUTIDE,target,1
-20Q1,SEMAGLUTIDE (Diabetes),Diarrhoea,99.0,SEMAGLUTIDE,target,2
-20Q1,SEMAGLUTIDE (Diabetes),Vomiting,98.0,SEMAGLUTIDE,target,3
-20Q1,SEMAGLUTIDE (Diabetes),Decreased appetite,74.0,SEMAGLUTIDE,target,4
-20Q1,SEMAGLUTIDE (Diabetes),Weight decreased,71.0,SEMAGLUTIDE,target,5
-20Q1,SEMAGLUTIDE (Unknown/Other),Nausea,70.0,SEMAGLUTIDE,target,1
-20Q1,SEMAGLUTIDE (Unknown/Other),Off label use,43.0,SEMAGLUTIDE,target,2
-20Q1,SEMAGLUTIDE (Unknown/Other),Pancreatitis,40.0,SEMAGLUTIDE,target,3
-20Q1,SEMAGLUTIDE (Unknown/Other),Diarrhoea,35.0,SEMAGLUTIDE,target,4
-20Q1,SEMAGLUTIDE (Unknown/Other),Vomiting,33.0,SEMAGLUTIDE,target,5
-20Q1,SEMAGLUTIDE (Weight Loss),Off label use,9.0,SEMAGLUTIDE,target,1
-20Q1,SEMAGLUTIDE (Weight Loss),Cholelithiasis,6.0,SEMAGLUTIDE,target,2
-20Q1,SEMAGLUTIDE (Weight Loss),Cholecystitis acute,4.0,SEMAGLUTIDE,target,3
-20Q1,SEMAGLUTIDE (Weight Loss),Nausea,4.0,SEMAGLUTIDE,target,4
-20Q1,SEMAGLUTIDE (Weight Loss),Bile duct stone,3.0,SEMAGLUTIDE,target,5
-20Q2,METFORMIN (Diabetes),Lactic acidosis,375.0,METFORMIN,control,1
-20Q2,METFORMIN (Diabetes),Acute kidney injury,188.0,METFORMIN,control,2
-20Q2,METFORMIN (Diabetes),Hyperglycaemia,172.0,METFORMIN,control,3
-20Q2,METFORMIN (Diabetes),Blood glucose increased,111.0,METFORMIN,control,4
-20Q2,METFORMIN (Diabetes),Diarrhoea,110.0,METFORMIN,control,5
-20Q2,METFORMIN (Unknown/Other),Lactic acidosis,160.0,METFORMIN,control,1
-20Q2,METFORMIN (Unknown/Other),Toxicity to various agents,124.0,METFORMIN,control,2
-20Q2,METFORMIN (Unknown/Other),Diarrhoea,68.0,METFORMIN,control,3
-20Q2,METFORMIN (Unknown/Other),Drug ineffective,61.0,METFORMIN,control,4
-20Q2,METFORMIN (Unknown/Other),Intentional overdose,54.0,METFORMIN,control,5
-20Q2,METFORMIN (Weight Loss),Product use in unapproved indication,8.0,METFORMIN,control,1
-20Q2,METFORMIN (Weight Loss),Cerebral venous thrombosis,5.0,METFORMIN,control,2
-20Q2,METFORMIN (Weight Loss),Drug interaction,5.0,METFORMIN,control,3
-20Q2,METFORMIN (Weight Loss),Headache,5.0,METFORMIN,control,4
-20Q2,METFORMIN (Weight Loss),Off label use,5.0,METFORMIN,control,5
-20Q2,PHENTERMINE (Unknown/Other),Drug ineffective,4.0,PHENTERMINE,control,1
-20Q2,PHENTERMINE (Unknown/Other),Dizziness,3.0,PHENTERMINE,control,2
-20Q2,PHENTERMINE (Unknown/Other),Myocardial infarction,3.0,PHENTERMINE,control,3
-20Q2,PHENTERMINE (Unknown/Other),Arteriospasm coronary,2.0,PHENTERMINE,control,4
-20Q2,PHENTERMINE (Unknown/Other),Drug-induced liver injury,2.0,PHENTERMINE,control,5
-20Q2,PHENTERMINE (Weight Loss),Acute myocardial infarction,2.0,PHENTERMINE,control,1
-20Q2,PHENTERMINE (Weight Loss),Arteriospasm coronary,2.0,PHENTERMINE,control,2
-20Q2,PHENTERMINE (Weight Loss),Hypertension,2.0,PHENTERMINE,control,3
-20Q2,PHENTERMINE (Weight Loss),Subarachnoid haemorrhage,2.0,PHENTERMINE,control,4
-20Q2,PHENTERMINE (Weight Loss),Acute kidney injury,1.0,PHENTERMINE,control,5
-20Q2,RIMEGEPANT (Unknown/Other),Drug ineffective,10.0,RIMEGEPANT,control,1
-20Q2,RIMEGEPANT (Unknown/Other),Nausea,7.0,RIMEGEPANT,control,2
-20Q2,RIMEGEPANT (Unknown/Other),Migraine,6.0,RIMEGEPANT,control,3
-20Q2,RIMEGEPANT (Unknown/Other),Asthenia,4.0,RIMEGEPANT,control,4
-20Q2,RIMEGEPANT (Unknown/Other),Dizziness,4.0,RIMEGEPANT,control,5
-20Q2,SEMAGLUTIDE (Diabetes),Nausea,186.0,SEMAGLUTIDE,target,1
-20Q2,SEMAGLUTIDE (Diabetes),Diarrhoea,102.0,SEMAGLUTIDE,target,2
-20Q2,SEMAGLUTIDE (Diabetes),Vomiting,93.0,SEMAGLUTIDE,target,3
-20Q2,SEMAGLUTIDE (Diabetes),Decreased appetite,82.0,SEMAGLUTIDE,target,4
-20Q2,SEMAGLUTIDE (Diabetes),Blood glucose increased,77.0,SEMAGLUTIDE,target,5
-20Q2,SEMAGLUTIDE (Unknown/Other),Nausea,75.0,SEMAGLUTIDE,target,1
-20Q2,SEMAGLUTIDE (Unknown/Other),Diarrhoea,40.0,SEMAGLUTIDE,target,2
-20Q2,SEMAGLUTIDE (Unknown/Other),Weight decreased,35.0,SEMAGLUTIDE,target,3
-20Q2,SEMAGLUTIDE (Unknown/Other),Vomiting,33.0,SEMAGLUTIDE,target,4
-20Q2,SEMAGLUTIDE (Unknown/Other),Off label use,31.0,SEMAGLUTIDE,target,5
-20Q2,SEMAGLUTIDE (Weight Loss),Off label use,10.0,SEMAGLUTIDE,target,1
-20Q2,SEMAGLUTIDE (Weight Loss),Nausea,6.0,SEMAGLUTIDE,target,2
-20Q2,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,5.0,SEMAGLUTIDE,target,3
-20Q2,SEMAGLUTIDE (Weight Loss),Cholecystitis acute,4.0,SEMAGLUTIDE,target,4
-20Q2,SEMAGLUTIDE (Weight Loss),Cholelithiasis,3.0,SEMAGLUTIDE,target,5
-20Q3,METFORMIN (Diabetes),Lactic acidosis,384.0,METFORMIN,control,1
-20Q3,METFORMIN (Diabetes),Acute kidney injury,215.0,METFORMIN,control,2
-20Q3,METFORMIN (Diabetes),Metabolic acidosis,116.0,METFORMIN,control,3
-20Q3,METFORMIN (Diabetes),Toxicity to various agents,110.0,METFORMIN,control,4
-20Q3,METFORMIN (Diabetes),Diarrhoea,94.0,METFORMIN,control,5
-20Q3,METFORMIN (Unknown/Other),Lactic acidosis,137.0,METFORMIN,control,1
-20Q3,METFORMIN (Unknown/Other),Toxicity to various agents,110.0,METFORMIN,control,2
-20Q3,METFORMIN (Unknown/Other),Diarrhoea,71.0,METFORMIN,control,3
-20Q3,METFORMIN (Unknown/Other),Shock,56.0,METFORMIN,control,4
-20Q3,METFORMIN (Unknown/Other),Drug ineffective,53.0,METFORMIN,control,5
-20Q3,METFORMIN (Weight Loss),Product use in unapproved indication,7.0,METFORMIN,control,1
-20Q3,METFORMIN (Weight Loss),Off label use,5.0,METFORMIN,control,2
-20Q3,METFORMIN (Weight Loss),Cerebral venous thrombosis,4.0,METFORMIN,control,3
-20Q3,METFORMIN (Weight Loss),Drug interaction,4.0,METFORMIN,control,4
-20Q3,METFORMIN (Weight Loss),Headache,4.0,METFORMIN,control,5
-20Q3,PHENTERMINE (Unknown/Other),Drug ineffective,5.0,PHENTERMINE,control,1
-20Q3,PHENTERMINE (Unknown/Other),Dizziness,2.0,PHENTERMINE,control,2
-20Q3,PHENTERMINE (Unknown/Other),Lethargy,2.0,PHENTERMINE,control,3
-20Q3,PHENTERMINE (Unknown/Other),Off label use,2.0,PHENTERMINE,control,4
-20Q3,PHENTERMINE (Unknown/Other),Product colour issue,2.0,PHENTERMINE,control,5
-20Q3,PHENTERMINE (Weight Loss),Paraesthesia,18.0,PHENTERMINE,control,1
-20Q3,PHENTERMINE (Weight Loss),Dry mouth,16.0,PHENTERMINE,control,2
-20Q3,PHENTERMINE (Weight Loss),Headache,14.0,PHENTERMINE,control,3
-20Q3,PHENTERMINE (Weight Loss),Weight increased,13.0,PHENTERMINE,control,4
-20Q3,PHENTERMINE (Weight Loss),Insomnia,12.0,PHENTERMINE,control,5
-20Q3,RIMEGEPANT (Unknown/Other),Nausea,2.0,RIMEGEPANT,control,1
-20Q3,RIMEGEPANT (Unknown/Other),Abnormal dreams,1.0,RIMEGEPANT,control,2
-20Q3,RIMEGEPANT (Unknown/Other),Akathisia,1.0,RIMEGEPANT,control,3
-20Q3,RIMEGEPANT (Unknown/Other),Blindness,1.0,RIMEGEPANT,control,4
-20Q3,RIMEGEPANT (Unknown/Other),Condition aggravated,1.0,RIMEGEPANT,control,5
-20Q3,SEMAGLUTIDE (Diabetes),Nausea,63.0,SEMAGLUTIDE,target,1
-20Q3,SEMAGLUTIDE (Diabetes),Vomiting,43.0,SEMAGLUTIDE,target,2
-20Q3,SEMAGLUTIDE (Diabetes),Diarrhoea,30.0,SEMAGLUTIDE,target,3
-20Q3,SEMAGLUTIDE (Diabetes),Weight decreased,18.0,SEMAGLUTIDE,target,4
-20Q3,SEMAGLUTIDE (Diabetes),Constipation,16.0,SEMAGLUTIDE,target,5
-20Q3,SEMAGLUTIDE (Unknown/Other),Nausea,25.0,SEMAGLUTIDE,target,1
-20Q3,SEMAGLUTIDE (Unknown/Other),Vomiting,23.0,SEMAGLUTIDE,target,2
-20Q3,SEMAGLUTIDE (Unknown/Other),Diarrhoea,15.0,SEMAGLUTIDE,target,3
-20Q3,SEMAGLUTIDE (Unknown/Other),Weight decreased,11.0,SEMAGLUTIDE,target,4
-20Q3,SEMAGLUTIDE (Unknown/Other),Cholecystitis,6.0,SEMAGLUTIDE,target,5
-20Q3,SEMAGLUTIDE (Weight Loss),Off label use,8.0,SEMAGLUTIDE,target,1
-20Q3,SEMAGLUTIDE (Weight Loss),Cholecystitis acute,2.0,SEMAGLUTIDE,target,2
-20Q3,SEMAGLUTIDE (Weight Loss),Hyperchlorhydria,2.0,SEMAGLUTIDE,target,3
-20Q3,SEMAGLUTIDE (Weight Loss),Nausea,2.0,SEMAGLUTIDE,target,4
-20Q3,SEMAGLUTIDE (Weight Loss),Vertigo,2.0,SEMAGLUTIDE,target,5
-20Q4,METFORMIN (Diabetes),Lactic acidosis,314.0,METFORMIN,control,1
-20Q4,METFORMIN (Diabetes),Acute kidney injury,206.0,METFORMIN,control,2
-20Q4,METFORMIN (Diabetes),Diarrhoea,100.0,METFORMIN,control,3
-20Q4,METFORMIN (Diabetes),Metabolic acidosis,93.0,METFORMIN,control,4
-20Q4,METFORMIN (Diabetes),Toxicity to various agents,85.0,METFORMIN,control,5
-20Q4,METFORMIN (Unknown/Other),Lactic acidosis,258.0,METFORMIN,control,1
-20Q4,METFORMIN (Unknown/Other),Acute kidney injury,191.0,METFORMIN,control,2
-20Q4,METFORMIN (Unknown/Other),Diarrhoea,72.0,METFORMIN,control,3
-20Q4,METFORMIN (Unknown/Other),Toxicity to various agents,72.0,METFORMIN,control,4
-20Q4,METFORMIN (Unknown/Other),Intentional overdose,65.0,METFORMIN,control,5
-20Q4,METFORMIN (Weight Loss),Hair colour changes,8.0,METFORMIN,control,1
-20Q4,METFORMIN (Weight Loss),Tinnitus,8.0,METFORMIN,control,2
-20Q4,METFORMIN (Weight Loss),Off label use,4.0,METFORMIN,control,3
-20Q4,METFORMIN (Weight Loss),Nausea,3.0,METFORMIN,control,4
-20Q4,METFORMIN (Weight Loss),Anovulatory cycle,2.0,METFORMIN,control,5
-20Q4,PHENTERMINE (Unknown/Other),Stress cardiomyopathy,9.0,PHENTERMINE,control,1
-20Q4,PHENTERMINE (Unknown/Other),Off label use,4.0,PHENTERMINE,control,2
-20Q4,PHENTERMINE (Unknown/Other),Drug ineffective,3.0,PHENTERMINE,control,3
-20Q4,PHENTERMINE (Unknown/Other),Agitation,2.0,PHENTERMINE,control,4
-20Q4,PHENTERMINE (Unknown/Other),Ataxia,2.0,PHENTERMINE,control,5
-20Q4,PHENTERMINE (Weight Loss),Nephrolithiasis,3.0,PHENTERMINE,control,1
-20Q4,PHENTERMINE (Weight Loss),Amnesia,2.0,PHENTERMINE,control,2
-20Q4,PHENTERMINE (Weight Loss),Anxiety,2.0,PHENTERMINE,control,3
-20Q4,PHENTERMINE (Weight Loss),Dizziness,2.0,PHENTERMINE,control,4
-20Q4,PHENTERMINE (Weight Loss),Drug ineffective,2.0,PHENTERMINE,control,5
-20Q4,RIMEGEPANT (Unknown/Other),Drug ineffective,244.0,RIMEGEPANT,control,1
-20Q4,RIMEGEPANT (Unknown/Other),Nausea,59.0,RIMEGEPANT,control,2
-20Q4,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,54.0,RIMEGEPANT,control,3
-20Q4,RIMEGEPANT (Unknown/Other),Migraine,33.0,RIMEGEPANT,control,4
-20Q4,RIMEGEPANT (Unknown/Other),Somnolence,23.0,RIMEGEPANT,control,5
-20Q4,SEMAGLUTIDE (Diabetes),Nausea,54.0,SEMAGLUTIDE,target,1
-20Q4,SEMAGLUTIDE (Diabetes),Vomiting,41.0,SEMAGLUTIDE,target,2
-20Q4,SEMAGLUTIDE (Diabetes),Diarrhoea,36.0,SEMAGLUTIDE,target,3
-20Q4,SEMAGLUTIDE (Diabetes),Constipation,17.0,SEMAGLUTIDE,target,4
-20Q4,SEMAGLUTIDE (Diabetes),Abdominal pain,16.0,SEMAGLUTIDE,target,5
-20Q4,SEMAGLUTIDE (Unknown/Other),Nausea,32.0,SEMAGLUTIDE,target,1
-20Q4,SEMAGLUTIDE (Unknown/Other),Vomiting,20.0,SEMAGLUTIDE,target,2
-20Q4,SEMAGLUTIDE (Unknown/Other),Diarrhoea,19.0,SEMAGLUTIDE,target,3
-20Q4,SEMAGLUTIDE (Unknown/Other),Blood glucose increased,16.0,SEMAGLUTIDE,target,4
-20Q4,SEMAGLUTIDE (Unknown/Other),Abdominal discomfort,9.0,SEMAGLUTIDE,target,5
-20Q4,SEMAGLUTIDE (Weight Loss),Off label use,12.0,SEMAGLUTIDE,target,1
-20Q4,SEMAGLUTIDE (Weight Loss),Nausea,4.0,SEMAGLUTIDE,target,2
-20Q4,SEMAGLUTIDE (Weight Loss),Vomiting,4.0,SEMAGLUTIDE,target,3
-20Q4,SEMAGLUTIDE (Weight Loss),Diarrhoea,3.0,SEMAGLUTIDE,target,4
-20Q4,SEMAGLUTIDE (Weight Loss),Abdominal distension,2.0,SEMAGLUTIDE,target,5
-21Q1,METFORMIN (Diabetes),Lactic acidosis,375.0,METFORMIN,control,1
-21Q1,METFORMIN (Diabetes),Acute kidney injury,203.0,METFORMIN,control,2
-21Q1,METFORMIN (Diabetes),Toxicity to various agents,113.0,METFORMIN,control,3
-21Q1,METFORMIN (Diabetes),Metabolic acidosis,88.0,METFORMIN,control,4
-21Q1,METFORMIN (Diabetes),Diarrhoea,85.0,METFORMIN,control,5
-21Q1,METFORMIN (Unknown/Other),Lactic acidosis,179.0,METFORMIN,control,1
-21Q1,METFORMIN (Unknown/Other),Diarrhoea,93.0,METFORMIN,control,2
-21Q1,METFORMIN (Unknown/Other),Toxicity to various agents,86.0,METFORMIN,control,3
-21Q1,METFORMIN (Unknown/Other),Completed suicide,57.0,METFORMIN,control,4
-21Q1,METFORMIN (Unknown/Other),Nausea,57.0,METFORMIN,control,5
-21Q1,METFORMIN (Weight Loss),Myopathy,6.0,METFORMIN,control,1
-21Q1,METFORMIN (Weight Loss),Lactic acidosis,3.0,METFORMIN,control,2
-21Q1,METFORMIN (Weight Loss),Prescription drug used without a prescription,3.0,METFORMIN,control,3
-21Q1,METFORMIN (Weight Loss),Product use in unapproved indication,3.0,METFORMIN,control,4
-21Q1,METFORMIN (Weight Loss),Toxicity to various agents,3.0,METFORMIN,control,5
-21Q1,PHENTERMINE (Unknown/Other),Drug ineffective,5.0,PHENTERMINE,control,1
-21Q1,PHENTERMINE (Unknown/Other),Abdominal discomfort,1.0,PHENTERMINE,control,2
-21Q1,PHENTERMINE (Unknown/Other),Anxiety,1.0,PHENTERMINE,control,3
-21Q1,PHENTERMINE (Unknown/Other),Cardiomyopathy,1.0,PHENTERMINE,control,4
-21Q1,PHENTERMINE (Unknown/Other),Completed suicide,1.0,PHENTERMINE,control,5
-21Q1,PHENTERMINE (Weight Loss),Drug ineffective,7.0,PHENTERMINE,control,1
-21Q1,PHENTERMINE (Weight Loss),Asthenia,2.0,PHENTERMINE,control,2
-21Q1,PHENTERMINE (Weight Loss),Product taste abnormal,2.0,PHENTERMINE,control,3
-21Q1,PHENTERMINE (Weight Loss),Therapeutic product effect decreased,2.0,PHENTERMINE,control,4
-21Q1,PHENTERMINE (Weight Loss),Aggression,1.0,PHENTERMINE,control,5
-21Q1,RIMEGEPANT (Unknown/Other),Drug ineffective,154.0,RIMEGEPANT,control,1
-21Q1,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,46.0,RIMEGEPANT,control,2
-21Q1,RIMEGEPANT (Unknown/Other),Nausea,40.0,RIMEGEPANT,control,3
-21Q1,RIMEGEPANT (Unknown/Other),Migraine,17.0,RIMEGEPANT,control,4
-21Q1,RIMEGEPANT (Unknown/Other),Headache,12.0,RIMEGEPANT,control,5
-21Q1,SEMAGLUTIDE (Diabetes),Nausea,97.0,SEMAGLUTIDE,target,1
-21Q1,SEMAGLUTIDE (Diabetes),Diarrhoea,55.0,SEMAGLUTIDE,target,2
-21Q1,SEMAGLUTIDE (Diabetes),Vomiting,48.0,SEMAGLUTIDE,target,3
-21Q1,SEMAGLUTIDE (Diabetes),Decreased appetite,47.0,SEMAGLUTIDE,target,4
-21Q1,SEMAGLUTIDE (Diabetes),Blood glucose increased,39.0,SEMAGLUTIDE,target,5
-21Q1,SEMAGLUTIDE (Unknown/Other),Nausea,143.0,SEMAGLUTIDE,target,1
-21Q1,SEMAGLUTIDE (Unknown/Other),Blood glucose increased,72.0,SEMAGLUTIDE,target,2
-21Q1,SEMAGLUTIDE (Unknown/Other),Decreased appetite,72.0,SEMAGLUTIDE,target,3
-21Q1,SEMAGLUTIDE (Unknown/Other),Vomiting,70.0,SEMAGLUTIDE,target,4
-21Q1,SEMAGLUTIDE (Unknown/Other),Diarrhoea,69.0,SEMAGLUTIDE,target,5
-21Q1,SEMAGLUTIDE (Weight Loss),Off label use,20.0,SEMAGLUTIDE,target,1
-21Q1,SEMAGLUTIDE (Weight Loss),Nausea,10.0,SEMAGLUTIDE,target,2
-21Q1,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,5.0,SEMAGLUTIDE,target,3
-21Q1,SEMAGLUTIDE (Weight Loss),Decreased appetite,4.0,SEMAGLUTIDE,target,4
-21Q1,SEMAGLUTIDE (Weight Loss),Headache,4.0,SEMAGLUTIDE,target,5
-21Q2,METFORMIN (Diabetes),Lactic acidosis,137.0,METFORMIN,control,1
-21Q2,METFORMIN (Diabetes),Acute kidney injury,91.0,METFORMIN,control,2
-21Q2,METFORMIN (Diabetes),Metabolic acidosis,76.0,METFORMIN,control,3
-21Q2,METFORMIN (Diabetes),Diarrhoea,70.0,METFORMIN,control,4
-21Q2,METFORMIN (Diabetes),Blood glucose increased,56.0,METFORMIN,control,5
-21Q2,METFORMIN (Unknown/Other),Lactic acidosis,99.0,METFORMIN,control,1
-21Q2,METFORMIN (Unknown/Other),Toxicity to various agents,70.0,METFORMIN,control,2
-21Q2,METFORMIN (Unknown/Other),Hypoglycaemia,60.0,METFORMIN,control,3
-21Q2,METFORMIN (Unknown/Other),Diarrhoea,56.0,METFORMIN,control,4
-21Q2,METFORMIN (Unknown/Other),Acute kidney injury,50.0,METFORMIN,control,5
-21Q2,METFORMIN (Weight Loss),Myopathy,9.0,METFORMIN,control,1
-21Q2,METFORMIN (Weight Loss),Off label use,5.0,METFORMIN,control,2
-21Q2,METFORMIN (Weight Loss),Metabolic disorder,3.0,METFORMIN,control,3
-21Q2,METFORMIN (Weight Loss),Nausea,2.0,METFORMIN,control,4
-21Q2,METFORMIN (Weight Loss),Product use in unapproved indication,2.0,METFORMIN,control,5
-21Q2,PHENTERMINE (Unknown/Other),Drug ineffective,4.0,PHENTERMINE,control,1
-21Q2,PHENTERMINE (Unknown/Other),Congestive cardiomyopathy,2.0,PHENTERMINE,control,2
-21Q2,PHENTERMINE (Unknown/Other),Illness,2.0,PHENTERMINE,control,3
-21Q2,PHENTERMINE (Unknown/Other),Nausea,2.0,PHENTERMINE,control,4
-21Q2,PHENTERMINE (Unknown/Other),Product availability issue,2.0,PHENTERMINE,control,5
-21Q2,PHENTERMINE (Weight Loss),Drug ineffective,11.0,PHENTERMINE,control,1
-21Q2,PHENTERMINE (Weight Loss),Nausea,5.0,PHENTERMINE,control,2
-21Q2,PHENTERMINE (Weight Loss),Asthenia,4.0,PHENTERMINE,control,3
-21Q2,PHENTERMINE (Weight Loss),Congestive cardiomyopathy,4.0,PHENTERMINE,control,4
-21Q2,PHENTERMINE (Weight Loss),Fatigue,4.0,PHENTERMINE,control,5
-21Q2,RIMEGEPANT (Unknown/Other),Drug ineffective,170.0,RIMEGEPANT,control,1
-21Q2,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,47.0,RIMEGEPANT,control,2
-21Q2,RIMEGEPANT (Unknown/Other),Nausea,25.0,RIMEGEPANT,control,3
-21Q2,RIMEGEPANT (Unknown/Other),Migraine,18.0,RIMEGEPANT,control,4
-21Q2,RIMEGEPANT (Unknown/Other),Headache,14.0,RIMEGEPANT,control,5
-21Q2,SEMAGLUTIDE (Diabetes),Vomiting,24.0,SEMAGLUTIDE,target,1
-21Q2,SEMAGLUTIDE (Diabetes),Nausea,22.0,SEMAGLUTIDE,target,2
-21Q2,SEMAGLUTIDE (Diabetes),Diarrhoea,15.0,SEMAGLUTIDE,target,3
-21Q2,SEMAGLUTIDE (Diabetes),Decreased appetite,12.0,SEMAGLUTIDE,target,4
-21Q2,SEMAGLUTIDE (Diabetes),Abdominal pain,9.0,SEMAGLUTIDE,target,5
-21Q2,SEMAGLUTIDE (Unknown/Other),Nausea,24.0,SEMAGLUTIDE,target,1
-21Q2,SEMAGLUTIDE (Unknown/Other),Vomiting,20.0,SEMAGLUTIDE,target,2
-21Q2,SEMAGLUTIDE (Unknown/Other),Diarrhoea,19.0,SEMAGLUTIDE,target,3
-21Q2,SEMAGLUTIDE (Unknown/Other),Decreased appetite,18.0,SEMAGLUTIDE,target,4
-21Q2,SEMAGLUTIDE (Unknown/Other),Off label use,14.0,SEMAGLUTIDE,target,5
-21Q2,SEMAGLUTIDE (Weight Loss),Off label use,16.0,SEMAGLUTIDE,target,1
-21Q2,SEMAGLUTIDE (Weight Loss),Vomiting,5.0,SEMAGLUTIDE,target,2
-21Q2,SEMAGLUTIDE (Weight Loss),Abdominal pain,4.0,SEMAGLUTIDE,target,3
-21Q2,SEMAGLUTIDE (Weight Loss),Cholecystectomy,4.0,SEMAGLUTIDE,target,4
-21Q2,SEMAGLUTIDE (Weight Loss),Diarrhoea,4.0,SEMAGLUTIDE,target,5
-21Q3,METFORMIN (Diabetes),Lactic acidosis,230.0,METFORMIN,control,1
-21Q3,METFORMIN (Diabetes),Acute kidney injury,180.0,METFORMIN,control,2
-21Q3,METFORMIN (Diabetes),Diarrhoea,99.0,METFORMIN,control,3
-21Q3,METFORMIN (Diabetes),Metabolic acidosis,86.0,METFORMIN,control,4
-21Q3,METFORMIN (Diabetes),Toxicity to various agents,59.0,METFORMIN,control,5
-21Q3,METFORMIN (Unknown/Other),Lactic acidosis,75.0,METFORMIN,control,1
-21Q3,METFORMIN (Unknown/Other),Acute kidney injury,57.0,METFORMIN,control,2
-21Q3,METFORMIN (Unknown/Other),Toxicity to various agents,47.0,METFORMIN,control,3
-21Q3,METFORMIN (Unknown/Other),Diarrhoea,44.0,METFORMIN,control,4
-21Q3,METFORMIN (Unknown/Other),Metabolic acidosis,36.0,METFORMIN,control,5
-21Q3,METFORMIN (Weight Loss),Enzyme abnormality,3.0,METFORMIN,control,1
-21Q3,METFORMIN (Weight Loss),Adverse event,1.0,METFORMIN,control,2
-21Q3,METFORMIN (Weight Loss),Asthenia,1.0,METFORMIN,control,3
-21Q3,METFORMIN (Weight Loss),Decreased appetite,1.0,METFORMIN,control,4
-21Q3,METFORMIN (Weight Loss),Dyspnoea exertional,1.0,METFORMIN,control,5
-21Q3,PHENTERMINE (Unknown/Other),Off label use,7.0,PHENTERMINE,control,1
-21Q3,PHENTERMINE (Unknown/Other),Drug ineffective,4.0,PHENTERMINE,control,2
-21Q3,PHENTERMINE (Unknown/Other),Hypoaesthesia,4.0,PHENTERMINE,control,3
-21Q3,PHENTERMINE (Unknown/Other),Illness,4.0,PHENTERMINE,control,4
-21Q3,PHENTERMINE (Unknown/Other),Nausea,4.0,PHENTERMINE,control,5
-21Q3,PHENTERMINE (Weight Loss),Paraesthesia,25.0,PHENTERMINE,control,1
-21Q3,PHENTERMINE (Weight Loss),Dry mouth,20.0,PHENTERMINE,control,2
-21Q3,PHENTERMINE (Weight Loss),Headache,17.0,PHENTERMINE,control,3
-21Q3,PHENTERMINE (Weight Loss),Dizziness,16.0,PHENTERMINE,control,4
-21Q3,PHENTERMINE (Weight Loss),Vision blurred,16.0,PHENTERMINE,control,5
-21Q3,RIMEGEPANT (Unknown/Other),Drug ineffective,110.0,RIMEGEPANT,control,1
-21Q3,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,49.0,RIMEGEPANT,control,2
-21Q3,RIMEGEPANT (Unknown/Other),Nausea,41.0,RIMEGEPANT,control,3
-21Q3,RIMEGEPANT (Unknown/Other),Headache,17.0,RIMEGEPANT,control,4
-21Q3,RIMEGEPANT (Unknown/Other),Fatigue,16.0,RIMEGEPANT,control,5
-21Q3,SEMAGLUTIDE (Diabetes),Nausea,96.0,SEMAGLUTIDE,target,1
-21Q3,SEMAGLUTIDE (Diabetes),Vomiting,56.0,SEMAGLUTIDE,target,2
-21Q3,SEMAGLUTIDE (Diabetes),Diarrhoea,52.0,SEMAGLUTIDE,target,3
-21Q3,SEMAGLUTIDE (Diabetes),Decreased appetite,41.0,SEMAGLUTIDE,target,4
-21Q3,SEMAGLUTIDE (Diabetes),Constipation,36.0,SEMAGLUTIDE,target,5
-21Q3,SEMAGLUTIDE (Unknown/Other),Nausea,224.0,SEMAGLUTIDE,target,1
-21Q3,SEMAGLUTIDE (Unknown/Other),Diarrhoea,111.0,SEMAGLUTIDE,target,2
-21Q3,SEMAGLUTIDE (Unknown/Other),Vomiting,105.0,SEMAGLUTIDE,target,3
-21Q3,SEMAGLUTIDE (Unknown/Other),Decreased appetite,104.0,SEMAGLUTIDE,target,4
-21Q3,SEMAGLUTIDE (Unknown/Other),Headache,78.0,SEMAGLUTIDE,target,5
-21Q3,SEMAGLUTIDE (Weight Loss),Off label use,27.0,SEMAGLUTIDE,target,1
-21Q3,SEMAGLUTIDE (Weight Loss),Nausea,22.0,SEMAGLUTIDE,target,2
-21Q3,SEMAGLUTIDE (Weight Loss),Vomiting,17.0,SEMAGLUTIDE,target,3
-21Q3,SEMAGLUTIDE (Weight Loss),Decreased appetite,9.0,SEMAGLUTIDE,target,4
-21Q3,SEMAGLUTIDE (Weight Loss),Dizziness,8.0,SEMAGLUTIDE,target,5
-21Q4,METFORMIN (Diabetes),Lactic acidosis,209.0,METFORMIN,control,1
-21Q4,METFORMIN (Diabetes),Acute kidney injury,129.0,METFORMIN,control,2
-21Q4,METFORMIN (Diabetes),Diarrhoea,79.0,METFORMIN,control,3
-21Q4,METFORMIN (Diabetes),Metabolic acidosis,57.0,METFORMIN,control,4
-21Q4,METFORMIN (Diabetes),Hypoglycaemia,54.0,METFORMIN,control,5
-21Q4,METFORMIN (Unknown/Other),Lactic acidosis,73.0,METFORMIN,control,1
-21Q4,METFORMIN (Unknown/Other),Acute kidney injury,57.0,METFORMIN,control,2
-21Q4,METFORMIN (Unknown/Other),Diarrhoea,55.0,METFORMIN,control,3
-21Q4,METFORMIN (Unknown/Other),Fatigue,46.0,METFORMIN,control,4
-21Q4,METFORMIN (Unknown/Other),Toxicity to various agents,45.0,METFORMIN,control,5
-21Q4,METFORMIN (Weight Loss),Chest discomfort,1.0,METFORMIN,control,1
-21Q4,METFORMIN (Weight Loss),Dizziness,1.0,METFORMIN,control,2
-21Q4,METFORMIN (Weight Loss),Dyspnoea,1.0,METFORMIN,control,3
-21Q4,METFORMIN (Weight Loss),Feeling abnormal,1.0,METFORMIN,control,4
-21Q4,METFORMIN (Weight Loss),Intentional overdose,1.0,METFORMIN,control,5
-21Q4,PHENTERMINE (Unknown/Other),Drug ineffective,7.0,PHENTERMINE,control,1
-21Q4,PHENTERMINE (Unknown/Other),Dyspnoea,2.0,PHENTERMINE,control,2
-21Q4,PHENTERMINE (Unknown/Other),Palpitations,2.0,PHENTERMINE,control,3
-21Q4,PHENTERMINE (Unknown/Other),Product quality issue,2.0,PHENTERMINE,control,4
-21Q4,PHENTERMINE (Unknown/Other),Abdominal discomfort,1.0,PHENTERMINE,control,5
-21Q4,PHENTERMINE (Weight Loss),Scleroderma,6.0,PHENTERMINE,control,1
-21Q4,PHENTERMINE (Weight Loss),Drug ineffective,3.0,PHENTERMINE,control,2
-21Q4,PHENTERMINE (Weight Loss),Atrial fibrillation,2.0,PHENTERMINE,control,3
-21Q4,PHENTERMINE (Weight Loss),Duodenitis,2.0,PHENTERMINE,control,4
-21Q4,PHENTERMINE (Weight Loss),Fatigue,2.0,PHENTERMINE,control,5
-21Q4,RIMEGEPANT (Unknown/Other),Drug ineffective,314.0,RIMEGEPANT,control,1
-21Q4,RIMEGEPANT (Unknown/Other),Nausea,96.0,RIMEGEPANT,control,2
-21Q4,RIMEGEPANT (Unknown/Other),Headache,46.0,RIMEGEPANT,control,3
-21Q4,RIMEGEPANT (Unknown/Other),Abdominal pain upper,28.0,RIMEGEPANT,control,4
-21Q4,RIMEGEPANT (Unknown/Other),Migraine,28.0,RIMEGEPANT,control,5
-21Q4,SEMAGLUTIDE (Diabetes),Diarrhoea,25.0,SEMAGLUTIDE,target,1
-21Q4,SEMAGLUTIDE (Diabetes),Nausea,16.0,SEMAGLUTIDE,target,2
-21Q4,SEMAGLUTIDE (Diabetes),Vomiting,16.0,SEMAGLUTIDE,target,3
-21Q4,SEMAGLUTIDE (Diabetes),Abdominal pain,9.0,SEMAGLUTIDE,target,4
-21Q4,SEMAGLUTIDE (Diabetes),Blood glucose increased,8.0,SEMAGLUTIDE,target,5
-21Q4,SEMAGLUTIDE (Unknown/Other),Nausea,95.0,SEMAGLUTIDE,target,1
-21Q4,SEMAGLUTIDE (Unknown/Other),Injection site extravasation,79.0,SEMAGLUTIDE,target,2
-21Q4,SEMAGLUTIDE (Unknown/Other),Vomiting,54.0,SEMAGLUTIDE,target,3
-21Q4,SEMAGLUTIDE (Unknown/Other),Product communication issue,35.0,SEMAGLUTIDE,target,4
-21Q4,SEMAGLUTIDE (Unknown/Other),Device leakage,31.0,SEMAGLUTIDE,target,5
-21Q4,SEMAGLUTIDE (Weight Loss),Nausea,23.0,SEMAGLUTIDE,target,1
-21Q4,SEMAGLUTIDE (Weight Loss),Off label use,21.0,SEMAGLUTIDE,target,2
-21Q4,SEMAGLUTIDE (Weight Loss),Vomiting,19.0,SEMAGLUTIDE,target,3
-21Q4,SEMAGLUTIDE (Weight Loss),Device malfunction,12.0,SEMAGLUTIDE,target,4
-21Q4,SEMAGLUTIDE (Weight Loss),Device leakage,8.0,SEMAGLUTIDE,target,5
-22Q1,METFORMIN (Diabetes),Lactic acidosis,200.0,METFORMIN,control,1
-22Q1,METFORMIN (Diabetes),Diarrhoea,103.0,METFORMIN,control,2
-22Q1,METFORMIN (Diabetes),Acute kidney injury,100.0,METFORMIN,control,3
-22Q1,METFORMIN (Diabetes),Metabolic acidosis,69.0,METFORMIN,control,4
-22Q1,METFORMIN (Diabetes),Toxicity to various agents,57.0,METFORMIN,control,5
-22Q1,METFORMIN (Unknown/Other),Lactic acidosis,89.0,METFORMIN,control,1
-22Q1,METFORMIN (Unknown/Other),Diarrhoea,73.0,METFORMIN,control,2
-22Q1,METFORMIN (Unknown/Other),Completed suicide,57.0,METFORMIN,control,3
-22Q1,METFORMIN (Unknown/Other),Toxicity to various agents,56.0,METFORMIN,control,4
-22Q1,METFORMIN (Unknown/Other),Acute kidney injury,54.0,METFORMIN,control,5
-22Q1,METFORMIN (Weight Loss),Cerebral venous thrombosis,3.0,METFORMIN,control,1
-22Q1,METFORMIN (Weight Loss),Hypercoagulation,3.0,METFORMIN,control,2
-22Q1,METFORMIN (Weight Loss),Off label use,3.0,METFORMIN,control,3
-22Q1,METFORMIN (Weight Loss),Cerebral haemorrhage,2.0,METFORMIN,control,4
-22Q1,METFORMIN (Weight Loss),Cerebral venous sinus thrombosis,2.0,METFORMIN,control,5
-22Q1,PHENTERMINE (Unknown/Other),Tachycardia,3.0,PHENTERMINE,control,1
-22Q1,PHENTERMINE (Unknown/Other),Drug abuse,2.0,PHENTERMINE,control,2
-22Q1,PHENTERMINE (Unknown/Other),Drug ineffective,2.0,PHENTERMINE,control,3
-22Q1,PHENTERMINE (Unknown/Other),Weight increased,2.0,PHENTERMINE,control,4
-22Q1,PHENTERMINE (Unknown/Other),Abdominal distension,1.0,PHENTERMINE,control,5
-22Q1,PHENTERMINE (Weight Loss),Drug ineffective,3.0,PHENTERMINE,control,1
-22Q1,PHENTERMINE (Weight Loss),Blood pressure increased,2.0,PHENTERMINE,control,2
-22Q1,PHENTERMINE (Weight Loss),Insomnia,2.0,PHENTERMINE,control,3
-22Q1,PHENTERMINE (Weight Loss),Atrial fibrillation,1.0,PHENTERMINE,control,4
-22Q1,PHENTERMINE (Weight Loss),Basal cell carcinoma,1.0,PHENTERMINE,control,5
-22Q1,RIMEGEPANT (Unknown/Other),Dizziness,5.0,RIMEGEPANT,control,1
-22Q1,RIMEGEPANT (Unknown/Other),Death,4.0,RIMEGEPANT,control,2
-22Q1,RIMEGEPANT (Unknown/Other),Drug ineffective,4.0,RIMEGEPANT,control,3
-22Q1,RIMEGEPANT (Unknown/Other),Drug hypersensitivity,2.0,RIMEGEPANT,control,4
-22Q1,RIMEGEPANT (Unknown/Other),Feeling abnormal,2.0,RIMEGEPANT,control,5
-22Q1,SEMAGLUTIDE (Diabetes),Nausea,98.0,SEMAGLUTIDE,target,1
-22Q1,SEMAGLUTIDE (Diabetes),Vomiting,59.0,SEMAGLUTIDE,target,2
-22Q1,SEMAGLUTIDE (Diabetes),Decreased appetite,54.0,SEMAGLUTIDE,target,3
-22Q1,SEMAGLUTIDE (Diabetes),Diarrhoea,54.0,SEMAGLUTIDE,target,4
-22Q1,SEMAGLUTIDE (Diabetes),Weight decreased,44.0,SEMAGLUTIDE,target,5
-22Q1,SEMAGLUTIDE (Unknown/Other),Nausea,301.0,SEMAGLUTIDE,target,1
-22Q1,SEMAGLUTIDE (Unknown/Other),Vomiting,144.0,SEMAGLUTIDE,target,2
-22Q1,SEMAGLUTIDE (Unknown/Other),Diarrhoea,131.0,SEMAGLUTIDE,target,3
-22Q1,SEMAGLUTIDE (Unknown/Other),Injection site extravasation,117.0,SEMAGLUTIDE,target,4
-22Q1,SEMAGLUTIDE (Unknown/Other),Decreased appetite,112.0,SEMAGLUTIDE,target,5
-22Q1,SEMAGLUTIDE (Weight Loss),Nausea,46.0,SEMAGLUTIDE,target,1
-22Q1,SEMAGLUTIDE (Weight Loss),Off label use,39.0,SEMAGLUTIDE,target,2
-22Q1,SEMAGLUTIDE (Weight Loss),Injection site extravasation,29.0,SEMAGLUTIDE,target,3
-22Q1,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,26.0,SEMAGLUTIDE,target,4
-22Q1,SEMAGLUTIDE (Weight Loss),Vomiting,26.0,SEMAGLUTIDE,target,5
-22Q2,METFORMIN (Diabetes),Lactic acidosis,229.0,METFORMIN,control,1
-22Q2,METFORMIN (Diabetes),Acute kidney injury,128.0,METFORMIN,control,2
-22Q2,METFORMIN (Diabetes),Metabolic acidosis,124.0,METFORMIN,control,3
-22Q2,METFORMIN (Diabetes),Diarrhoea,56.0,METFORMIN,control,4
-22Q2,METFORMIN (Diabetes),Toxicity to various agents,50.0,METFORMIN,control,5
-22Q2,METFORMIN (Unknown/Other),Lactic acidosis,94.0,METFORMIN,control,1
-22Q2,METFORMIN (Unknown/Other),Acute kidney injury,61.0,METFORMIN,control,2
-22Q2,METFORMIN (Unknown/Other),Diarrhoea,49.0,METFORMIN,control,3
-22Q2,METFORMIN (Unknown/Other),Off label use,48.0,METFORMIN,control,4
-22Q2,METFORMIN (Unknown/Other),Blood glucose increased,40.0,METFORMIN,control,5
-22Q2,METFORMIN (Weight Loss),Drug abuse,12.0,METFORMIN,control,1
-22Q2,METFORMIN (Weight Loss),Toxicity to various agents,12.0,METFORMIN,control,2
-22Q2,METFORMIN (Weight Loss),Acute kidney injury,10.0,METFORMIN,control,3
-22Q2,METFORMIN (Weight Loss),Anaemia megaloblastic,10.0,METFORMIN,control,4
-22Q2,METFORMIN (Weight Loss),Cardiogenic shock,10.0,METFORMIN,control,5
-22Q2,PHENTERMINE (Unknown/Other),Drug ineffective,12.0,PHENTERMINE,control,1
-22Q2,PHENTERMINE (Unknown/Other),Fatigue,2.0,PHENTERMINE,control,2
-22Q2,PHENTERMINE (Unknown/Other),Product quality issue,2.0,PHENTERMINE,control,3
-22Q2,PHENTERMINE (Unknown/Other),Alopecia,1.0,PHENTERMINE,control,4
-22Q2,PHENTERMINE (Unknown/Other),Bipolar disorder,1.0,PHENTERMINE,control,5
-22Q2,PHENTERMINE (Weight Loss),Atrial fibrillation,9.0,PHENTERMINE,control,1
-22Q2,PHENTERMINE (Weight Loss),Drug ineffective,3.0,PHENTERMINE,control,2
-22Q2,PHENTERMINE (Weight Loss),Headache,3.0,PHENTERMINE,control,3
-22Q2,PHENTERMINE (Weight Loss),Irritability,3.0,PHENTERMINE,control,4
-22Q2,PHENTERMINE (Weight Loss),Acute myocardial infarction,2.0,PHENTERMINE,control,5
-22Q2,RIMEGEPANT (Unknown/Other),Drug ineffective,591.0,RIMEGEPANT,control,1
-22Q2,RIMEGEPANT (Unknown/Other),Nausea,128.0,RIMEGEPANT,control,2
-22Q2,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,77.0,RIMEGEPANT,control,3
-22Q2,RIMEGEPANT (Unknown/Other),Headache,60.0,RIMEGEPANT,control,4
-22Q2,RIMEGEPANT (Unknown/Other),Migraine,57.0,RIMEGEPANT,control,5
-22Q2,SEMAGLUTIDE (Diabetes),Vomiting,30.0,SEMAGLUTIDE,target,1
-22Q2,SEMAGLUTIDE (Diabetes),Nausea,28.0,SEMAGLUTIDE,target,2
-22Q2,SEMAGLUTIDE (Diabetes),Decreased appetite,25.0,SEMAGLUTIDE,target,3
-22Q2,SEMAGLUTIDE (Diabetes),Diarrhoea,17.0,SEMAGLUTIDE,target,4
-22Q2,SEMAGLUTIDE (Diabetes),Weight decreased,16.0,SEMAGLUTIDE,target,5
-22Q2,SEMAGLUTIDE (Unknown/Other),Nausea,135.0,SEMAGLUTIDE,target,1
-22Q2,SEMAGLUTIDE (Unknown/Other),Injection site extravasation,122.0,SEMAGLUTIDE,target,2
-22Q2,SEMAGLUTIDE (Unknown/Other),Device malfunction,69.0,SEMAGLUTIDE,target,3
-22Q2,SEMAGLUTIDE (Unknown/Other),Vomiting,69.0,SEMAGLUTIDE,target,4
-22Q2,SEMAGLUTIDE (Unknown/Other),Device leakage,56.0,SEMAGLUTIDE,target,5
-22Q2,SEMAGLUTIDE (Weight Loss),Nausea,51.0,SEMAGLUTIDE,target,1
-22Q2,SEMAGLUTIDE (Weight Loss),Off label use,37.0,SEMAGLUTIDE,target,2
-22Q2,SEMAGLUTIDE (Weight Loss),Injection site extravasation,36.0,SEMAGLUTIDE,target,3
-22Q2,SEMAGLUTIDE (Weight Loss),Device malfunction,30.0,SEMAGLUTIDE,target,4
-22Q2,SEMAGLUTIDE (Weight Loss),Vomiting,28.0,SEMAGLUTIDE,target,5
-22Q3,METFORMIN (Diabetes),Lactic acidosis,221.0,METFORMIN,control,1
-22Q3,METFORMIN (Diabetes),Acute kidney injury,128.0,METFORMIN,control,2
-22Q3,METFORMIN (Diabetes),Metabolic acidosis,94.0,METFORMIN,control,3
-22Q3,METFORMIN (Diabetes),Diarrhoea,66.0,METFORMIN,control,4
-22Q3,METFORMIN (Diabetes),Parkinsonism,55.0,METFORMIN,control,5
-22Q3,METFORMIN (Unknown/Other),Acute kidney injury,86.0,METFORMIN,control,1
-22Q3,METFORMIN (Unknown/Other),Diarrhoea,80.0,METFORMIN,control,2
-22Q3,METFORMIN (Unknown/Other),Lactic acidosis,72.0,METFORMIN,control,3
-22Q3,METFORMIN (Unknown/Other),Drug ineffective,49.0,METFORMIN,control,4
-22Q3,METFORMIN (Unknown/Other),Metabolic acidosis,39.0,METFORMIN,control,5
-22Q3,METFORMIN (Weight Loss),Abdominal distension,1.0,METFORMIN,control,1
-22Q3,METFORMIN (Weight Loss),Abnormal dreams,1.0,METFORMIN,control,2
-22Q3,METFORMIN (Weight Loss),Anxiety,1.0,METFORMIN,control,3
-22Q3,METFORMIN (Weight Loss),Appetite disorder,1.0,METFORMIN,control,4
-22Q3,METFORMIN (Weight Loss),Arterial disorder,1.0,METFORMIN,control,5
-22Q3,PHENTERMINE (Diabetes),Off label use,1.0,PHENTERMINE,control,1
-22Q3,PHENTERMINE (Unknown/Other),Headache,10.0,PHENTERMINE,control,1
-22Q3,PHENTERMINE (Unknown/Other),Dry mouth,9.0,PHENTERMINE,control,2
-22Q3,PHENTERMINE (Unknown/Other),Drug ineffective,7.0,PHENTERMINE,control,3
-22Q3,PHENTERMINE (Unknown/Other),Paraesthesia,7.0,PHENTERMINE,control,4
-22Q3,PHENTERMINE (Unknown/Other),Constipation,5.0,PHENTERMINE,control,5
-22Q3,PHENTERMINE (Weight Loss),Weight increased,38.0,PHENTERMINE,control,1
-22Q3,PHENTERMINE (Weight Loss),Headache,21.0,PHENTERMINE,control,2
-22Q3,PHENTERMINE (Weight Loss),Insomnia,19.0,PHENTERMINE,control,3
-22Q3,PHENTERMINE (Weight Loss),Incorrect product administration duration,17.0,PHENTERMINE,control,4
-22Q3,PHENTERMINE (Weight Loss),Product dose omission issue,17.0,PHENTERMINE,control,5
-22Q3,RIMEGEPANT (Unknown/Other),Drug ineffective,7.0,RIMEGEPANT,control,1
-22Q3,RIMEGEPANT (Unknown/Other),Nausea,6.0,RIMEGEPANT,control,2
-22Q3,RIMEGEPANT (Unknown/Other),Abdominal pain upper,4.0,RIMEGEPANT,control,3
-22Q3,RIMEGEPANT (Unknown/Other),Anxiety,3.0,RIMEGEPANT,control,4
-22Q3,RIMEGEPANT (Unknown/Other),Death,3.0,RIMEGEPANT,control,5
-22Q3,SEMAGLUTIDE (Diabetes),Nausea,129.0,SEMAGLUTIDE,target,1
-22Q3,SEMAGLUTIDE (Diabetes),Vomiting,84.0,SEMAGLUTIDE,target,2
-22Q3,SEMAGLUTIDE (Diabetes),Decreased appetite,79.0,SEMAGLUTIDE,target,3
-22Q3,SEMAGLUTIDE (Diabetes),Diarrhoea,63.0,SEMAGLUTIDE,target,4
-22Q3,SEMAGLUTIDE (Diabetes),Weight decreased,59.0,SEMAGLUTIDE,target,5
-22Q3,SEMAGLUTIDE (Unknown/Other),Nausea,202.0,SEMAGLUTIDE,target,1
-22Q3,SEMAGLUTIDE (Unknown/Other),Decreased appetite,125.0,SEMAGLUTIDE,target,2
-22Q3,SEMAGLUTIDE (Unknown/Other),Vomiting,116.0,SEMAGLUTIDE,target,3
-22Q3,SEMAGLUTIDE (Unknown/Other),Weight decreased,101.0,SEMAGLUTIDE,target,4
-22Q3,SEMAGLUTIDE (Unknown/Other),Diarrhoea,97.0,SEMAGLUTIDE,target,5
-22Q3,SEMAGLUTIDE (Weight Loss),Off label use,54.0,SEMAGLUTIDE,target,1
-22Q3,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,44.0,SEMAGLUTIDE,target,2
-22Q3,SEMAGLUTIDE (Weight Loss),Nausea,32.0,SEMAGLUTIDE,target,3
-22Q3,SEMAGLUTIDE (Weight Loss),Vomiting,21.0,SEMAGLUTIDE,target,4
-22Q3,SEMAGLUTIDE (Weight Loss),Dizziness,13.0,SEMAGLUTIDE,target,5
-22Q4,METFORMIN (Diabetes),Metabolic acidosis,290.0,METFORMIN,control,1
-22Q4,METFORMIN (Diabetes),Lactic acidosis,223.0,METFORMIN,control,2
-22Q4,METFORMIN (Diabetes),Acute kidney injury,110.0,METFORMIN,control,3
-22Q4,METFORMIN (Diabetes),Diarrhoea,83.0,METFORMIN,control,4
-22Q4,METFORMIN (Diabetes),Vomiting,56.0,METFORMIN,control,5
-22Q4,METFORMIN (Unknown/Other),Lactic acidosis,119.0,METFORMIN,control,1
-22Q4,METFORMIN (Unknown/Other),Metabolic acidosis,97.0,METFORMIN,control,2
-22Q4,METFORMIN (Unknown/Other),Toxicity to various agents,81.0,METFORMIN,control,3
-22Q4,METFORMIN (Unknown/Other),Acute kidney injury,70.0,METFORMIN,control,4
-22Q4,METFORMIN (Unknown/Other),Overdose,70.0,METFORMIN,control,5
-22Q4,METFORMIN (Weight Loss),Exposure during pregnancy,3.0,METFORMIN,control,1
-22Q4,METFORMIN (Weight Loss),Food craving,1.0,METFORMIN,control,2
-22Q4,METFORMIN (Weight Loss),Hypothyroidism,1.0,METFORMIN,control,3
-22Q4,METFORMIN (Weight Loss),Off label use,1.0,METFORMIN,control,4
-22Q4,METFORMIN (Weight Loss),Product use in unapproved indication,1.0,METFORMIN,control,5
-22Q4,PHENTERMINE (Unknown/Other),Drug ineffective,3.0,PHENTERMINE,control,1
-22Q4,PHENTERMINE (Unknown/Other),Myocardial infarction,3.0,PHENTERMINE,control,2
-22Q4,PHENTERMINE (Unknown/Other),Diabetes mellitus,2.0,PHENTERMINE,control,3
-22Q4,PHENTERMINE (Unknown/Other),Palpitations,2.0,PHENTERMINE,control,4
-22Q4,PHENTERMINE (Unknown/Other),Rheumatoid arthritis,2.0,PHENTERMINE,control,5
-22Q4,PHENTERMINE (Weight Loss),Anaphylactic reaction,2.0,PHENTERMINE,control,1
-22Q4,PHENTERMINE (Weight Loss),Anxiety,2.0,PHENTERMINE,control,2
-22Q4,PHENTERMINE (Weight Loss),Asthenia,2.0,PHENTERMINE,control,3
-22Q4,PHENTERMINE (Weight Loss),Blood pressure increased,2.0,PHENTERMINE,control,4
-22Q4,PHENTERMINE (Weight Loss),Dysphagia,2.0,PHENTERMINE,control,5
-22Q4,RIMEGEPANT (Unknown/Other),Drug ineffective,687.0,RIMEGEPANT,control,1
-22Q4,RIMEGEPANT (Unknown/Other),Nausea,147.0,RIMEGEPANT,control,2
-22Q4,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,87.0,RIMEGEPANT,control,3
-22Q4,RIMEGEPANT (Unknown/Other),Migraine,76.0,RIMEGEPANT,control,4
-22Q4,RIMEGEPANT (Unknown/Other),Therapeutic product effect variable,72.0,RIMEGEPANT,control,5
-22Q4,SEMAGLUTIDE (Diabetes),Nausea,31.0,SEMAGLUTIDE,target,1
-22Q4,SEMAGLUTIDE (Diabetes),Vomiting,21.0,SEMAGLUTIDE,target,2
-22Q4,SEMAGLUTIDE (Diabetes),Diarrhoea,20.0,SEMAGLUTIDE,target,3
-22Q4,SEMAGLUTIDE (Diabetes),Blood glucose increased,12.0,SEMAGLUTIDE,target,4
-22Q4,SEMAGLUTIDE (Diabetes),Decreased appetite,12.0,SEMAGLUTIDE,target,5
-22Q4,SEMAGLUTIDE (Unknown/Other),Vomiting,41.0,SEMAGLUTIDE,target,1
-22Q4,SEMAGLUTIDE (Unknown/Other),Nausea,35.0,SEMAGLUTIDE,target,2
-22Q4,SEMAGLUTIDE (Unknown/Other),Off label use,22.0,SEMAGLUTIDE,target,3
-22Q4,SEMAGLUTIDE (Unknown/Other),Diarrhoea,21.0,SEMAGLUTIDE,target,4
-22Q4,SEMAGLUTIDE (Unknown/Other),Constipation,13.0,SEMAGLUTIDE,target,5
-22Q4,SEMAGLUTIDE (Weight Loss),Off label use,25.0,SEMAGLUTIDE,target,1
-22Q4,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,21.0,SEMAGLUTIDE,target,2
-22Q4,SEMAGLUTIDE (Weight Loss),Nausea,13.0,SEMAGLUTIDE,target,3
-22Q4,SEMAGLUTIDE (Weight Loss),Decreased appetite,9.0,SEMAGLUTIDE,target,4
-22Q4,SEMAGLUTIDE (Weight Loss),Vomiting,9.0,SEMAGLUTIDE,target,5
-23Q1,METFORMIN (Diabetes),Lactic acidosis,284.0,METFORMIN,control,1
-23Q1,METFORMIN (Diabetes),Acute kidney injury,167.0,METFORMIN,control,2
-23Q1,METFORMIN (Diabetes),Metabolic acidosis,142.0,METFORMIN,control,3
-23Q1,METFORMIN (Diabetes),Diarrhoea,67.0,METFORMIN,control,4
-23Q1,METFORMIN (Diabetes),Vomiting,61.0,METFORMIN,control,5
-23Q1,METFORMIN (Unknown/Other),Completed suicide,117.0,METFORMIN,control,1
-23Q1,METFORMIN (Unknown/Other),Diarrhoea,82.0,METFORMIN,control,2
-23Q1,METFORMIN (Unknown/Other),Lactic acidosis,80.0,METFORMIN,control,3
-23Q1,METFORMIN (Unknown/Other),Drug ineffective,66.0,METFORMIN,control,4
-23Q1,METFORMIN (Unknown/Other),Metabolic acidosis,61.0,METFORMIN,control,5
-23Q1,METFORMIN (Weight Loss),Product use in unapproved indication,3.0,METFORMIN,control,1
-23Q1,METFORMIN (Weight Loss),Acute kidney injury,2.0,METFORMIN,control,2
-23Q1,METFORMIN (Weight Loss),Anaemia megaloblastic,2.0,METFORMIN,control,3
-23Q1,METFORMIN (Weight Loss),Cardiogenic shock,2.0,METFORMIN,control,4
-23Q1,METFORMIN (Weight Loss),Hyponatraemia,2.0,METFORMIN,control,5
-23Q1,PHENTERMINE (Unknown/Other),Treatment failure,11.0,PHENTERMINE,control,1
-23Q1,PHENTERMINE (Unknown/Other),Drug ineffective,5.0,PHENTERMINE,control,2
-23Q1,PHENTERMINE (Unknown/Other),Drug abuse,2.0,PHENTERMINE,control,3
-23Q1,PHENTERMINE (Unknown/Other),Heart rate increased,2.0,PHENTERMINE,control,4
-23Q1,PHENTERMINE (Unknown/Other),Malaise,2.0,PHENTERMINE,control,5
-23Q1,PHENTERMINE (Weight Loss),Arteriospasm coronary,4.0,PHENTERMINE,control,1
-23Q1,PHENTERMINE (Weight Loss),Acute myocardial infarction,3.0,PHENTERMINE,control,2
-23Q1,PHENTERMINE (Weight Loss),Cardiac ventricular thrombosis,3.0,PHENTERMINE,control,3
-23Q1,PHENTERMINE (Weight Loss),Cardiomyopathy,3.0,PHENTERMINE,control,4
-23Q1,PHENTERMINE (Weight Loss),Cardiorenal syndrome,2.0,PHENTERMINE,control,5
-23Q1,RIMEGEPANT (Unknown/Other),Drug ineffective,241.0,RIMEGEPANT,control,1
-23Q1,RIMEGEPANT (Unknown/Other),Nausea,61.0,RIMEGEPANT,control,2
-23Q1,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,39.0,RIMEGEPANT,control,3
-23Q1,RIMEGEPANT (Unknown/Other),Headache,34.0,RIMEGEPANT,control,4
-23Q1,RIMEGEPANT (Unknown/Other),Off label use,34.0,RIMEGEPANT,control,5
-23Q1,SEMAGLUTIDE (Diabetes),Nausea,175.0,SEMAGLUTIDE,target,1
-23Q1,SEMAGLUTIDE (Diabetes),Decreased appetite,100.0,SEMAGLUTIDE,target,2
-23Q1,SEMAGLUTIDE (Diabetes),Vomiting,95.0,SEMAGLUTIDE,target,3
-23Q1,SEMAGLUTIDE (Diabetes),Diarrhoea,89.0,SEMAGLUTIDE,target,4
-23Q1,SEMAGLUTIDE (Diabetes),Weight decreased,70.0,SEMAGLUTIDE,target,5
-23Q1,SEMAGLUTIDE (Unknown/Other),Nausea,296.0,SEMAGLUTIDE,target,1
-23Q1,SEMAGLUTIDE (Unknown/Other),Off label use,172.0,SEMAGLUTIDE,target,2
-23Q1,SEMAGLUTIDE (Unknown/Other),Vomiting,152.0,SEMAGLUTIDE,target,3
-23Q1,SEMAGLUTIDE (Unknown/Other),Weight decreased,149.0,SEMAGLUTIDE,target,4
-23Q1,SEMAGLUTIDE (Unknown/Other),Diarrhoea,131.0,SEMAGLUTIDE,target,5
-23Q1,SEMAGLUTIDE (Weight Loss),Off label use,110.0,SEMAGLUTIDE,target,1
-23Q1,SEMAGLUTIDE (Weight Loss),Nausea,83.0,SEMAGLUTIDE,target,2
-23Q1,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,57.0,SEMAGLUTIDE,target,3
-23Q1,SEMAGLUTIDE (Weight Loss),Vomiting,43.0,SEMAGLUTIDE,target,4
-23Q1,SEMAGLUTIDE (Weight Loss),Diarrhoea,33.0,SEMAGLUTIDE,target,5
-23Q2,METFORMIN (Diabetes),Lactic acidosis,182.0,METFORMIN,control,1
-23Q2,METFORMIN (Diabetes),Metabolic acidosis,104.0,METFORMIN,control,2
-23Q2,METFORMIN (Diabetes),Acute kidney injury,77.0,METFORMIN,control,3
-23Q2,METFORMIN (Diabetes),Diarrhoea,68.0,METFORMIN,control,4
-23Q2,METFORMIN (Diabetes),Vomiting,64.0,METFORMIN,control,5
-23Q2,METFORMIN (Unknown/Other),Drug ineffective,60.0,METFORMIN,control,1
-23Q2,METFORMIN (Unknown/Other),Lactic acidosis,57.0,METFORMIN,control,2
-23Q2,METFORMIN (Unknown/Other),Diarrhoea,52.0,METFORMIN,control,3
-23Q2,METFORMIN (Unknown/Other),Acute kidney injury,44.0,METFORMIN,control,4
-23Q2,METFORMIN (Unknown/Other),Nausea,36.0,METFORMIN,control,5
-23Q2,METFORMIN (Weight Loss),Generalised bullous fixed drug eruption,12.0,METFORMIN,control,1
-23Q2,METFORMIN (Weight Loss),Product use in unapproved indication,7.0,METFORMIN,control,2
-23Q2,METFORMIN (Weight Loss),Drug abuse,2.0,METFORMIN,control,3
-23Q2,METFORMIN (Weight Loss),Inappropriate schedule of product administration,2.0,METFORMIN,control,4
-23Q2,METFORMIN (Weight Loss),Acute kidney injury,1.0,METFORMIN,control,5
-23Q2,PHENTERMINE (Unknown/Other),Drug ineffective,3.0,PHENTERMINE,control,1
-23Q2,PHENTERMINE (Unknown/Other),Headache,3.0,PHENTERMINE,control,2
-23Q2,PHENTERMINE (Unknown/Other),Confusional state,2.0,PHENTERMINE,control,3
-23Q2,PHENTERMINE (Unknown/Other),Treatment failure,2.0,PHENTERMINE,control,4
-23Q2,PHENTERMINE (Unknown/Other),Abdominal pain upper,1.0,PHENTERMINE,control,5
-23Q2,PHENTERMINE (Weight Loss),Drug ineffective,5.0,PHENTERMINE,control,1
-23Q2,PHENTERMINE (Weight Loss),Cardiomyopathy,2.0,PHENTERMINE,control,2
-23Q2,PHENTERMINE (Weight Loss),Dilated cardiomyopathy,2.0,PHENTERMINE,control,3
-23Q2,PHENTERMINE (Weight Loss),Seizure,2.0,PHENTERMINE,control,4
-23Q2,PHENTERMINE (Weight Loss),Therapeutic response unexpected,2.0,PHENTERMINE,control,5
-23Q2,RIMEGEPANT (Unknown/Other),Drug ineffective,147.0,RIMEGEPANT,control,1
-23Q2,RIMEGEPANT (Unknown/Other),Nausea,41.0,RIMEGEPANT,control,2
-23Q2,RIMEGEPANT (Unknown/Other),Off label use,40.0,RIMEGEPANT,control,3
-23Q2,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,29.0,RIMEGEPANT,control,4
-23Q2,RIMEGEPANT (Unknown/Other),Headache,25.0,RIMEGEPANT,control,5
-23Q2,SEMAGLUTIDE (Diabetes),Nausea,57.0,SEMAGLUTIDE,target,1
-23Q2,SEMAGLUTIDE (Diabetes),Vomiting,44.0,SEMAGLUTIDE,target,2
-23Q2,SEMAGLUTIDE (Diabetes),Diarrhoea,34.0,SEMAGLUTIDE,target,3
-23Q2,SEMAGLUTIDE (Diabetes),Decreased appetite,24.0,SEMAGLUTIDE,target,4
-23Q2,SEMAGLUTIDE (Diabetes),Weight decreased,19.0,SEMAGLUTIDE,target,5
-23Q2,SEMAGLUTIDE (Unknown/Other),Nausea,57.0,SEMAGLUTIDE,target,1
-23Q2,SEMAGLUTIDE (Unknown/Other),Vomiting,52.0,SEMAGLUTIDE,target,2
-23Q2,SEMAGLUTIDE (Unknown/Other),Diarrhoea,31.0,SEMAGLUTIDE,target,3
-23Q2,SEMAGLUTIDE (Unknown/Other),Off label use,29.0,SEMAGLUTIDE,target,4
-23Q2,SEMAGLUTIDE (Unknown/Other),Dizziness,18.0,SEMAGLUTIDE,target,5
-23Q2,SEMAGLUTIDE (Weight Loss),Off label use,28.0,SEMAGLUTIDE,target,1
-23Q2,SEMAGLUTIDE (Weight Loss),Vomiting,28.0,SEMAGLUTIDE,target,2
-23Q2,SEMAGLUTIDE (Weight Loss),Nausea,26.0,SEMAGLUTIDE,target,3
-23Q2,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,25.0,SEMAGLUTIDE,target,4
-23Q2,SEMAGLUTIDE (Weight Loss),Diarrhoea,22.0,SEMAGLUTIDE,target,5
-23Q3,METFORMIN (Diabetes),Lactic acidosis,297.0,METFORMIN,control,1
-23Q3,METFORMIN (Diabetes),Acute kidney injury,173.0,METFORMIN,control,2
-23Q3,METFORMIN (Diabetes),Metabolic acidosis,83.0,METFORMIN,control,3
-23Q3,METFORMIN (Diabetes),Diarrhoea,53.0,METFORMIN,control,4
-23Q3,METFORMIN (Diabetes),Hypoglycaemia,47.0,METFORMIN,control,5
-23Q3,METFORMIN (Unknown/Other),Lactic acidosis,128.0,METFORMIN,control,1
-23Q3,METFORMIN (Unknown/Other),Acute kidney injury,100.0,METFORMIN,control,2
-23Q3,METFORMIN (Unknown/Other),Toxicity to various agents,67.0,METFORMIN,control,3
-23Q3,METFORMIN (Unknown/Other),Diarrhoea,62.0,METFORMIN,control,4
-23Q3,METFORMIN (Unknown/Other),Drug ineffective,56.0,METFORMIN,control,5
-23Q3,METFORMIN (Weight Loss),Generalised bullous fixed drug eruption,2.0,METFORMIN,control,1
-23Q3,METFORMIN (Weight Loss),Off label use,2.0,METFORMIN,control,2
-23Q3,METFORMIN (Weight Loss),Abdominal discomfort,1.0,METFORMIN,control,3
-23Q3,METFORMIN (Weight Loss),Gastrointestinal disorder,1.0,METFORMIN,control,4
-23Q3,METFORMIN (Weight Loss),Hypoglycaemia,1.0,METFORMIN,control,5
-23Q3,PHENTERMINE (Unknown/Other),Insomnia,26.0,PHENTERMINE,control,1
-23Q3,PHENTERMINE (Unknown/Other),Headache,25.0,PHENTERMINE,control,2
-23Q3,PHENTERMINE (Unknown/Other),COVID-19,24.0,PHENTERMINE,control,3
-23Q3,PHENTERMINE (Unknown/Other),Paraesthesia,20.0,PHENTERMINE,control,4
-23Q3,PHENTERMINE (Unknown/Other),Malaise,19.0,PHENTERMINE,control,5
-23Q3,PHENTERMINE (Weight Loss),Headache,18.0,PHENTERMINE,control,1
-23Q3,PHENTERMINE (Weight Loss),Weight increased,17.0,PHENTERMINE,control,2
-23Q3,PHENTERMINE (Weight Loss),Incorrect product administration duration,16.0,PHENTERMINE,control,3
-23Q3,PHENTERMINE (Weight Loss),Fatigue,13.0,PHENTERMINE,control,4
-23Q3,PHENTERMINE (Weight Loss),Insomnia,11.0,PHENTERMINE,control,5
-23Q3,RIMEGEPANT (Unknown/Other),Drug ineffective,88.0,RIMEGEPANT,control,1
-23Q3,RIMEGEPANT (Unknown/Other),Nausea,21.0,RIMEGEPANT,control,2
-23Q3,RIMEGEPANT (Unknown/Other),Headache,16.0,RIMEGEPANT,control,3
-23Q3,RIMEGEPANT (Unknown/Other),Dizziness,11.0,RIMEGEPANT,control,4
-23Q3,RIMEGEPANT (Unknown/Other),Off label use,11.0,RIMEGEPANT,control,5
-23Q3,SEMAGLUTIDE (Diabetes),Nausea,236.0,SEMAGLUTIDE,target,1
-23Q3,SEMAGLUTIDE (Diabetes),Vomiting,134.0,SEMAGLUTIDE,target,2
-23Q3,SEMAGLUTIDE (Diabetes),Decreased appetite,129.0,SEMAGLUTIDE,target,3
-23Q3,SEMAGLUTIDE (Diabetes),Diarrhoea,120.0,SEMAGLUTIDE,target,4
-23Q3,SEMAGLUTIDE (Diabetes),Weight decreased,113.0,SEMAGLUTIDE,target,5
-23Q3,SEMAGLUTIDE (Unknown/Other),Nausea,347.0,SEMAGLUTIDE,target,1
-23Q3,SEMAGLUTIDE (Unknown/Other),Vomiting,215.0,SEMAGLUTIDE,target,2
-23Q3,SEMAGLUTIDE (Unknown/Other),Off label use,191.0,SEMAGLUTIDE,target,3
-23Q3,SEMAGLUTIDE (Unknown/Other),Diarrhoea,172.0,SEMAGLUTIDE,target,4
-23Q3,SEMAGLUTIDE (Unknown/Other),Decreased appetite,155.0,SEMAGLUTIDE,target,5
-23Q3,SEMAGLUTIDE (Weight Loss),Off label use,121.0,SEMAGLUTIDE,target,1
-23Q3,SEMAGLUTIDE (Weight Loss),Nausea,110.0,SEMAGLUTIDE,target,2
-23Q3,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,101.0,SEMAGLUTIDE,target,3
-23Q3,SEMAGLUTIDE (Weight Loss),Vomiting,75.0,SEMAGLUTIDE,target,4
-23Q3,SEMAGLUTIDE (Weight Loss),Diarrhoea,52.0,SEMAGLUTIDE,target,5
-23Q4,METFORMIN (Diabetes),Lactic acidosis,429.0,METFORMIN,control,1
-23Q4,METFORMIN (Diabetes),Acute kidney injury,205.0,METFORMIN,control,2
-23Q4,METFORMIN (Diabetes),Metabolic acidosis,102.0,METFORMIN,control,3
-23Q4,METFORMIN (Diabetes),Diarrhoea,66.0,METFORMIN,control,4
-23Q4,METFORMIN (Diabetes),Toxicity to various agents,54.0,METFORMIN,control,5
-23Q4,METFORMIN (Unknown/Other),Lactic acidosis,286.0,METFORMIN,control,1
-23Q4,METFORMIN (Unknown/Other),Toxicity to various agents,110.0,METFORMIN,control,2
-23Q4,METFORMIN (Unknown/Other),Acute kidney injury,102.0,METFORMIN,control,3
-23Q4,METFORMIN (Unknown/Other),Diarrhoea,83.0,METFORMIN,control,4
-23Q4,METFORMIN (Unknown/Other),Completed suicide,66.0,METFORMIN,control,5
-23Q4,METFORMIN (Weight Loss),Off label use,14.0,METFORMIN,control,1
-23Q4,METFORMIN (Weight Loss),Lactic acidosis,11.0,METFORMIN,control,2
-23Q4,METFORMIN (Weight Loss),Brain death,9.0,METFORMIN,control,3
-23Q4,METFORMIN (Weight Loss),Respiratory failure,9.0,METFORMIN,control,4
-23Q4,METFORMIN (Weight Loss),Subarachnoid haemorrhage,9.0,METFORMIN,control,5
-23Q4,PHENTERMINE (Unknown/Other),Hypothyroidism,4.0,PHENTERMINE,control,1
-23Q4,PHENTERMINE (Unknown/Other),Cerebrovascular accident,3.0,PHENTERMINE,control,2
-23Q4,PHENTERMINE (Unknown/Other),Crohn's disease,2.0,PHENTERMINE,control,3
-23Q4,PHENTERMINE (Unknown/Other),Diabetes mellitus,2.0,PHENTERMINE,control,4
-23Q4,PHENTERMINE (Unknown/Other),Nausea,2.0,PHENTERMINE,control,5
-23Q4,PHENTERMINE (Weight Loss),Cardiomyopathy,8.0,PHENTERMINE,control,1
-23Q4,PHENTERMINE (Weight Loss),Depression,2.0,PHENTERMINE,control,2
-23Q4,PHENTERMINE (Weight Loss),Drug ineffective,2.0,PHENTERMINE,control,3
-23Q4,PHENTERMINE (Weight Loss),Drug interaction,2.0,PHENTERMINE,control,4
-23Q4,PHENTERMINE (Weight Loss),Electrocardiogram QT prolonged,2.0,PHENTERMINE,control,5
-23Q4,RIMEGEPANT (Unknown/Other),Drug ineffective,78.0,RIMEGEPANT,control,1
-23Q4,RIMEGEPANT (Unknown/Other),Nausea,22.0,RIMEGEPANT,control,2
-23Q4,RIMEGEPANT (Unknown/Other),Off label use,14.0,RIMEGEPANT,control,3
-23Q4,RIMEGEPANT (Unknown/Other),Dizziness,11.0,RIMEGEPANT,control,4
-23Q4,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,11.0,RIMEGEPANT,control,5
-23Q4,SEMAGLUTIDE (Diabetes),Nausea,47.0,SEMAGLUTIDE,target,1
-23Q4,SEMAGLUTIDE (Diabetes),Vomiting,41.0,SEMAGLUTIDE,target,2
-23Q4,SEMAGLUTIDE (Diabetes),Diarrhoea,26.0,SEMAGLUTIDE,target,3
-23Q4,SEMAGLUTIDE (Diabetes),Decreased appetite,25.0,SEMAGLUTIDE,target,4
-23Q4,SEMAGLUTIDE (Diabetes),Constipation,24.0,SEMAGLUTIDE,target,5
-23Q4,SEMAGLUTIDE (Unknown/Other),Nausea,62.0,SEMAGLUTIDE,target,1
-23Q4,SEMAGLUTIDE (Unknown/Other),Vomiting,48.0,SEMAGLUTIDE,target,2
-23Q4,SEMAGLUTIDE (Unknown/Other),Diarrhoea,28.0,SEMAGLUTIDE,target,3
-23Q4,SEMAGLUTIDE (Unknown/Other),Off label use,27.0,SEMAGLUTIDE,target,4
-23Q4,SEMAGLUTIDE (Unknown/Other),Weight decreased,26.0,SEMAGLUTIDE,target,5
-23Q4,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,53.0,SEMAGLUTIDE,target,1
-23Q4,SEMAGLUTIDE (Weight Loss),Vomiting,47.0,SEMAGLUTIDE,target,2
-23Q4,SEMAGLUTIDE (Weight Loss),Nausea,42.0,SEMAGLUTIDE,target,3
-23Q4,SEMAGLUTIDE (Weight Loss),Off label use,32.0,SEMAGLUTIDE,target,4
-23Q4,SEMAGLUTIDE (Weight Loss),Suicidal ideation,24.0,SEMAGLUTIDE,target,5
-24Q1,METFORMIN (Diabetes),Lactic acidosis,313.0,METFORMIN,control,1
-24Q1,METFORMIN (Diabetes),Acute kidney injury,143.0,METFORMIN,control,2
-24Q1,METFORMIN (Diabetes),Diarrhoea,74.0,METFORMIN,control,3
-24Q1,METFORMIN (Diabetes),Metabolic acidosis,65.0,METFORMIN,control,4
-24Q1,METFORMIN (Diabetes),Potentiating drug interaction,62.0,METFORMIN,control,5
-24Q1,METFORMIN (Unknown/Other),Lactic acidosis,137.0,METFORMIN,control,1
-24Q1,METFORMIN (Unknown/Other),Acute kidney injury,111.0,METFORMIN,control,2
-24Q1,METFORMIN (Unknown/Other),Toxicity to various agents,73.0,METFORMIN,control,3
-24Q1,METFORMIN (Unknown/Other),Diarrhoea,66.0,METFORMIN,control,4
-24Q1,METFORMIN (Unknown/Other),Blood glucose increased,50.0,METFORMIN,control,5
-24Q1,METFORMIN (Weight Loss),Cerebrovascular accident,5.0,METFORMIN,control,1
-24Q1,METFORMIN (Weight Loss),Lactic acidosis,4.0,METFORMIN,control,2
-24Q1,METFORMIN (Weight Loss),Off label use,2.0,METFORMIN,control,3
-24Q1,METFORMIN (Weight Loss),Abdominal discomfort,1.0,METFORMIN,control,4
-24Q1,METFORMIN (Weight Loss),Alanine aminotransferase increased,1.0,METFORMIN,control,5
-24Q1,PHENTERMINE (Unknown/Other),Treatment failure,7.0,PHENTERMINE,control,1
-24Q1,PHENTERMINE (Unknown/Other),Blindness,4.0,PHENTERMINE,control,2
-24Q1,PHENTERMINE (Unknown/Other),Seizure,4.0,PHENTERMINE,control,3
-24Q1,PHENTERMINE (Unknown/Other),Headache,3.0,PHENTERMINE,control,4
-24Q1,PHENTERMINE (Unknown/Other),Hypothyroidism,3.0,PHENTERMINE,control,5
-24Q1,PHENTERMINE (Weight Loss),Palpitations,2.0,PHENTERMINE,control,1
-24Q1,PHENTERMINE (Weight Loss),Adverse drug reaction,1.0,PHENTERMINE,control,2
-24Q1,PHENTERMINE (Weight Loss),Aggression,1.0,PHENTERMINE,control,3
-24Q1,PHENTERMINE (Weight Loss),Aphasia,1.0,PHENTERMINE,control,4
-24Q1,PHENTERMINE (Weight Loss),Asthenia,1.0,PHENTERMINE,control,5
-24Q1,RIMEGEPANT (Unknown/Other),Drug ineffective,103.0,RIMEGEPANT,control,1
-24Q1,RIMEGEPANT (Unknown/Other),Off label use,21.0,RIMEGEPANT,control,2
-24Q1,RIMEGEPANT (Unknown/Other),Headache,18.0,RIMEGEPANT,control,3
-24Q1,RIMEGEPANT (Unknown/Other),Nausea,16.0,RIMEGEPANT,control,4
-24Q1,RIMEGEPANT (Unknown/Other),Migraine,13.0,RIMEGEPANT,control,5
-24Q1,SEMAGLUTIDE (Diabetes),Nausea,201.0,SEMAGLUTIDE,target,1
-24Q1,SEMAGLUTIDE (Diabetes),Diarrhoea,116.0,SEMAGLUTIDE,target,2
-24Q1,SEMAGLUTIDE (Diabetes),Vomiting,107.0,SEMAGLUTIDE,target,3
-24Q1,SEMAGLUTIDE (Diabetes),Constipation,94.0,SEMAGLUTIDE,target,4
-24Q1,SEMAGLUTIDE (Diabetes),Decreased appetite,83.0,SEMAGLUTIDE,target,5
-24Q1,SEMAGLUTIDE (Unknown/Other),Nausea,295.0,SEMAGLUTIDE,target,1
-24Q1,SEMAGLUTIDE (Unknown/Other),Vomiting,201.0,SEMAGLUTIDE,target,2
-24Q1,SEMAGLUTIDE (Unknown/Other),Diarrhoea,160.0,SEMAGLUTIDE,target,3
-24Q1,SEMAGLUTIDE (Unknown/Other),Off label use,153.0,SEMAGLUTIDE,target,4
-24Q1,SEMAGLUTIDE (Unknown/Other),Constipation,144.0,SEMAGLUTIDE,target,5
-24Q1,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,123.0,SEMAGLUTIDE,target,1
-24Q1,SEMAGLUTIDE (Weight Loss),Off label use,108.0,SEMAGLUTIDE,target,2
-24Q1,SEMAGLUTIDE (Weight Loss),Nausea,107.0,SEMAGLUTIDE,target,3
-24Q1,SEMAGLUTIDE (Weight Loss),Vomiting,76.0,SEMAGLUTIDE,target,4
-24Q1,SEMAGLUTIDE (Weight Loss),Allodynia,58.0,SEMAGLUTIDE,target,5
-24Q2,METFORMIN (Diabetes),Lactic acidosis,245.0,METFORMIN,control,1
-24Q2,METFORMIN (Diabetes),Acute kidney injury,115.0,METFORMIN,control,2
-24Q2,METFORMIN (Diabetes),Toxicity to various agents,95.0,METFORMIN,control,3
-24Q2,METFORMIN (Diabetes),Metabolic acidosis,70.0,METFORMIN,control,4
-24Q2,METFORMIN (Diabetes),Drug ineffective,53.0,METFORMIN,control,5
-24Q2,METFORMIN (Unknown/Other),Lactic acidosis,93.0,METFORMIN,control,1
-24Q2,METFORMIN (Unknown/Other),Toxicity to various agents,78.0,METFORMIN,control,2
-24Q2,METFORMIN (Unknown/Other),Diarrhoea,63.0,METFORMIN,control,3
-24Q2,METFORMIN (Unknown/Other),Acute kidney injury,46.0,METFORMIN,control,4
-24Q2,METFORMIN (Unknown/Other),Blood glucose increased,45.0,METFORMIN,control,5
-24Q2,METFORMIN (Weight Loss),Intentional product misuse,12.0,METFORMIN,control,1
-24Q2,METFORMIN (Weight Loss),Lactic acidosis,12.0,METFORMIN,control,2
-24Q2,METFORMIN (Weight Loss),Toxicity to various agents,5.0,METFORMIN,control,3
-24Q2,METFORMIN (Weight Loss),Drug level increased,2.0,METFORMIN,control,4
-24Q2,METFORMIN (Weight Loss),Abdominal discomfort,1.0,METFORMIN,control,5
-24Q2,PHENTERMINE (Unknown/Other),Hypothyroidism,10.0,PHENTERMINE,control,1
-24Q2,PHENTERMINE (Unknown/Other),Diabetes mellitus,7.0,PHENTERMINE,control,2
-24Q2,PHENTERMINE (Unknown/Other),Drug ineffective,6.0,PHENTERMINE,control,3
-24Q2,PHENTERMINE (Unknown/Other),Polycystic ovarian syndrome,6.0,PHENTERMINE,control,4
-24Q2,PHENTERMINE (Unknown/Other),Coronary artery dissection,4.0,PHENTERMINE,control,5
-24Q2,PHENTERMINE (Weight Loss),Glomerulonephritis minimal lesion,8.0,PHENTERMINE,control,1
-24Q2,PHENTERMINE (Weight Loss),Colitis ischaemic,5.0,PHENTERMINE,control,2
-24Q2,PHENTERMINE (Weight Loss),Drug ineffective,4.0,PHENTERMINE,control,3
-24Q2,PHENTERMINE (Weight Loss),Retinal artery occlusion,3.0,PHENTERMINE,control,4
-24Q2,PHENTERMINE (Weight Loss),Acute myocardial infarction,2.0,PHENTERMINE,control,5
-24Q2,RIMEGEPANT (Unknown/Other),Drug ineffective,111.0,RIMEGEPANT,control,1
-24Q2,RIMEGEPANT (Unknown/Other),Off label use,21.0,RIMEGEPANT,control,2
-24Q2,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,17.0,RIMEGEPANT,control,3
-24Q2,RIMEGEPANT (Unknown/Other),Headache,15.0,RIMEGEPANT,control,4
-24Q2,RIMEGEPANT (Unknown/Other),Nausea,14.0,RIMEGEPANT,control,5
-24Q2,SEMAGLUTIDE (Diabetes),Vomiting,66.0,SEMAGLUTIDE,target,1
-24Q2,SEMAGLUTIDE (Diabetes),Nausea,59.0,SEMAGLUTIDE,target,2
-24Q2,SEMAGLUTIDE (Diabetes),Diarrhoea,42.0,SEMAGLUTIDE,target,3
-24Q2,SEMAGLUTIDE (Diabetes),Constipation,31.0,SEMAGLUTIDE,target,4
-24Q2,SEMAGLUTIDE (Diabetes),Off label use,30.0,SEMAGLUTIDE,target,5
-24Q2,SEMAGLUTIDE (Unknown/Other),Nausea,100.0,SEMAGLUTIDE,target,1
-24Q2,SEMAGLUTIDE (Unknown/Other),Vomiting,81.0,SEMAGLUTIDE,target,2
-24Q2,SEMAGLUTIDE (Unknown/Other),Diarrhoea,60.0,SEMAGLUTIDE,target,3
-24Q2,SEMAGLUTIDE (Unknown/Other),Off label use,51.0,SEMAGLUTIDE,target,4
-24Q2,SEMAGLUTIDE (Unknown/Other),Constipation,37.0,SEMAGLUTIDE,target,5
-24Q2,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,57.0,SEMAGLUTIDE,target,1
-24Q2,SEMAGLUTIDE (Weight Loss),Nausea,48.0,SEMAGLUTIDE,target,2
-24Q2,SEMAGLUTIDE (Weight Loss),Off label use,40.0,SEMAGLUTIDE,target,3
-24Q2,SEMAGLUTIDE (Weight Loss),Vomiting,38.0,SEMAGLUTIDE,target,4
-24Q2,SEMAGLUTIDE (Weight Loss),Diarrhoea,24.0,SEMAGLUTIDE,target,5
-24Q3,METFORMIN (Diabetes),Lactic acidosis,303.0,METFORMIN,control,1
-24Q3,METFORMIN (Diabetes),Acute kidney injury,150.0,METFORMIN,control,2
-24Q3,METFORMIN (Diabetes),Toxicity to various agents,91.0,METFORMIN,control,3
-24Q3,METFORMIN (Diabetes),Metabolic acidosis,78.0,METFORMIN,control,4
-24Q3,METFORMIN (Diabetes),Diarrhoea,72.0,METFORMIN,control,5
-24Q3,METFORMIN (Unknown/Other),Lactic acidosis,130.0,METFORMIN,control,1
-24Q3,METFORMIN (Unknown/Other),Diarrhoea,74.0,METFORMIN,control,2
-24Q3,METFORMIN (Unknown/Other),Toxicity to various agents,62.0,METFORMIN,control,3
-24Q3,METFORMIN (Unknown/Other),Drug ineffective,52.0,METFORMIN,control,4
-24Q3,METFORMIN (Unknown/Other),Nausea,49.0,METFORMIN,control,5
-24Q3,METFORMIN (Weight Loss),Pancreatitis acute,5.0,METFORMIN,control,1
-24Q3,METFORMIN (Weight Loss),Weight increased,3.0,METFORMIN,control,2
-24Q3,METFORMIN (Weight Loss),Central obesity,2.0,METFORMIN,control,3
-24Q3,METFORMIN (Weight Loss),Abdominal discomfort,1.0,METFORMIN,control,4
-24Q3,METFORMIN (Weight Loss),Drug ineffective,1.0,METFORMIN,control,5
-24Q3,PHENTERMINE (Unknown/Other),Inappropriate schedule of product administration,59.0,PHENTERMINE,control,1
-24Q3,PHENTERMINE (Unknown/Other),Adverse drug reaction,45.0,PHENTERMINE,control,2
-24Q3,PHENTERMINE (Unknown/Other),Product dose omission issue,45.0,PHENTERMINE,control,3
-24Q3,PHENTERMINE (Unknown/Other),Headache,40.0,PHENTERMINE,control,4
-24Q3,PHENTERMINE (Unknown/Other),Weight increased,33.0,PHENTERMINE,control,5
-24Q3,PHENTERMINE (Weight Loss),Insomnia,13.0,PHENTERMINE,control,1
-24Q3,PHENTERMINE (Weight Loss),Paraesthesia,10.0,PHENTERMINE,control,2
-24Q3,PHENTERMINE (Weight Loss),Weight increased,9.0,PHENTERMINE,control,3
-24Q3,PHENTERMINE (Weight Loss),Dry mouth,8.0,PHENTERMINE,control,4
-24Q3,PHENTERMINE (Weight Loss),Anxiety,7.0,PHENTERMINE,control,5
-24Q3,RIMEGEPANT (Unknown/Other),Drug ineffective,110.0,RIMEGEPANT,control,1
-24Q3,RIMEGEPANT (Unknown/Other),Nausea,29.0,RIMEGEPANT,control,2
-24Q3,RIMEGEPANT (Unknown/Other),Off label use,29.0,RIMEGEPANT,control,3
-24Q3,RIMEGEPANT (Unknown/Other),Headache,18.0,RIMEGEPANT,control,4
-24Q3,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,15.0,RIMEGEPANT,control,5
-24Q3,SEMAGLUTIDE (Diabetes),Nausea,326.0,SEMAGLUTIDE,target,1
-24Q3,SEMAGLUTIDE (Diabetes),Off label use,203.0,SEMAGLUTIDE,target,2
-24Q3,SEMAGLUTIDE (Diabetes),Decreased appetite,202.0,SEMAGLUTIDE,target,3
-24Q3,SEMAGLUTIDE (Diabetes),Weight decreased,200.0,SEMAGLUTIDE,target,4
-24Q3,SEMAGLUTIDE (Diabetes),Vomiting,196.0,SEMAGLUTIDE,target,5
-24Q3,SEMAGLUTIDE (Unknown/Other),Nausea,449.0,SEMAGLUTIDE,target,1
-24Q3,SEMAGLUTIDE (Unknown/Other),Off label use,287.0,SEMAGLUTIDE,target,2
-24Q3,SEMAGLUTIDE (Unknown/Other),Vomiting,272.0,SEMAGLUTIDE,target,3
-24Q3,SEMAGLUTIDE (Unknown/Other),Diarrhoea,213.0,SEMAGLUTIDE,target,4
-24Q3,SEMAGLUTIDE (Unknown/Other),Wrong technique in product usage process,203.0,SEMAGLUTIDE,target,5
-24Q3,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,228.0,SEMAGLUTIDE,target,1
-24Q3,SEMAGLUTIDE (Weight Loss),Off label use,210.0,SEMAGLUTIDE,target,2
-24Q3,SEMAGLUTIDE (Weight Loss),Nausea,187.0,SEMAGLUTIDE,target,3
-24Q3,SEMAGLUTIDE (Weight Loss),Vomiting,124.0,SEMAGLUTIDE,target,4
-24Q3,SEMAGLUTIDE (Weight Loss),Diarrhoea,86.0,SEMAGLUTIDE,target,5
-24Q4,METFORMIN (Diabetes),Lactic acidosis,350.0,METFORMIN,control,1
-24Q4,METFORMIN (Diabetes),Acute kidney injury,167.0,METFORMIN,control,2
-24Q4,METFORMIN (Diabetes),Diarrhoea,63.0,METFORMIN,control,3
-24Q4,METFORMIN (Diabetes),Metabolic acidosis,55.0,METFORMIN,control,4
-24Q4,METFORMIN (Diabetes),Toxicity to various agents,55.0,METFORMIN,control,5
-24Q4,METFORMIN (Unknown/Other),Lactic acidosis,130.0,METFORMIN,control,1
-24Q4,METFORMIN (Unknown/Other),Acute kidney injury,65.0,METFORMIN,control,2
-24Q4,METFORMIN (Unknown/Other),Completed suicide,52.0,METFORMIN,control,3
-24Q4,METFORMIN (Unknown/Other),Drug ineffective,50.0,METFORMIN,control,4
-24Q4,METFORMIN (Unknown/Other),Diarrhoea,49.0,METFORMIN,control,5
-24Q4,METFORMIN (Weight Loss),Diarrhoea,2.0,METFORMIN,control,1
-24Q4,METFORMIN (Weight Loss),Heavy menstrual bleeding,2.0,METFORMIN,control,2
-24Q4,METFORMIN (Weight Loss),Acute myocardial infarction,1.0,METFORMIN,control,3
-24Q4,METFORMIN (Weight Loss),Coronary artery dissection,1.0,METFORMIN,control,4
-24Q4,METFORMIN (Weight Loss),Drug intolerance,1.0,METFORMIN,control,5
-24Q4,PHENTERMINE (Diabetes),Abdominal pain,1.0,PHENTERMINE,control,1
-24Q4,PHENTERMINE (Diabetes),Chest pain,1.0,PHENTERMINE,control,2
-24Q4,PHENTERMINE (Diabetes),Maternal exposure during pregnancy,1.0,PHENTERMINE,control,3
-24Q4,PHENTERMINE (Diabetes),Nephrolithiasis,1.0,PHENTERMINE,control,4
-24Q4,PHENTERMINE (Diabetes),Pregnancy,1.0,PHENTERMINE,control,5
-24Q4,PHENTERMINE (Unknown/Other),Drug ineffective,8.0,PHENTERMINE,control,1
-24Q4,PHENTERMINE (Unknown/Other),Dry mouth,3.0,PHENTERMINE,control,2
-24Q4,PHENTERMINE (Unknown/Other),Headache,3.0,PHENTERMINE,control,3
-24Q4,PHENTERMINE (Unknown/Other),Treatment failure,3.0,PHENTERMINE,control,4
-24Q4,PHENTERMINE (Unknown/Other),Breast cancer,2.0,PHENTERMINE,control,5
-24Q4,PHENTERMINE (Weight Loss),Drug-induced liver injury,5.0,PHENTERMINE,control,1
-24Q4,PHENTERMINE (Weight Loss),Constipation,3.0,PHENTERMINE,control,2
-24Q4,PHENTERMINE (Weight Loss),Vanishing bile duct syndrome,3.0,PHENTERMINE,control,3
-24Q4,PHENTERMINE (Weight Loss),Anxiety,2.0,PHENTERMINE,control,4
-24Q4,PHENTERMINE (Weight Loss),Arteriospasm coronary,2.0,PHENTERMINE,control,5
-24Q4,RIMEGEPANT (Unknown/Other),Drug ineffective,92.0,RIMEGEPANT,control,1
-24Q4,RIMEGEPANT (Unknown/Other),Nausea,33.0,RIMEGEPANT,control,2
-24Q4,RIMEGEPANT (Unknown/Other),Therapeutic product effect incomplete,20.0,RIMEGEPANT,control,3
-24Q4,RIMEGEPANT (Unknown/Other),Off label use,19.0,RIMEGEPANT,control,4
-24Q4,RIMEGEPANT (Unknown/Other),Dizziness,13.0,RIMEGEPANT,control,5
-24Q4,SEMAGLUTIDE (Diabetes),Nausea,97.0,SEMAGLUTIDE,target,1
-24Q4,SEMAGLUTIDE (Diabetes),Impaired gastric emptying,74.0,SEMAGLUTIDE,target,2
-24Q4,SEMAGLUTIDE (Diabetes),Diarrhoea,68.0,SEMAGLUTIDE,target,3
-24Q4,SEMAGLUTIDE (Diabetes),Intestinal obstruction,67.0,SEMAGLUTIDE,target,4
-24Q4,SEMAGLUTIDE (Diabetes),Vomiting,67.0,SEMAGLUTIDE,target,5
-24Q4,SEMAGLUTIDE (Unknown/Other),Nausea,117.0,SEMAGLUTIDE,target,1
-24Q4,SEMAGLUTIDE (Unknown/Other),Vomiting,88.0,SEMAGLUTIDE,target,2
-24Q4,SEMAGLUTIDE (Unknown/Other),Off label use,70.0,SEMAGLUTIDE,target,3
-24Q4,SEMAGLUTIDE (Unknown/Other),Diarrhoea,67.0,SEMAGLUTIDE,target,4
-24Q4,SEMAGLUTIDE (Unknown/Other),Constipation,60.0,SEMAGLUTIDE,target,5
-24Q4,SEMAGLUTIDE (Weight Loss),Nausea,79.0,SEMAGLUTIDE,target,1
-24Q4,SEMAGLUTIDE (Weight Loss),Vomiting,79.0,SEMAGLUTIDE,target,2
-24Q4,SEMAGLUTIDE (Weight Loss),Product use in unapproved indication,75.0,SEMAGLUTIDE,target,3
-24Q4,SEMAGLUTIDE (Weight Loss),Off label use,69.0,SEMAGLUTIDE,target,4
-24Q4,SEMAGLUTIDE (Weight Loss),Diarrhoea,47.0,SEMAGLUTIDE,target,5
+quarter_year,drug_and_indication,total_cases,gi_cases,misuse_cases,drug,role
+20Q1,METFORMIN (Diabetes),1529.0,202.0,38.0,METFORMIN,control
+20Q2,METFORMIN (Diabetes),1411.0,190.0,34.0,METFORMIN,control
+20Q3,METFORMIN (Diabetes),1337.0,174.0,53.0,METFORMIN,control
+20Q4,METFORMIN (Diabetes),1266.0,164.0,26.0,METFORMIN,control
+21Q1,METFORMIN (Diabetes),1168.0,139.0,53.0,METFORMIN,control
+21Q2,METFORMIN (Diabetes),831.0,116.0,51.0,METFORMIN,control
+21Q3,METFORMIN (Diabetes),1000.0,152.0,49.0,METFORMIN,control
+21Q4,METFORMIN (Diabetes),880.0,140.0,45.0,METFORMIN,control
+22Q1,METFORMIN (Diabetes),819.0,146.0,30.0,METFORMIN,control
+22Q2,METFORMIN (Diabetes),918.0,94.0,33.0,METFORMIN,control
+22Q3,METFORMIN (Diabetes),842.0,92.0,39.0,METFORMIN,control
+22Q4,METFORMIN (Diabetes),1059.0,119.0,41.0,METFORMIN,control
+23Q1,METFORMIN (Diabetes),933.0,108.0,38.0,METFORMIN,control
+23Q2,METFORMIN (Diabetes),845.0,129.0,32.0,METFORMIN,control
+23Q3,METFORMIN (Diabetes),839.0,101.0,43.0,METFORMIN,control
+23Q4,METFORMIN (Diabetes),1018.0,108.0,21.0,METFORMIN,control
+24Q1,METFORMIN (Diabetes),1025.0,120.0,24.0,METFORMIN,control
+24Q2,METFORMIN (Diabetes),769.0,87.0,23.0,METFORMIN,control
+24Q3,METFORMIN (Diabetes),807.0,103.0,27.0,METFORMIN,control
+24Q4,METFORMIN (Diabetes),922.0,93.0,37.0,METFORMIN,control
+20Q1,METFORMIN (Unknown/Other),1264.0,175.0,38.0,METFORMIN,control
+20Q2,METFORMIN (Unknown/Other),858.0,103.0,26.0,METFORMIN,control
+20Q3,METFORMIN (Unknown/Other),898.0,107.0,13.0,METFORMIN,control
+20Q4,METFORMIN (Unknown/Other),948.0,110.0,38.0,METFORMIN,control
+21Q1,METFORMIN (Unknown/Other),1073.0,151.0,44.0,METFORMIN,control
+21Q2,METFORMIN (Unknown/Other),782.0,90.0,36.0,METFORMIN,control
+21Q3,METFORMIN (Unknown/Other),746.0,67.0,47.0,METFORMIN,control
+21Q4,METFORMIN (Unknown/Other),806.0,98.0,44.0,METFORMIN,control
+22Q1,METFORMIN (Unknown/Other),756.0,103.0,33.0,METFORMIN,control
+22Q2,METFORMIN (Unknown/Other),644.0,82.0,65.0,METFORMIN,control
+22Q3,METFORMIN (Unknown/Other),725.0,112.0,58.0,METFORMIN,control
+22Q4,METFORMIN (Unknown/Other),879.0,108.0,48.0,METFORMIN,control
+23Q1,METFORMIN (Unknown/Other),994.0,125.0,45.0,METFORMIN,control
+23Q2,METFORMIN (Unknown/Other),619.0,84.0,36.0,METFORMIN,control
+23Q3,METFORMIN (Unknown/Other),786.0,111.0,34.0,METFORMIN,control
+23Q4,METFORMIN (Unknown/Other),1045.0,135.0,39.0,METFORMIN,control
+24Q1,METFORMIN (Unknown/Other),857.0,104.0,46.0,METFORMIN,control
+24Q2,METFORMIN (Unknown/Other),671.0,106.0,43.0,METFORMIN,control
+24Q3,METFORMIN (Unknown/Other),651.0,107.0,27.0,METFORMIN,control
+24Q4,METFORMIN (Unknown/Other),701.0,91.0,36.0,METFORMIN,control
+20Q1,METFORMIN (Weight Loss),10.0,3.0,5.0,METFORMIN,control
+20Q2,METFORMIN (Weight Loss),9.0,3.0,8.0,METFORMIN,control
+20Q3,METFORMIN (Weight Loss),8.0,3.0,8.0,METFORMIN,control
+20Q4,METFORMIN (Weight Loss),13.0,3.0,4.0,METFORMIN,control
+21Q1,METFORMIN (Weight Loss),9.0,0.0,6.0,METFORMIN,control
+21Q2,METFORMIN (Weight Loss),14.0,3.0,6.0,METFORMIN,control
+21Q3,METFORMIN (Weight Loss),5.0,0.0,1.0,METFORMIN,control
+21Q4,METFORMIN (Weight Loss),1.0,1.0,1.0,METFORMIN,control
+22Q1,METFORMIN (Weight Loss),4.0,0.0,3.0,METFORMIN,control
+22Q2,METFORMIN (Weight Loss),19.0,3.0,10.0,METFORMIN,control
+22Q3,METFORMIN (Weight Loss),2.0,2.0,1.0,METFORMIN,control
+22Q4,METFORMIN (Weight Loss),5.0,0.0,2.0,METFORMIN,control
+23Q1,METFORMIN (Weight Loss),5.0,1.0,3.0,METFORMIN,control
+23Q2,METFORMIN (Weight Loss),17.0,0.0,8.0,METFORMIN,control
+23Q3,METFORMIN (Weight Loss),5.0,0.0,3.0,METFORMIN,control
+23Q4,METFORMIN (Weight Loss),18.0,0.0,16.0,METFORMIN,control
+24Q1,METFORMIN (Weight Loss),11.0,0.0,3.0,METFORMIN,control
+24Q2,METFORMIN (Weight Loss),15.0,1.0,12.0,METFORMIN,control
+24Q3,METFORMIN (Weight Loss),10.0,0.0,1.0,METFORMIN,control
+24Q4,METFORMIN (Weight Loss),8.0,2.0,0.0,METFORMIN,control
+22Q3,PHENTERMINE (Diabetes),1.0,0.0,1.0,PHENTERMINE,control
+24Q4,PHENTERMINE (Diabetes),1.0,0.0,0.0,PHENTERMINE,control
+20Q1,PHENTERMINE (Unknown/Other),29.0,1.0,1.0,PHENTERMINE,control
+20Q2,PHENTERMINE (Unknown/Other),21.0,2.0,1.0,PHENTERMINE,control
+20Q3,PHENTERMINE (Unknown/Other),36.0,2.0,3.0,PHENTERMINE,control
+20Q4,PHENTERMINE (Unknown/Other),17.0,2.0,5.0,PHENTERMINE,control
+21Q1,PHENTERMINE (Unknown/Other),15.0,1.0,0.0,PHENTERMINE,control
+21Q2,PHENTERMINE (Unknown/Other),16.0,2.0,1.0,PHENTERMINE,control
+21Q3,PHENTERMINE (Unknown/Other),59.0,7.0,8.0,PHENTERMINE,control
+21Q4,PHENTERMINE (Unknown/Other),16.0,2.0,0.0,PHENTERMINE,control
+22Q1,PHENTERMINE (Unknown/Other),15.0,0.0,0.0,PHENTERMINE,control
+22Q2,PHENTERMINE (Unknown/Other),25.0,0.0,0.0,PHENTERMINE,control
+22Q3,PHENTERMINE (Unknown/Other),141.0,6.0,4.0,PHENTERMINE,control
+22Q4,PHENTERMINE (Unknown/Other),28.0,0.0,2.0,PHENTERMINE,control
+23Q1,PHENTERMINE (Unknown/Other),42.0,0.0,1.0,PHENTERMINE,control
+23Q2,PHENTERMINE (Unknown/Other),30.0,1.0,1.0,PHENTERMINE,control
+23Q3,PHENTERMINE (Unknown/Other),575.0,16.0,8.0,PHENTERMINE,control
+23Q4,PHENTERMINE (Unknown/Other),33.0,3.0,0.0,PHENTERMINE,control
+24Q1,PHENTERMINE (Unknown/Other),41.0,2.0,0.0,PHENTERMINE,control
+24Q2,PHENTERMINE (Unknown/Other),72.0,2.0,1.0,PHENTERMINE,control
+24Q3,PHENTERMINE (Unknown/Other),904.0,28.0,6.0,PHENTERMINE,control
+24Q4,PHENTERMINE (Unknown/Other),48.0,1.0,1.0,PHENTERMINE,control
+20Q1,PHENTERMINE (Weight Loss),23.0,1.0,2.0,PHENTERMINE,control
+20Q2,PHENTERMINE (Weight Loss),16.0,1.0,0.0,PHENTERMINE,control
+20Q3,PHENTERMINE (Weight Loss),177.0,9.0,3.0,PHENTERMINE,control
+20Q4,PHENTERMINE (Weight Loss),9.0,1.0,2.0,PHENTERMINE,control
+21Q1,PHENTERMINE (Weight Loss),17.0,1.0,0.0,PHENTERMINE,control
+21Q2,PHENTERMINE (Weight Loss),46.0,6.0,0.0,PHENTERMINE,control
+21Q3,PHENTERMINE (Weight Loss),208.0,13.0,3.0,PHENTERMINE,control
+21Q4,PHENTERMINE (Weight Loss),33.0,1.0,2.0,PHENTERMINE,control
+22Q1,PHENTERMINE (Weight Loss),12.0,1.0,0.0,PHENTERMINE,control
+22Q2,PHENTERMINE (Weight Loss),32.0,3.0,0.0,PHENTERMINE,control
+22Q3,PHENTERMINE (Weight Loss),199.0,13.0,1.0,PHENTERMINE,control
+22Q4,PHENTERMINE (Weight Loss),14.0,0.0,0.0,PHENTERMINE,control
+23Q1,PHENTERMINE (Weight Loss),26.0,2.0,0.0,PHENTERMINE,control
+23Q2,PHENTERMINE (Weight Loss),23.0,1.0,1.0,PHENTERMINE,control
+23Q3,PHENTERMINE (Weight Loss),163.0,9.0,2.0,PHENTERMINE,control
+23Q4,PHENTERMINE (Weight Loss),23.0,0.0,1.0,PHENTERMINE,control
+24Q1,PHENTERMINE (Weight Loss),9.0,0.0,0.0,PHENTERMINE,control
+24Q2,PHENTERMINE (Weight Loss),33.0,0.0,1.0,PHENTERMINE,control
+24Q3,PHENTERMINE (Weight Loss),124.0,8.0,1.0,PHENTERMINE,control
+24Q4,PHENTERMINE (Weight Loss),26.0,3.0,0.0,PHENTERMINE,control
+20Q2,RIMEGEPANT (Unknown/Other),43.0,10.0,2.0,RIMEGEPANT,control
+20Q3,RIMEGEPANT (Unknown/Other),11.0,2.0,0.0,RIMEGEPANT,control
+20Q4,RIMEGEPANT (Unknown/Other),553.0,65.0,6.0,RIMEGEPANT,control
+21Q1,RIMEGEPANT (Unknown/Other),332.0,45.0,2.0,RIMEGEPANT,control
+21Q2,RIMEGEPANT (Unknown/Other),338.0,32.0,4.0,RIMEGEPANT,control
+21Q3,RIMEGEPANT (Unknown/Other),331.0,47.0,6.0,RIMEGEPANT,control
+21Q4,RIMEGEPANT (Unknown/Other),729.0,111.0,15.0,RIMEGEPANT,control
+22Q1,RIMEGEPANT (Unknown/Other),32.0,1.0,1.0,RIMEGEPANT,control
+22Q2,RIMEGEPANT (Unknown/Other),1257.0,155.0,49.0,RIMEGEPANT,control
+22Q3,RIMEGEPANT (Unknown/Other),42.0,8.0,1.0,RIMEGEPANT,control
+22Q4,RIMEGEPANT (Unknown/Other),1675.0,178.0,42.0,RIMEGEPANT,control
+23Q1,RIMEGEPANT (Unknown/Other),582.0,80.0,40.0,RIMEGEPANT,control
+23Q2,RIMEGEPANT (Unknown/Other),411.0,48.0,45.0,RIMEGEPANT,control
+23Q3,RIMEGEPANT (Unknown/Other),242.0,32.0,12.0,RIMEGEPANT,control
+23Q4,RIMEGEPANT (Unknown/Other),227.0,30.0,17.0,RIMEGEPANT,control
+24Q1,RIMEGEPANT (Unknown/Other),277.0,21.0,24.0,RIMEGEPANT,control
+24Q2,RIMEGEPANT (Unknown/Other),265.0,17.0,24.0,RIMEGEPANT,control
+24Q3,RIMEGEPANT (Unknown/Other),325.0,34.0,31.0,RIMEGEPANT,control
+24Q4,RIMEGEPANT (Unknown/Other),308.0,38.0,21.0,RIMEGEPANT,control
+20Q1,SEMAGLUTIDE (Diabetes),661.0,237.0,63.0,SEMAGLUTIDE,target
+20Q2,SEMAGLUTIDE (Diabetes),640.0,252.0,71.0,SEMAGLUTIDE,target
+20Q3,SEMAGLUTIDE (Diabetes),202.0,81.0,4.0,SEMAGLUTIDE,target
+20Q4,SEMAGLUTIDE (Diabetes),231.0,77.0,2.0,SEMAGLUTIDE,target
+21Q1,SEMAGLUTIDE (Diabetes),440.0,138.0,28.0,SEMAGLUTIDE,target
+21Q2,SEMAGLUTIDE (Diabetes),148.0,34.0,4.0,SEMAGLUTIDE,target
+21Q3,SEMAGLUTIDE (Diabetes),418.0,143.0,25.0,SEMAGLUTIDE,target
+21Q4,SEMAGLUTIDE (Diabetes),161.0,43.0,8.0,SEMAGLUTIDE,target
+22Q1,SEMAGLUTIDE (Diabetes),474.0,143.0,40.0,SEMAGLUTIDE,target
+22Q2,SEMAGLUTIDE (Diabetes),222.0,51.0,11.0,SEMAGLUTIDE,target
+22Q3,SEMAGLUTIDE (Diabetes),643.0,180.0,40.0,SEMAGLUTIDE,target
+22Q4,SEMAGLUTIDE (Diabetes),200.0,41.0,6.0,SEMAGLUTIDE,target
+23Q1,SEMAGLUTIDE (Diabetes),762.0,250.0,60.0,SEMAGLUTIDE,target
+23Q2,SEMAGLUTIDE (Diabetes),295.0,82.0,11.0,SEMAGLUTIDE,target
+23Q3,SEMAGLUTIDE (Diabetes),1034.0,337.0,94.0,SEMAGLUTIDE,target
+23Q4,SEMAGLUTIDE (Diabetes),347.0,75.0,17.0,SEMAGLUTIDE,target
+24Q1,SEMAGLUTIDE (Diabetes),1047.0,294.0,82.0,SEMAGLUTIDE,target
+24Q2,SEMAGLUTIDE (Diabetes),481.0,108.0,34.0,SEMAGLUTIDE,target
+24Q3,SEMAGLUTIDE (Diabetes),1992.0,502.0,231.0,SEMAGLUTIDE,target
+24Q4,SEMAGLUTIDE (Diabetes),736.0,150.0,34.0,SEMAGLUTIDE,target
+20Q1,SEMAGLUTIDE (Unknown/Other),464.0,98.0,46.0,SEMAGLUTIDE,target
+20Q2,SEMAGLUTIDE (Unknown/Other),408.0,109.0,43.0,SEMAGLUTIDE,target
+20Q3,SEMAGLUTIDE (Unknown/Other),136.0,40.0,3.0,SEMAGLUTIDE,target
+20Q4,SEMAGLUTIDE (Unknown/Other),234.0,49.0,10.0,SEMAGLUTIDE,target
+21Q1,SEMAGLUTIDE (Unknown/Other),807.0,207.0,56.0,SEMAGLUTIDE,target
+21Q2,SEMAGLUTIDE (Unknown/Other),190.0,39.0,14.0,SEMAGLUTIDE,target
+21Q3,SEMAGLUTIDE (Unknown/Other),1177.0,327.0,86.0,SEMAGLUTIDE,target
+21Q4,SEMAGLUTIDE (Unknown/Other),569.0,130.0,25.0,SEMAGLUTIDE,target
+22Q1,SEMAGLUTIDE (Unknown/Other),1572.0,401.0,103.0,SEMAGLUTIDE,target
+22Q2,SEMAGLUTIDE (Unknown/Other),828.0,176.0,51.0,SEMAGLUTIDE,target
+22Q3,SEMAGLUTIDE (Unknown/Other),1265.0,288.0,116.0,SEMAGLUTIDE,target
+22Q4,SEMAGLUTIDE (Unknown/Other),315.0,66.0,34.0,SEMAGLUTIDE,target
+23Q1,SEMAGLUTIDE (Unknown/Other),1766.0,410.0,208.0,SEMAGLUTIDE,target
+23Q2,SEMAGLUTIDE (Unknown/Other),444.0,91.0,40.0,SEMAGLUTIDE,target
+23Q3,SEMAGLUTIDE (Unknown/Other),2220.0,498.0,271.0,SEMAGLUTIDE,target
+23Q4,SEMAGLUTIDE (Unknown/Other),525.0,88.0,53.0,SEMAGLUTIDE,target
+24Q1,SEMAGLUTIDE (Unknown/Other),2644.0,460.0,273.0,SEMAGLUTIDE,target
+24Q2,SEMAGLUTIDE (Unknown/Other),795.0,153.0,89.0,SEMAGLUTIDE,target
+24Q3,SEMAGLUTIDE (Unknown/Other),3581.0,677.0,473.0,SEMAGLUTIDE,target
+24Q4,SEMAGLUTIDE (Unknown/Other),981.0,185.0,131.0,SEMAGLUTIDE,target
+20Q1,SEMAGLUTIDE (Weight Loss),37.0,5.0,11.0,SEMAGLUTIDE,target
+20Q2,SEMAGLUTIDE (Weight Loss),28.0,6.0,15.0,SEMAGLUTIDE,target
+20Q3,SEMAGLUTIDE (Weight Loss),14.0,3.0,8.0,SEMAGLUTIDE,target
+20Q4,SEMAGLUTIDE (Weight Loss),18.0,7.0,14.0,SEMAGLUTIDE,target
+21Q1,SEMAGLUTIDE (Weight Loss),32.0,12.0,25.0,SEMAGLUTIDE,target
+21Q2,SEMAGLUTIDE (Weight Loss),27.0,9.0,18.0,SEMAGLUTIDE,target
+21Q3,SEMAGLUTIDE (Weight Loss),77.0,30.0,33.0,SEMAGLUTIDE,target
+21Q4,SEMAGLUTIDE (Weight Loss),107.0,32.0,25.0,SEMAGLUTIDE,target
+22Q1,SEMAGLUTIDE (Weight Loss),211.0,60.0,65.0,SEMAGLUTIDE,target
+22Q2,SEMAGLUTIDE (Weight Loss),250.0,66.0,51.0,SEMAGLUTIDE,target
+22Q3,SEMAGLUTIDE (Weight Loss),153.0,43.0,99.0,SEMAGLUTIDE,target
+22Q4,SEMAGLUTIDE (Weight Loss),74.0,18.0,45.0,SEMAGLUTIDE,target
+23Q1,SEMAGLUTIDE (Weight Loss),313.0,102.0,172.0,SEMAGLUTIDE,target
+23Q2,SEMAGLUTIDE (Weight Loss),194.0,44.0,55.0,SEMAGLUTIDE,target
+23Q3,SEMAGLUTIDE (Weight Loss),603.0,159.0,226.0,SEMAGLUTIDE,target
+23Q4,SEMAGLUTIDE (Weight Loss),281.0,70.0,89.0,SEMAGLUTIDE,target
+24Q1,SEMAGLUTIDE (Weight Loss),773.0,167.0,235.0,SEMAGLUTIDE,target
+24Q2,SEMAGLUTIDE (Weight Loss),333.0,72.0,99.0,SEMAGLUTIDE,target
+24Q3,SEMAGLUTIDE (Weight Loss),1210.0,275.0,447.0,SEMAGLUTIDE,target
+24Q4,SEMAGLUTIDE (Weight Loss),551.0,120.0,151.0,SEMAGLUTIDE,target
