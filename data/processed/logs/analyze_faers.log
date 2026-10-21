@@ -1,0 +1,129 @@
+Building canonical_demo...
+Building filtered_drug...
+Building indi_raw...
+Building resolved_indi...
+Building resolved_reac...
+
+--- Top matched drugname / prod_ai strings per cohort ---
+       drug                                                      drugname                   prod_ai     n  rk
+DULAGLUTIDE                                                     TRULICITY               DULAGLUTIDE 43734   1
+DULAGLUTIDE                                                   DULAGLUTIDE               DULAGLUTIDE   130   2
+DULAGLUTIDE                                                  DULAGLUTIDE.               DULAGLUTIDE    87   3
+DULAGLUTIDE          DULAGLUTIDE (DULAGLUTIDE 0.75MG/0.5ML INJ, SOLN PEN)               DULAGLUTIDE    25   4
+DULAGLUTIDE                                             Dulaglutide 1.5mg               DULAGLUTIDE    13   5
+DULAGLUTIDE           DULAGLUTIDE (DULAGLUTIDE 1.5MG/0.5ML INJ, SOLN PEN)               DULAGLUTIDE     6   6
+DULAGLUTIDE                                            Dulaglutide 0.75mg               DULAGLUTIDE     5   7
+DULAGLUTIDE          DULAGLUTIDE (DULAGLUTIDE 0.75MG/0.5ML INJ, SOLN,PEN)               DULAGLUTIDE     4   8
+LIRAGLUTIDE                                                       VICTOZA               LIRAGLUTIDE  3082   1
+LIRAGLUTIDE                                                       SAXENDA               LIRAGLUTIDE  2718   2
+LIRAGLUTIDE                                                   LIRAGLUTIDE               LIRAGLUTIDE   128   3
+LIRAGLUTIDE                                                   Liraglutide               LIRAGLUTIDE    38   4
+LIRAGLUTIDE                                           Liraglutide FlexPen               LIRAGLUTIDE     6   5
+LIRAGLUTIDE                                     Liraglutide 6mg/ml PDS290               LIRAGLUTIDE     5   6
+LIRAGLUTIDE                                                   liraglutide               LIRAGLUTIDE     3   7
+LIRAGLUTIDE                                                   LIraglutide               LIRAGLUTIDE     2   8
+  METFORMIN                                                     METFORMIN   METFORMIN HYDROCHLORIDE 21170   1
+  METFORMIN                                       METFORMIN HYDROCHLORIDE   METFORMIN HYDROCHLORIDE  4779   2
+  METFORMIN                                      METFORMIN HYDROCHLORIDE.   METFORMIN HYDROCHLORIDE  1475   3
+  METFORMIN                                                      METGLUCO   METFORMIN HYDROCHLORIDE   567   4
+  METFORMIN                                                    METFORMINE   METFORMIN HYDROCHLORIDE   500   5
+  METFORMIN                                                    GLUCOPHAGE   METFORMIN HYDROCHLORIDE   483   6
+  METFORMIN                                                       GLIFAGE   METFORMIN HYDROCHLORIDE   148   7
+  METFORMIN                                              Metformin tablet   METFORMIN HYDROCHLORIDE   133   8
+PHENTERMINE                                                   PHENTERMINE               PHENTERMINE   236   1
+PHENTERMINE                                     PHENTERMINE HYDROCHLORIDE PHENTERMINE HYDROCHLORIDE   101   2
+PHENTERMINE                                                  PHENTERMINE.               PHENTERMINE    95   3
+PHENTERMINE                                    PHENTERMINE HYDROCHLORIDE. PHENTERMINE HYDROCHLORIDE    64   4
+PHENTERMINE                                                      ADIPEX-P PHENTERMINE HYDROCHLORIDE    41   5
+PHENTERMINE                                                      ADIPEX?P PHENTERMINE HYDROCHLORIDE    31   6
+PHENTERMINE                                                       LOMAIRA PHENTERMINE HYDROCHLORIDE    18   7
+PHENTERMINE                        Phentermine Hydrochloride Tablets, USP PHENTERMINE HYDROCHLORIDE     8   8
+ RIMEGEPANT                                                    NURTEC ODT        RIMEGEPANT SULFATE  7867   1
+ RIMEGEPANT                                                    RIMEGEPANT                RIMEGEPANT   112   2
+ RIMEGEPANT                                            RIMEGEPANT SULFATE        RIMEGEPANT SULFATE     1   3
+ RIMEGEPANT                                                   RIMEGEPANT.                RIMEGEPANT     1   4
+SEMAGLUTIDE                                                       OZEMPIC               SEMAGLUTIDE 25091   1
+SEMAGLUTIDE                                                        WEGOVY               SEMAGLUTIDE  6658   2
+SEMAGLUTIDE                                                      RYBELSUS               SEMAGLUTIDE  4116   3
+SEMAGLUTIDE                                                   SEMAGLUTIDE               SEMAGLUTIDE   998   4
+SEMAGLUTIDE SEMAGLUTIDE (SEMAGLUTIDE 0.5MG/0.375ML INJ, SOLN, PEN, 1.5ML)               SEMAGLUTIDE   147   5
+SEMAGLUTIDE                                Semaglutide B 3.0 mg/ml PDS290               SEMAGLUTIDE    51   6
+SEMAGLUTIDE                               Semaglutide B 1.34 mg/ml PDS290               SEMAGLUTIDE    26   7
+SEMAGLUTIDE    SEMAGLUTIDE (SEMAGLUTIDE 1MG/0.75ML INJ, SOLN, PEN, 1.5ML)               SEMAGLUTIDE    24   8
+TIRZEPATIDE                                                      MOUNJARO               TIRZEPATIDE 52418   1
+TIRZEPATIDE                                                      ZEPBOUND               TIRZEPATIDE 10394   2
+TIRZEPATIDE                                                   TIRZEPATIDE               TIRZEPATIDE   555   3
+
+--- Top indication terms for target drugs ---
+                                   indi_pt     n
+       Product used for unknown indication 16286
+                  Type 2 diabetes mellitus  8416
+                            Weight control  2550
+                         Diabetes mellitus  2502
+                                   Obesity  1229
+                          Weight decreased  1168
+                Glucose tolerance impaired   646
+                                Overweight   273
+                  Type 1 diabetes mellitus   133
+        Glycosylated haemoglobin increased   102
+                        Insulin resistance    92
+                   Blood glucose increased    68
+      Diabetes mellitus inadequate control    63
+              Diabetes mellitus management    35
+                        Polycystic ovaries    28
+                          Cardiac disorder    27
+                    Blood glucose abnormal    26
+                  Glycosylated haemoglobin    26
+                              Hypertension    23
+                      Ill-defined disorder    22
+                 Body mass index increased    22
+               Polycystic ovarian syndrome    21
+      Product use in unapproved indication    18
+Insulin-requiring type 2 diabetes mellitus    17
+               Blood cholesterol increased    17
+
+--- Reporter codes (OCCP_COD) and the group each maps to ---
+occp_cod          reporter_group       n
+      CN                Consumer 3258864
+      MD Healthcare professional 1546229
+      HP           Other/Unknown 1487253
+      PH Healthcare professional  438575
+      LW                  Lawyer  319549
+    None           Other/Unknown  171796
+
+--- Share of target drug lines with no weight-loss or diabetes indication, by year and reporter ---
+ year          reporter_group  drug_lines  unclassified_share
+ 2020                Consumer        1625               0.346
+ 2020 Healthcare professional         881               0.437
+ 2020           Other/Unknown         407               0.624
+ 2021                Consumer        2486               0.681
+ 2021 Healthcare professional         970               0.593
+ 2021           Other/Unknown         459               0.721
+ 2022                Consumer        3916               0.662
+ 2022 Healthcare professional        1237               0.549
+ 2022           Other/Unknown         502               0.701
+ 2023                Consumer        5508               0.558
+ 2023 Healthcare professional        1937               0.555
+ 2023                  Lawyer           3               0.000
+ 2023           Other/Unknown         775               0.665
+ 2024                Consumer        9836               0.507
+ 2024 Healthcare professional        2578               0.561
+ 2024                  Lawyer           4               0.500
+ 2024           Other/Unknown        1312               0.643
+
+--- Outcome PTs present in REAC (case-insensitive) ---
+                                           pt      n
+                                off label use 596854
+                                       nausea 327854
+                                    diarrhoea 317386
+                                     vomiting 189908
+         product use in unapproved indication 158678
+                                     overdose 117745
+     wrong technique in product usage process 114762
+                   intentional product misuse  38712
+                                    underdose  29691
+                             medication error  15270
+prescription drug used without a prescription   3661
+                suspected counterfeit product   1684
+
+FAERS case counts saved to data/processed/faers_cases.csv (667 rows, years 2020-2024)

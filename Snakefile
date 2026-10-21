@@ -2,11 +2,7 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        "data/processed/cms_volume_output.csv",
-        "data/processed/faers_top5_visuals.csv",
-        "data/processed/faers_full_ml_data.csv",
-        "data/processed/meps_financial_output.csv",
-        "data/processed/ml_insights_report.txt"
+        "reports/GLP1_Analysis.html"
 
 rule analyze_cms:
     input:
@@ -36,10 +32,11 @@ rule analyze_faers:
         faers_dir = config["faers_folder"],
         config_file = "config.yaml"
     output:
-        visuals = "data/processed/faers_top5_visuals.csv",
-        ml_data = "data/processed/faers_full_ml_data.csv"
+        "data/processed/faers_cases.csv"
     benchmark:
         "data/processed/benchmarks/analyze_faers.tsv"
+    log:
+        "data/processed/logs/analyze_faers.log"
     params:
         targets = config["target_drugs"],
         controls = config["control_drugs"],
@@ -52,8 +49,7 @@ rule analyze_faers:
             --faers_folder {input.faers_dir} \
             --faers_quarters {params.quarters} \
             --config_file {input.config_file} \
-            --output_visuals {output.visuals} \
-            --output_ml {output.ml_data}
+            --output {output} > {log} 2>&1
         """
 
 rule analyze_meps:
@@ -64,6 +60,8 @@ rule analyze_meps:
         "data/processed/meps_financial_output.csv"
     benchmark:
         "data/processed/benchmarks/analyze_meps.tsv"
+    log:
+        "data/processed/logs/analyze_meps.log"
     params:
         targets = config["target_drugs"],
         controls = config["control_drugs"],
@@ -76,21 +74,44 @@ rule analyze_meps:
             --targets {params.targets} \
             --controls {params.controls} \
             --config_file {input.config_file} \
-            --output {output}
+            --output {output} > {log} 2>&1
         """
 
-rule run_ml_models:
+rule run_stats_models:
     input:
-        cms = "data/processed/cms_volume_output.csv",
-        faers_ml = "data/processed/faers_full_ml_data.csv"
+        faers = "data/processed/faers_cases.csv"
     output:
-        report = "data/processed/ml_insights_report.txt"
+        csv = "data/processed/stats_results.csv",
+        report = "data/processed/stats_report.txt"
     benchmark:
-        "data/processed/benchmarks/run_ml_models.tsv"
+        "data/processed/benchmarks/run_stats_models.tsv"
+    params:
+        targets = config["target_drugs"],
+        comparators = config["glp1_comparators"],
+        brand_scopes = config["stats"]["brand_scopes"],
+        exclude_products = config["stats"]["exclude_products"]
     shell:
         """
-        python src/run_ml_models.py \
-            --cms_file {input.cms} \
-            --faers_file {input.faers_ml} \
+        python src/run_stats_models.py \
+            --faers_file {input.faers} \
+            --targets {params.targets} \
+            --comparators {params.comparators} \
+            --brand_scopes {params.brand_scopes} \
+            --exclude_products {params.exclude_products} \
+            --output_csv {output.csv} \
             --output_report {output.report}
+        """
+
+rule render_report:
+    input:
+        cms = "data/processed/cms_volume_output.csv",
+        faers = "data/processed/faers_cases.csv",
+        meps = "data/processed/meps_financial_output.csv",
+        stats = "data/processed/stats_results.csv",
+        rmd = "reports/GLP1_Analysis.Rmd"
+    output:
+        "reports/GLP1_Analysis.html"
+    shell:
+        """
+        Rscript -e "rmarkdown::render('{input.rmd}', output_file='GLP1_Analysis.html', output_dir='reports', quiet=TRUE)"
         """

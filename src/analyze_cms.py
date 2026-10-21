@@ -6,21 +6,38 @@ import re
 import yaml
 
 def build_cms_query(cms_folder, cms_files, targets, controls, drug_mappings):
-    file_paths = [str(Path(cms_folder) / f) for f in cms_files]
-    queries = []
+    """
+    Builds an SQL query to extract and aggregate CMS Medicare Part D prescription data.
+
+    Parameters:
+    cms_folder (str): Path to the folder containing CMS files.
+    cms_files (list): List of CMS file names to process.
+    targets (list): List of target drug names.
+    controls (list): List of control drug names.
+    drug_mappings (dict): Dictionary mapping drug names to their brand/generic names.
+
+    Returns:
+    sql_query (str): SQL query that extracts/aggregates prescription data for the specified drugs.
+    """
+    file_paths = [str(Path(cms_folder) / f) for f in cms_files] # Convert file names to full paths
+    queries = [] # Empty list to hold one SQL query for each file
 
     for fp in file_paths:
+        # Look for a four-digit year pattern in the file name to extract the year
         year_groups = re.findall(r'(?<!\d)\d{4}(?!\d)', Path(fp).stem)
         year = year_groups[-1] if year_groups else 'Unknown'
 
         try:
+            # Open the file with utf-8 encoding and ignore errors just to read the header line
             with open(fp, 'r', encoding='utf-8', errors='ignore') as f:
                 header_line = f.readline().strip().replace('\ufeff', '').replace('"', '').lower()
-                header = header_line.split(',')
+                header = header_line.split(',') # Split the header line into a list of columns
         except Exception as e:
             print(f"Error reading header for {fp}: {e}")
             continue
 
+        # Search for columns that contain drug names and total claim counts
+        # Government files often update formatting and naming conventions differently across years
         search_cols = [c for c in header if c in ['gnrc_name', 'generic_name', 'brnd_name', 'brand_name', 'drug_name']]
         clms_col = next((c for c in header if c in ['tot_clms', 'total_claim_count', 'tot_clm_cnt']), None)
 
@@ -31,16 +48,27 @@ def build_cms_query(cms_folder, cms_files, targets, controls, drug_mappings):
         case_when = ""
         where_conditions = []
 
-        # Apply drug mappings to search for Brand AND Generic names
+        # Identify the generic name column to check for combination products (e.g., Sitagliptin/Metformin)
+        gnrc_col = next((c for c in header if c in ['gnrc_name', 'generic_name']), None)
+
+        # Build a regex exclusion string: If it contains '/', '+', '&', or 'AND', it is a combination drug and must be excluded
+        no_combo = f"AND NOT REGEXP_MATCHES(COALESCE({gnrc_col}, ''), '(?i)[/+&]|\\bAND\\b')" if gnrc_col else ""
+
+        # Apply drug mappings to search for Brand AND Generic names using strict whole-word regex
         for d in targets + controls:
             terms = drug_mappings.get(d, [d])
-            # Create an OR condition for every column and every mapped term
-            drug_conds = " OR ".join([f"{c} ILIKE '%{t}%'" for c in search_cols for t in terms])
-            case_when += f"        WHEN {drug_conds} THEN '{d}'\n"
-            where_conditions.append(f"({drug_conds})")
+            # \b ensures word boundaries. (?i) makes it case-insensitive.
+            regex = f"(?i)\\b({'|'.join(re.escape(t) for t in terms)})\\b"
 
-        where_clause = " OR ".join(where_conditions)
+            # Create an OR condition for every column, explicitly excluding combination products
+            drug_conds = "(" + " OR ".join([f"REGEXP_MATCHES(COALESCE({c}, ''), '{regex}')" for c in search_cols]) + f") {no_combo}"
 
+            case_when += f"        WHEN {drug_conds} THEN '{d}'\n" # Map matched rows to the generic cohort name
+            where_conditions.append(f"({drug_conds})") # Add to the WHERE clause to filter the dataset
+
+        where_clause = " OR ".join(where_conditions) # Combine all WHERE conditions into a single OR clause
+
+        # Build the query for this specific year's file
         q = f"""
         SELECT
             CASE
@@ -56,8 +84,9 @@ def build_cms_query(cms_folder, cms_files, targets, controls, drug_mappings):
     if not queries:
         raise SystemExit("No usable CMS files found (all skipped). Check the warnings above.")
 
-    union_query = " UNION ALL ".join(queries)
+    union_query = " UNION ALL ".join(queries) # Stack all yearly queries together
 
+    # Final aggregation: Sum the total prescriptions grouped by drug and year
     sql_query = f"""
     SELECT generic_name, year, SUM(total_prescriptions) AS total_prescriptions
     FROM ({union_query})
@@ -67,6 +96,9 @@ def build_cms_query(cms_folder, cms_files, targets, controls, drug_mappings):
     return sql_query
 
 def main():
+    """
+    Parser for command line arguments and main execution function.
+    """
     parser = argparse.ArgumentParser(description="CMS Volume Trend Pipeline")
     parser.add_argument('--cms_folder', type=str, required=True)
     parser.add_argument('--cms_files', type=str, nargs='+', required=True)
@@ -78,17 +110,18 @@ def main():
     args = parser.parse_args()
     print(f"Running CMS Volume Analysis for {args.targets} vs {args.controls}...")
 
-    with open(args.config_file, 'r') as f:
+    with open(args.config_file, 'r') as f: # Snakemake passes the config file to this script
         config = yaml.safe_load(f)
     drug_mappings = config.get('drug_mappings', {})
 
+    # Map target and control roles for downstream visualization
     role_map = {d: 'target' for d in args.targets}
     role_map.update({d: 'control' for d in args.controls})
 
-    con = duckdb.connect(database=':memory:')
+    con = duckdb.connect(database=':memory:') # Create an in-memory DuckDB connection
     query = build_cms_query(args.cms_folder, args.cms_files, args.targets, args.controls, drug_mappings)
 
-    result_df = con.execute(query).df()
+    result_df = con.execute(query).df() # Execute the query and convert to a pandas DataFrame
     result_df['role'] = result_df['generic_name'].map(role_map)
     result_df.to_csv(args.output, index=False)
     print(f"CMS Volume data successfully saved to {args.output}")

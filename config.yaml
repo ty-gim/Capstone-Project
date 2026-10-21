@@ -5,8 +5,17 @@ control_drugs:
   - "PHENTERMINE"
   - "METFORMIN"
   - "RIMEGEPANT"
+  - "LIRAGLUTIDE"
+  - "TIRZEPATIDE"
+  - "DULAGLUTIDE"
 
-# Brand name mappings for survey data (MEPS)
+# Injectable GLP-1/GIP comparators (also listed in control_drugs), used for the same-class interaction model
+glp1_comparators:
+  - "LIRAGLUTIDE"
+  - "TIRZEPATIDE"
+  - "DULAGLUTIDE"
+
+# Generic name first, then brand names; QSYMIA is left out because it is phentermine/topiramate
 drug_mappings:
   SEMAGLUTIDE:
     - "SEMAGLUTIDE"
@@ -17,7 +26,6 @@ drug_mappings:
     - "PHENTERMINE"
     - "ADIPEX"
     - "LOMAIRA"
-    - "QSYMIA"
   METFORMIN:
     - "METFORMIN"
     - "GLUCOPHAGE"
@@ -27,6 +35,17 @@ drug_mappings:
     - "RIMEGEPANT"
     - "NURTEC"
     - "VYDURA"
+  LIRAGLUTIDE:
+    - "LIRAGLUTIDE"
+    - "VICTOZA"
+    - "SAXENDA"
+  TIRZEPATIDE:
+    - "TIRZEPATIDE"
+    - "MOUNJARO"
+    - "ZEPBOUND"
+  DULAGLUTIDE:
+    - "DULAGLUTIDE"
+    - "TRULICITY"
 
 cms_folder: "data/raw/cms_data"
 cms_files:
@@ -66,3 +85,9 @@ meps_files:
   - "h239adta/h239a.dta"
   - "h248adta/h248a.dta"
   - "h254adta/h254a.dta"
+
+stats:
+  brand_scopes:
+    - "OZEMPIC"
+  exclude_products:
+    - "RYBELSUS"

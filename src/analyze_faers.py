@@ -4,184 +4,183 @@ import pandas as pd
 from pathlib import Path
 import re
 import yaml
-import sys
 
-def get_files_by_prefix(base_folder, quarters, prefix):
+def build_faers_queries(targets, controls, drug_mappings, files, min_year, max_year):
     """
-    Strictly discovers files. If a quarter is missing a required file,
-    it fails loudly rather than silently skipping.
+    Builds the ordered SQL steps that turn raw FAERS quarters into case-level counts.
+
+    Parameters:
+    targets (list): Target drug names.
+    controls (list): Control drug names.
+    drug_mappings (dict): Dictionary mapping generic drugs to brand names.
+    files (dict): Dictionary of file paths for DEMO, DRUG, REAC, and INDI.
+    min_year (int): Start year for the analysis window.
+    max_year (int): End year for the analysis window.
     """
-    files = []
-    for q in quarters:
-        path = Path(base_folder) / q
-        if not path.exists():
-            raise FileNotFoundError(f"Expected directory does not exist: {path}")
+    # Standardize CSV reading options for DuckDB
+    csv_opts = "delim='$', quote='', header=True, all_varchar=True, normalize_names=True"
+    demo_src = f"read_csv({files['DEMO']}, {csv_opts})"
+    drug_src = f"read_csv({files['DRUG']}, {csv_opts})"
+    reac_src = f"read_csv({files['REAC']}, {csv_opts})"
+    indi_src = f"read_csv({files['INDI']}, {csv_opts})"
 
-        # FAERS ASCII files are typically named like DEMO20Q1.txt
-        matched_files = [p for p in path.glob('*') if p.is_file() and p.name.lower().startswith(prefix.lower()) and p.suffix.lower() == '.txt']
+    # Regex to detect combination products (e.g., drug A / drug B)
+    combo_ai = r"[\\/+&;]|\bAND\b"
+    combo_name = r"[A-Za-z]{4,}\s*[/+&]\s*[A-Za-z]{4,}|\bAND\b"
 
-        if not matched_files:
-            raise FileNotFoundError(f"Missing {prefix} file in {path}")
-        if len(matched_files) > 1:
-            raise ValueError(f"Multiple {prefix} files found in {path}. Expected exactly one.")
-
-        files.append(str(matched_files[0].as_posix()))
-    return files
-
-def build_regex_conditions(drugs, drug_mappings):
-    """
-    Builds strict RE2-compatible regex conditions for the target drugs.
-    """
-    conditions = []
-    for d in drugs:
+    drug_when, product_when, drug_filter = [], [], []
+    for d in targets + controls:
         terms = drug_mappings.get(d, [d])
-        # Escape terms and join with OR
-        terms_regex = "|".join([re.escape(t) for t in terms])
-        # \b ensures word boundaries. (?i) makes it case-insensitive.
-        regex = f"(?i)\\b({terms_regex})\\b"
-        conditions.append((d, regex))
-    return conditions
+        regex = f"(?i)\\b({'|'.join(re.escape(t) for t in terms)})\\b"
 
-def run_faers_pipeline(targets, controls, drug_mappings, faers_folder, faers_quarters, output_ml, output_visuals):
-    # 1. Strict File Discovery
-    print("Discovering and validating FAERS files...")
-    demo_files = get_files_by_prefix(faers_folder, faers_quarters, 'DEMO')
-    drug_files = get_files_by_prefix(faers_folder, faers_quarters, 'DRUG')
-    reac_files = get_files_by_prefix(faers_folder, faers_quarters, 'REAC')
-    indi_files = get_files_by_prefix(faers_folder, faers_quarters, 'INDI')
+        # Positive match for the drug, negative match for combination delimiters
+        pos = f"(REGEXP_MATCHES(dn, '{regex}') OR REGEXP_MATCHES(ai, '{regex}'))"
+        neg = f"(REGEXP_MATCHES(dn, '(?i){combo_name}') OR REGEXP_MATCHES(ai, '(?i){combo_ai}'))"
 
-    # 2. Build Boolean SQL Logic for Drugs (RE2 Compatible)
-    all_drugs = targets + controls
-    regex_mapping = build_regex_conditions(all_drugs, drug_mappings)
+        drug_when.append(f"WHEN ({pos} AND NOT {neg}) THEN '{d}'")
+        drug_filter.append(f"({pos} AND NOT {neg})")
 
-    # Regex to detect combination drugs (e.g., SITAGLIPTIN/METFORMIN)
-    combo_exclusion = r"[/+&]|\bAND\b"
+        # Brand terms (everything after the generic) label the specific product (e.g., Ozempic)
+        for t in terms[1:]:
+            product_when.append(f"WHEN REGEXP_MATCHES(dn, '(?i)\\b{re.escape(t)}\\b') THEN '{t}'")
 
-    case_when_clauses = []
-    drug_filter_conds = []
+    product_sql = f"CASE {' '.join(product_when)} ELSE 'GENERIC/UNSPECIFIED' END" if product_when else "'GENERIC/UNSPECIFIED'"
 
-    for drug_name, regex in regex_mapping:
-        # Positive match for the drug
-        pos_match = f"(REGEXP_MATCHES(drugname, '{regex}') OR REGEXP_MATCHES(prod_ai, '{regex}'))"
-        # Negative match for combination delimiters
-        neg_match = f"(REGEXP_MATCHES(drugname, '(?i){combo_exclusion}') OR REGEXP_MATCHES(prod_ai, '(?i){combo_exclusion}'))"
+    # MedDRA preferred terms behind each outcome flag
+    off_label = ['Off label use', 'Product use in unapproved indication', 'Prescription drug used without a prescription']
+    med_core = ['Medication error', 'Suspected counterfeit product', 'Intentional product misuse', 'Wrong technique in product usage process']
+    med_all = med_core + ['Underdose', 'Overdose']
+    gi = ['Nausea', 'Vomiting', 'Diarrhoea']
+    pt_list = lambda pts: ", ".join(f"'{p.lower()}'" for p in pts)
 
-        # Combine them: Must contain the drug, MUST NOT contain combination delimiters
-        full_cond = f"({pos_match} AND NOT {neg_match})"
+    ddl = {}
 
-        case_when_clauses.append(f"WHEN {full_cond} THEN '{drug_name}'")
-        drug_filter_conds.append(full_cond)
+    # STEP A: Canonical DEMO Deduplication
+    # Keep the latest version of each case. Maps 'OT' (Other Health Professional) to Healthcare Professional.
+    ddl['canonical_demo'] = f"""
+        CREATE OR REPLACE TEMP TABLE canonical_demo AS
+        SELECT primaryid, occp_cod,
+               CASE WHEN occp_cod IN ('MD', 'PH', 'OT') THEN 'Healthcare professional'
+                    WHEN occp_cod = 'CN' THEN 'Consumer'
+                    WHEN occp_cod = 'LW' THEN 'Lawyer'
+                    ELSE 'Other/Unknown' END AS reporter_group,
+               init_year
+        FROM (
+            SELECT primaryid, TRIM(occp_cod) AS occp_cod, TRY_CAST(SUBSTRING(init_fda_dt, 1, 4) AS INT) AS init_year,
+                   ROW_NUMBER() OVER (PARTITION BY caseid ORDER BY TRY_CAST(caseversion AS INT) DESC, fda_dt DESC, primaryid DESC) AS rn
+            FROM {demo_src}
+        )
+        WHERE rn = 1 AND init_year BETWEEN {min_year} AND {max_year}
+    """
 
-    drug_case_sql = "\n".join(case_when_clauses)
-    drug_filter_sql = " OR ".join(drug_filter_conds)
+    # STEP B: Filtered DRUG Table
+    # Primary suspect drugs only; COALESCE prevents rows with empty prod_ai from being silently dropped
+    ddl['filtered_drug'] = f"""
+        CREATE OR REPLACE TEMP TABLE filtered_drug AS
+        SELECT primaryid, drug_seq, dn AS drugname, ai AS prod_ai,
+               CASE {' '.join(drug_when)} END AS drug,
+               {product_sql} AS product
+        FROM (
+            SELECT primaryid, drug_seq, role_cod, COALESCE(drugname, '') AS dn, COALESCE(prod_ai, '') AS ai
+            FROM {drug_src}
+        )
+        WHERE TRIM(role_cod) = 'PS' AND ({' OR '.join(drug_filter)})
+    """
 
-    # 3. Initialize DuckDB (File-backed to prevent RAM blowouts on 20+ quarters)
-    print("Initializing DuckDB out-of-core processing...")
-    con = duckdb.connect('faers_processing.db')
+    ddl['indi_raw'] = f"""
+        CREATE OR REPLACE TEMP TABLE indi_raw AS
+        SELECT primaryid, indi_drug_seq, indi_pt FROM {indi_src}
+    """
 
-    try:
-        # STEP A: Canonical DEMO Deduplication
-        print("Building Canonical DEMO table (Deduplicating case versions)...")
-        con.execute(f"""
-            CREATE OR REPLACE TEMP TABLE canonical_demo AS
-            SELECT primaryid, caseid, occp_cod,
-                   SUBSTRING(init_fda_dt, 1, 4) AS init_year
-            FROM (
-                SELECT primaryid, caseid, occp_cod, init_fda_dt, caseversion, fda_dt,
-                       ROW_NUMBER() OVER (
-                           PARTITION BY caseid
-                           ORDER BY CAST(caseversion AS INT) DESC, fda_dt DESC
-                       ) as rn
-                FROM read_csv({demo_files}, delim='$', quote='', header=True, all_varchar=True, normalize_names=True)
-            )
-            WHERE rn = 1
-        """)
+    # STEP C: Indication flags per drug line
+    ddl['resolved_indi'] = """
+        CREATE OR REPLACE TEMP TABLE resolved_indi AS
+        SELECT primaryid, indi_drug_seq,
+               MAX(CASE WHEN REGEXP_MATCHES(indi_pt, '(?i)weight (loss|control|management|decreased)|obes|overweight') THEN 1 ELSE 0 END) AS is_weight_loss,
+               MAX(CASE WHEN REGEXP_MATCHES(indi_pt, '(?i)diabet') THEN 1 ELSE 0 END) AS is_diabetes
+        FROM indi_raw
+        GROUP BY primaryid, indi_drug_seq
+    """
 
-        # STEP B: Filtered DRUG Table
-        print("Filtering DRUG table...")
-        con.execute(f"""
-            CREATE OR REPLACE TEMP TABLE filtered_drug AS
-            SELECT primaryid, drug_seq,
-                   CASE {drug_case_sql} END AS drug_cohort
-            FROM read_csv({drug_files}, delim='$', quote='', header=True, all_varchar=True, normalize_names=True)
-            WHERE TRIM(role_cod) = 'PS'
-              AND ({drug_filter_sql})
-        """)
+    # STEP D: Outcome flags per case
+    ddl['resolved_reac'] = f"""
+        CREATE OR REPLACE TEMP TABLE resolved_reac AS
+        SELECT primaryid,
+               MAX(CASE WHEN LOWER(pt) IN ({pt_list(off_label)}) THEN 1 ELSE 0 END) AS is_off_label,
+               MAX(CASE WHEN LOWER(pt) IN ({pt_list(med_all)}) THEN 1 ELSE 0 END) AS is_med_error,
+               MAX(CASE WHEN LOWER(pt) IN ({pt_list(med_core)}) THEN 1 ELSE 0 END) AS is_med_core,
+               MAX(CASE WHEN LOWER(pt) IN ({pt_list(gi)}) THEN 1 ELSE 0 END) AS is_gi
+        FROM {reac_src}
+        GROUP BY primaryid
+    """
 
-        # STEP C: Indication Resolution
-        print("Resolving INDI table...")
-        con.execute(f"""
-            CREATE OR REPLACE TEMP TABLE resolved_indi AS
-            SELECT primaryid, indi_drug_seq,
-                   MAX(CASE WHEN REGEXP_MATCHES(indi_pt, '(?i)weight loss|obesity|weight management') THEN 1 ELSE 0 END) AS is_weight_loss,
-                   MAX(CASE WHEN REGEXP_MATCHES(indi_pt, '(?i)diabet') THEN 1 ELSE 0 END) AS is_diabetes
-            FROM read_csv({indi_files}, delim='$', quote='', header=True, all_varchar=True, normalize_names=True)
-            GROUP BY primaryid, indi_drug_seq
-        """)
+    # Audit queries printed for manual inspection
+    audit = {}
+    audit['Top matched drugname / prod_ai strings per cohort'] = """
+        SELECT * FROM (
+            SELECT drug, drugname, prod_ai, COUNT(*) AS n,
+                   ROW_NUMBER() OVER (PARTITION BY drug ORDER BY COUNT(*) DESC) AS rk
+            FROM filtered_drug GROUP BY drug, drugname, prod_ai
+        ) WHERE rk <= 8 ORDER BY drug, rk
+    """
+    audit['Top indication terms for target drugs'] = f"""
+        SELECT i.indi_pt, COUNT(*) AS n
+        FROM indi_raw i JOIN filtered_drug fd ON i.primaryid = fd.primaryid AND i.indi_drug_seq = fd.drug_seq
+        WHERE fd.drug IN ({', '.join(repr(t) for t in targets)})
+        GROUP BY i.indi_pt ORDER BY n DESC LIMIT 25
+    """
+    audit['Reporter codes (OCCP_COD) and the group each maps to'] = """
+        SELECT occp_cod, reporter_group, COUNT(*) AS n FROM canonical_demo GROUP BY 1, 2 ORDER BY n DESC
+    """
+    audit['Share of target drug lines with no weight-loss or diabetes indication, by year and reporter'] = f"""
+        SELECT demo.init_year AS year, demo.reporter_group, COUNT(*) AS drug_lines,
+               ROUND(AVG(CASE WHEN COALESCE(indi.is_weight_loss, 0) + COALESCE(indi.is_diabetes, 0) = 0 THEN 1.0 ELSE 0.0 END), 3) AS unclassified_share
+        FROM canonical_demo demo
+        JOIN filtered_drug fd ON demo.primaryid = fd.primaryid
+        LEFT JOIN resolved_indi indi ON fd.primaryid = indi.primaryid AND fd.drug_seq = indi.indi_drug_seq
+        WHERE fd.drug IN ({', '.join(repr(t) for t in targets)})
+        GROUP BY 1, 2 ORDER BY 1, 2
+    """
+    audit['Outcome PTs present in REAC (case-insensitive)'] = f"""
+        SELECT LOWER(pt) AS pt, COUNT(*) AS n FROM {reac_src}
+        WHERE LOWER(pt) IN ({pt_list(off_label + med_all + gi)})
+        GROUP BY 1 ORDER BY n DESC
+    """
 
-        # STEP D: Reaction/Outcome Resolution
-        print("Resolving REAC table...")
-        con.execute(f"""
-            CREATE OR REPLACE TEMP TABLE resolved_reac AS
-            SELECT primaryid,
-                   MAX(CASE WHEN pt IN ('Off label use', 'Product use in unapproved indication', 'Prescription drug used without a prescription') THEN 1 ELSE 0 END) AS is_off_label,
-                   MAX(CASE WHEN pt IN ('Medication error', 'Suspected counterfeit product', 'Intentional product misuse', 'Wrong technique in product usage process', 'Underdose', 'Overdose') THEN 1 ELSE 0 END) AS is_med_error,
-                   MAX(CASE WHEN pt IN ('Nausea', 'Vomiting', 'Diarrhoea') THEN 1 ELSE 0 END) AS is_gi_event
-            FROM read_csv({reac_files}, delim='$', quote='', header=True, all_varchar=True, normalize_names=True)
-            GROUP BY primaryid
-        """)
-
-        # STEP E: Final Master Join and Aggregation
-        print("Executing Master Join and Aggregation...")
-        final_query = """
-            SELECT
-                demo.init_year AS year,
-                demo.occp_cod AS reporter_type,
-                drug.drug_cohort AS drug,
-                CASE
-                    WHEN indi.is_weight_loss = 1 AND indi.is_diabetes = 1 THEN 'Dual Indication'
+    # STEP E: Final Master Join and Aggregation
+    # One row per year x reporter group x drug x product x indication; outcomes counted as distinct cases to prevent fan-out bug
+    final = """
+        SELECT demo.init_year AS year,
+               demo.reporter_group,
+               fd.drug,
+               fd.product,
+               CASE WHEN indi.is_weight_loss = 1 AND indi.is_diabetes = 1 THEN 'Dual Indication'
                     WHEN indi.is_weight_loss = 1 THEN 'Weight Loss'
                     WHEN indi.is_diabetes = 1 THEN 'Diabetes'
-                    ELSE 'Other/Unknown'
-                END AS indication,
-                COUNT(DISTINCT demo.primaryid) AS total_cases,
-                SUM(reac.is_off_label) AS off_label_cases,
-                SUM(reac.is_med_error) AS med_error_cases,
-                SUM(reac.is_gi_event) AS gi_cases
-            FROM canonical_demo demo
-            JOIN filtered_drug drug ON demo.primaryid = drug.primaryid
-            LEFT JOIN resolved_indi indi ON drug.primaryid = indi.primaryid AND drug.drug_seq = indi.indi_drug_seq
-            LEFT JOIN resolved_reac reac ON demo.primaryid = reac.primaryid
-            WHERE demo.init_year IS NOT NULL
-            GROUP BY 1, 2, 3, 4
-            ORDER BY 1, 3, 4
-        """
-
-        df = con.execute(final_query).df()
-
-    finally:
-        con.close()
-        Path('faers_processing.db').unlink(missing_ok=True)
-
-    # 4. Map Roles and Save
-    role_map = {d: 'target' for d in targets}
-    role_map.update({d: 'control' for d in controls})
-    df['role'] = df['drug'].map(role_map)
-
-    print(f"Saving outputs to {output_ml} and {output_visuals}...")
-    df.to_csv(output_ml, index=False)
-    df.to_csv(output_visuals, index=False)
-    print("FAERS Pipeline completed successfully.")
+                    ELSE 'Other/Unknown' END AS indication,
+               COUNT(DISTINCT demo.primaryid) AS total_cases,
+               COUNT(DISTINCT CASE WHEN reac.is_off_label = 1 THEN demo.primaryid END) AS off_label_cases,
+               COUNT(DISTINCT CASE WHEN reac.is_med_error = 1 THEN demo.primaryid END) AS med_error_cases,
+               COUNT(DISTINCT CASE WHEN reac.is_med_core = 1 THEN demo.primaryid END) AS med_error_core_cases,
+               COUNT(DISTINCT CASE WHEN reac.is_gi = 1 THEN demo.primaryid END) AS gi_cases
+        FROM canonical_demo demo
+        JOIN filtered_drug fd ON demo.primaryid = fd.primaryid
+        LEFT JOIN resolved_indi indi ON fd.primaryid = indi.primaryid AND fd.drug_seq = indi.indi_drug_seq
+        LEFT JOIN resolved_reac reac ON demo.primaryid = reac.primaryid
+        GROUP BY 1, 2, 3, 4, 5
+        ORDER BY 1, 3, 5, 2, 4
+    """
+    return ddl, audit, final
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="FAERS Pharmacovigilance Pipeline")
     parser.add_argument('--targets', type=str, nargs='+', required=True)
     parser.add_argument('--controls', type=str, nargs='*', default=[])
     parser.add_argument('--faers_folder', type=str, required=True)
     parser.add_argument('--faers_quarters', type=str, nargs='+', required=True)
     parser.add_argument('--config_file', type=str, required=True)
-    parser.add_argument('--output_visuals', type=str, required=True)
-    parser.add_argument('--output_ml', type=str, required=True)
+    parser.add_argument('--output', type=str, required=True)
+    parser.add_argument('--db_path', type=str, default='faers_processing.db')
 
     args = parser.parse_args()
 
@@ -189,15 +188,48 @@ def main():
         config = yaml.safe_load(f)
     drug_mappings = config.get('drug_mappings', {})
 
-    run_faers_pipeline(
-        targets=args.targets,
-        controls=args.controls,
-        drug_mappings=drug_mappings,
-        faers_folder=args.faers_folder,
-        faers_quarters=args.faers_quarters,
-        output_ml=args.output_ml,
-        output_visuals=args.output_visuals
-    )
+    # Exactly one file per table per quarter, otherwise fail loudly
+    files = {}
+    for prefix in ['DEMO', 'DRUG', 'REAC', 'INDI']:
+        files[prefix] = []
+        for q in args.faers_quarters:
+            path = Path(args.faers_folder) / q
+            matched = [p for p in path.glob('*') if p.is_file() and p.name.lower().startswith(prefix.lower()) and p.suffix.lower() == '.txt']
+            if len(matched) != 1:
+                raise FileNotFoundError(f"Expected exactly one {prefix} file in {path}, found {len(matched)}")
+            files[prefix].append(matched[0].as_posix())
+
+    # Analysis window comes from the quarter folder names
+    years = [int(re.search(r'(\d{4})', q).group(1)) for q in args.faers_quarters]
+    min_year, max_year = min(years), max(years)
+
+    ddl, audit, final = build_faers_queries(args.targets, args.controls, drug_mappings, files, min_year, max_year)
+
+    # File-backed DuckDB so 20 quarters do not have to fit in RAM
+    con = duckdb.connect(args.db_path)
+    try:
+        for name, sql in ddl.items():
+            print(f"Building {name}...")
+            con.execute(sql)
+        for title, sql in audit.items():
+            print(f"\n--- {title} ---")
+            print(con.execute(sql).df().to_string(index=False))
+        df = con.execute(final).df()
+    finally:
+        con.close()
+        Path(args.db_path).unlink(missing_ok=True)
+
+    role_map = {d: 'target' for d in args.targets}
+    role_map.update({d: 'control' for d in args.controls})
+    df['role'] = df['drug'].map(role_map)
+
+    # Post-execution assertion: Flag counts can never exceed total cases (verifies fan-out bug is fixed)
+    for c in ['off_label_cases', 'med_error_cases', 'med_error_core_cases', 'gi_cases']:
+        if (df[c] > df['total_cases']).any():
+            raise ValueError(f"{c} exceeds total_cases in some rows")
+
+    df.to_csv(args.output, index=False)
+    print(f"\nFAERS case counts saved to {args.output} ({len(df)} rows, years {min_year}-{max_year})")
 
 if __name__ == "__main__":
     main()

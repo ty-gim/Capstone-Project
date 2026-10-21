@@ -1,0 +1,668 @@
+year,reporter_group,drug,product,indication,total_cases,off_label_cases,med_error_cases,med_error_core_cases,gi_cases,role
+2020,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,15,0,0,0,4,control
+2020,Consumer,DULAGLUTIDE,TRULICITY,Diabetes,2864,22,61,22,379,control
+2020,Healthcare professional,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,35,0,1,0,12,control
+2020,Healthcare professional,DULAGLUTIDE,TRULICITY,Diabetes,325,3,10,3,48,control
+2020,Other/Unknown,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,4,0,0,0,1,control
+2020,Other/Unknown,DULAGLUTIDE,TRULICITY,Diabetes,177,2,3,1,39,control
+2020,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,24,1,0,0,3,control
+2020,Consumer,DULAGLUTIDE,TRULICITY,Other/Unknown,4702,32,61,22,762,control
+2020,Healthcare professional,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,14,0,0,0,7,control
+2020,Healthcare professional,DULAGLUTIDE,TRULICITY,Other/Unknown,412,3,7,2,71,control
+2020,Other/Unknown,DULAGLUTIDE,TRULICITY,Other/Unknown,360,1,3,0,68,control
+2020,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,2,2,0,0,1,control
+2020,Consumer,DULAGLUTIDE,TRULICITY,Weight Loss,13,13,0,0,5,control
+2020,Healthcare professional,DULAGLUTIDE,TRULICITY,Weight Loss,5,2,0,0,0,control
+2020,Consumer,LIRAGLUTIDE,SAXENDA,Diabetes,5,5,0,0,1,control
+2020,Consumer,LIRAGLUTIDE,VICTOZA,Diabetes,327,19,10,10,73,control
+2020,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,7,0,0,0,1,control
+2020,Healthcare professional,LIRAGLUTIDE,VICTOZA,Diabetes,74,2,1,1,20,control
+2020,Lawyer,LIRAGLUTIDE,VICTOZA,Diabetes,18,0,0,0,0,control
+2020,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,1,0,0,0,1,control
+2020,Other/Unknown,LIRAGLUTIDE,VICTOZA,Diabetes,35,2,0,0,12,control
+2020,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,5,0,0,0,1,control
+2020,Consumer,LIRAGLUTIDE,SAXENDA,Other/Unknown,129,6,2,2,18,control
+2020,Consumer,LIRAGLUTIDE,VICTOZA,Other/Unknown,236,19,6,6,27,control
+2020,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,2,0,0,0,0,control
+2020,Healthcare professional,LIRAGLUTIDE,SAXENDA,Other/Unknown,53,1,0,0,5,control
+2020,Healthcare professional,LIRAGLUTIDE,VICTOZA,Other/Unknown,52,0,1,1,6,control
+2020,Lawyer,LIRAGLUTIDE,VICTOZA,Other/Unknown,29,0,0,0,0,control
+2020,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,3,0,0,0,2,control
+2020,Other/Unknown,LIRAGLUTIDE,SAXENDA,Other/Unknown,38,2,0,0,2,control
+2020,Other/Unknown,LIRAGLUTIDE,VICTOZA,Other/Unknown,56,4,0,0,7,control
+2020,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,2,0,0,0,0,control
+2020,Consumer,LIRAGLUTIDE,SAXENDA,Weight Loss,164,6,6,6,40,control
+2020,Consumer,LIRAGLUTIDE,VICTOZA,Weight Loss,28,27,0,0,7,control
+2020,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,2,0,0,0,0,control
+2020,Healthcare professional,LIRAGLUTIDE,SAXENDA,Weight Loss,31,0,0,0,5,control
+2020,Healthcare professional,LIRAGLUTIDE,VICTOZA,Weight Loss,8,8,0,0,1,control
+2020,Other/Unknown,LIRAGLUTIDE,SAXENDA,Weight Loss,17,1,0,0,4,control
+2020,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,663,10,21,20,159,control
+2020,Consumer,METFORMIN,GLUCOPHAGE,Diabetes,23,0,1,1,4,control
+2020,Consumer,METFORMIN,GLUMETZA,Diabetes,5,0,0,0,2,control
+2020,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,1647,12,99,11,180,control
+2020,Healthcare professional,METFORMIN,GLUCOPHAGE,Diabetes,28,0,2,0,5,control
+2020,Lawyer,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,2,0,0,0,0,control
+2020,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,1326,24,65,14,144,control
+2020,Other/Unknown,METFORMIN,GLUCOPHAGE,Diabetes,70,0,0,0,10,control
+2020,Other/Unknown,METFORMIN,GLUMETZA,Diabetes,2,1,0,0,2,control
+2020,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,699,19,14,10,162,control
+2020,Consumer,METFORMIN,GLUCOPHAGE,Other/Unknown,27,1,1,1,4,control
+2020,Consumer,METFORMIN,GLUMETZA,Other/Unknown,3,2,0,0,3,control
+2020,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,1034,13,63,16,86,control
+2020,Healthcare professional,METFORMIN,GLUCOPHAGE,Other/Unknown,7,0,0,0,1,control
+2020,Healthcare professional,METFORMIN,GLUMETZA,Other/Unknown,1,0,0,0,0,control
+2020,Lawyer,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,1,0,0,0,0,control
+2020,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,1245,38,62,4,134,control
+2020,Other/Unknown,METFORMIN,GLUCOPHAGE,Other/Unknown,10,0,0,0,2,control
+2020,Other/Unknown,METFORMIN,GLUMETZA,Other/Unknown,1,0,0,0,1,control
+2020,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,5,3,0,0,3,control
+2020,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,3,2,0,0,0,control
+2020,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,9,5,2,2,4,control
+2020,Other/Unknown,METFORMIN,GLUCOPHAGE,Weight Loss,1,1,0,0,1,control
+2020,Consumer,PHENTERMINE,ADIPEX,Other/Unknown,2,0,0,0,0,control
+2020,Consumer,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,19,0,1,1,1,control
+2020,Consumer,PHENTERMINE,LOMAIRA,Other/Unknown,2,1,0,0,0,control
+2020,Healthcare professional,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,12,0,0,0,0,control
+2020,Other/Unknown,PHENTERMINE,ADIPEX,Other/Unknown,1,0,0,0,0,control
+2020,Other/Unknown,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,31,6,2,0,3,control
+2020,Other/Unknown,PHENTERMINE,LOMAIRA,Other/Unknown,1,0,0,0,0,control
+2020,Consumer,PHENTERMINE,ADIPEX,Weight Loss,2,0,0,0,0,control
+2020,Consumer,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,11,1,2,2,2,control
+2020,Healthcare professional,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,9,0,1,1,0,control
+2020,Other/Unknown,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,22,0,0,0,0,control
+2020,Consumer,RIMEGEPANT,NURTEC,Other/Unknown,583,6,10,1,74,control
+2020,Healthcare professional,RIMEGEPANT,GENERIC/UNSPECIFIED,Other/Unknown,1,0,0,0,0,control
+2020,Healthcare professional,RIMEGEPANT,NURTEC,Other/Unknown,9,1,0,0,1,control
+2020,Other/Unknown,RIMEGEPANT,NURTEC,Other/Unknown,9,0,0,0,1,control
+2020,Consumer,SEMAGLUTIDE,OZEMPIC,Diabetes,920,114,45,41,343,target
+2020,Consumer,SEMAGLUTIDE,RYBELSUS,Diabetes,101,3,0,0,43,target
+2020,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,203,0,0,0,121,target
+2020,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Diabetes,205,6,1,1,45,target
+2020,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Diabetes,50,0,0,0,18,target
+2020,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,1,0,0,0,1,target
+2020,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Diabetes,108,2,1,0,25,target
+2020,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Diabetes,40,0,2,2,15,target
+2020,Consumer,SEMAGLUTIDE,OZEMPIC,Dual Indication,1,0,0,0,1,target
+2020,Consumer,SEMAGLUTIDE,OZEMPIC,Other/Unknown,510,74,17,16,129,target
+2020,Consumer,SEMAGLUTIDE,RYBELSUS,Other/Unknown,53,3,1,1,17,target
+2020,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,41,0,0,0,26,target
+2020,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Other/Unknown,235,9,2,2,27,target
+2020,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Other/Unknown,109,1,0,0,27,target
+2020,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Other/Unknown,163,5,1,0,33,target
+2020,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Other/Unknown,91,2,1,1,31,target
+2020,Consumer,SEMAGLUTIDE,OZEMPIC,Weight Loss,33,29,1,1,12,target
+2020,Consumer,SEMAGLUTIDE,RYBELSUS,Weight Loss,7,6,0,0,3,target
+2020,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,27,0,0,0,1,target
+2020,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Weight Loss,11,9,0,0,3,target
+2020,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Weight Loss,4,4,0,0,1,target
+2021,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,9,0,2,0,1,control
+2021,Consumer,DULAGLUTIDE,TRULICITY,Diabetes,3634,38,76,28,555,control
+2021,Healthcare professional,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,14,0,0,0,3,control
+2021,Healthcare professional,DULAGLUTIDE,TRULICITY,Diabetes,471,1,6,0,113,control
+2021,Other/Unknown,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,3,0,0,0,2,control
+2021,Other/Unknown,DULAGLUTIDE,TRULICITY,Diabetes,300,1,2,2,75,control
+2021,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,14,0,1,0,2,control
+2021,Consumer,DULAGLUTIDE,TRULICITY,Other/Unknown,5286,51,110,36,688,control
+2021,Healthcare professional,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,6,0,0,0,4,control
+2021,Healthcare professional,DULAGLUTIDE,TRULICITY,Other/Unknown,436,1,5,2,98,control
+2021,Other/Unknown,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,4,0,0,0,3,control
+2021,Other/Unknown,DULAGLUTIDE,TRULICITY,Other/Unknown,484,3,9,3,118,control
+2021,Consumer,DULAGLUTIDE,TRULICITY,Weight Loss,24,24,1,1,9,control
+2021,Other/Unknown,DULAGLUTIDE,TRULICITY,Weight Loss,4,2,0,0,1,control
+2021,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,7,0,0,0,0,control
+2021,Consumer,LIRAGLUTIDE,SAXENDA,Diabetes,2,2,0,0,1,control
+2021,Consumer,LIRAGLUTIDE,VICTOZA,Diabetes,180,13,3,3,41,control
+2021,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,9,0,0,0,1,control
+2021,Healthcare professional,LIRAGLUTIDE,SAXENDA,Diabetes,4,0,0,0,2,control
+2021,Healthcare professional,LIRAGLUTIDE,VICTOZA,Diabetes,50,2,0,0,7,control
+2021,Lawyer,LIRAGLUTIDE,VICTOZA,Diabetes,1,0,0,0,0,control
+2021,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,3,0,0,0,1,control
+2021,Other/Unknown,LIRAGLUTIDE,VICTOZA,Diabetes,49,0,1,0,19,control
+2021,Consumer,LIRAGLUTIDE,VICTOZA,Dual Indication,1,0,0,0,0,control
+2021,Healthcare professional,LIRAGLUTIDE,SAXENDA,Dual Indication,1,0,0,0,1,control
+2021,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,4,0,0,0,1,control
+2021,Consumer,LIRAGLUTIDE,SAXENDA,Other/Unknown,183,7,8,6,35,control
+2021,Consumer,LIRAGLUTIDE,VICTOZA,Other/Unknown,298,25,6,6,46,control
+2021,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,7,0,0,0,1,control
+2021,Healthcare professional,LIRAGLUTIDE,SAXENDA,Other/Unknown,69,1,1,0,7,control
+2021,Healthcare professional,LIRAGLUTIDE,VICTOZA,Other/Unknown,40,1,1,1,3,control
+2021,Lawyer,LIRAGLUTIDE,VICTOZA,Other/Unknown,7,0,0,0,0,control
+2021,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,4,0,0,0,0,control
+2021,Other/Unknown,LIRAGLUTIDE,SAXENDA,Other/Unknown,32,1,0,0,4,control
+2021,Other/Unknown,LIRAGLUTIDE,VICTOZA,Other/Unknown,26,1,0,0,4,control
+2021,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,3,0,0,0,0,control
+2021,Consumer,LIRAGLUTIDE,SAXENDA,Weight Loss,116,6,1,1,22,control
+2021,Consumer,LIRAGLUTIDE,VICTOZA,Weight Loss,14,12,0,0,6,control
+2021,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,1,0,0,0,0,control
+2021,Healthcare professional,LIRAGLUTIDE,SAXENDA,Weight Loss,31,0,0,0,7,control
+2021,Healthcare professional,LIRAGLUTIDE,VICTOZA,Weight Loss,2,2,0,0,0,control
+2021,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,2,0,0,0,1,control
+2021,Other/Unknown,LIRAGLUTIDE,SAXENDA,Weight Loss,21,1,0,0,2,control
+2021,Other/Unknown,LIRAGLUTIDE,VICTOZA,Weight Loss,3,2,0,0,1,control
+2021,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,474,24,25,25,143,control
+2021,Consumer,METFORMIN,GLUCOPHAGE,Diabetes,8,0,0,0,3,control
+2021,Consumer,METFORMIN,GLUMETZA,Diabetes,2,0,1,1,0,control
+2021,Healthcare professional,METFORMIN,FORTAMET,Diabetes,3,0,0,0,1,control
+2021,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,1009,12,37,8,122,control
+2021,Healthcare professional,METFORMIN,GLUCOPHAGE,Diabetes,20,0,0,0,1,control
+2021,Healthcare professional,METFORMIN,GLUMETZA,Diabetes,3,0,0,0,1,control
+2021,Lawyer,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,2,0,0,0,0,control
+2021,Other/Unknown,METFORMIN,FORTAMET,Diabetes,1,0,0,0,0,control
+2021,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,1024,28,57,20,86,control
+2021,Other/Unknown,METFORMIN,GLUCOPHAGE,Diabetes,40,0,0,0,8,control
+2021,Other/Unknown,METFORMIN,GLUMETZA,Diabetes,1,0,0,0,0,control
+2021,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,771,35,7,5,143,control
+2021,Consumer,METFORMIN,GLUCOPHAGE,Other/Unknown,10,2,0,0,0,control
+2021,Consumer,METFORMIN,GLUMETZA,Other/Unknown,2,0,0,0,0,control
+2021,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,757,7,44,22,48,control
+2021,Healthcare professional,METFORMIN,GLUCOPHAGE,Other/Unknown,11,0,1,1,3,control
+2021,Healthcare professional,METFORMIN,GLUMETZA,Other/Unknown,3,0,0,0,0,control
+2021,Lawyer,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,5,0,0,0,0,control
+2021,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,970,56,63,16,137,control
+2021,Other/Unknown,METFORMIN,GLUCOPHAGE,Other/Unknown,15,0,0,0,1,control
+2021,Other/Unknown,METFORMIN,GLUMETZA,Other/Unknown,4,0,0,0,0,control
+2021,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,4,1,0,0,2,control
+2021,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,1,1,0,0,0,control
+2021,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,17,8,0,0,0,control
+2021,Consumer,PHENTERMINE,ADIPEX,Other/Unknown,20,1,0,0,0,control
+2021,Consumer,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,10,0,0,0,3,control
+2021,Healthcare professional,PHENTERMINE,ADIPEX,Other/Unknown,4,0,0,0,0,control
+2021,Healthcare professional,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,10,0,0,0,1,control
+2021,Other/Unknown,PHENTERMINE,ADIPEX,Other/Unknown,1,0,0,0,0,control
+2021,Other/Unknown,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,16,0,0,0,1,control
+2021,Other/Unknown,PHENTERMINE,LOMAIRA,Other/Unknown,1,0,0,0,0,control
+2021,Consumer,PHENTERMINE,ADIPEX,Weight Loss,15,0,0,0,0,control
+2021,Consumer,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,22,0,2,2,4,control
+2021,Consumer,PHENTERMINE,LOMAIRA,Weight Loss,1,0,0,0,0,control
+2021,Healthcare professional,PHENTERMINE,ADIPEX,Weight Loss,1,0,0,0,0,control
+2021,Healthcare professional,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,8,0,0,0,0,control
+2021,Other/Unknown,PHENTERMINE,ADIPEX,Weight Loss,1,0,0,0,0,control
+2021,Other/Unknown,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,41,2,0,0,2,control
+2021,Consumer,RIMEGEPANT,NURTEC,Other/Unknown,1533,17,28,12,205,control
+2021,Healthcare professional,RIMEGEPANT,GENERIC/UNSPECIFIED,Other/Unknown,1,0,0,0,0,control
+2021,Healthcare professional,RIMEGEPANT,NURTEC,Other/Unknown,103,4,0,0,16,control
+2021,Other/Unknown,RIMEGEPANT,GENERIC/UNSPECIFIED,Other/Unknown,1,0,0,0,0,control
+2021,Other/Unknown,RIMEGEPANT,NURTEC,Other/Unknown,58,1,1,1,12,control
+2021,Consumer,SEMAGLUTIDE,OZEMPIC,Diabetes,552,44,20,17,213,target
+2021,Consumer,SEMAGLUTIDE,RYBELSUS,Diabetes,90,2,0,0,29,target
+2021,Consumer,SEMAGLUTIDE,WEGOVY,Diabetes,8,1,0,0,4,target
+2021,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,53,0,0,0,15,target
+2021,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Diabetes,195,6,3,2,44,target
+2021,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Diabetes,79,3,1,1,14,target
+2021,Healthcare professional,SEMAGLUTIDE,WEGOVY,Diabetes,2,1,0,0,2,target
+2021,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,3,0,0,0,1,target
+2021,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Diabetes,66,0,1,0,12,target
+2021,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Diabetes,32,0,1,1,7,target
+2021,Consumer,SEMAGLUTIDE,OZEMPIC,Dual Indication,1,0,0,0,1,target
+2021,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Dual Indication,1,0,0,0,0,target
+2021,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Dual Indication,2,0,0,0,0,target
+2021,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,4,0,0,0,1,target
+2021,Consumer,SEMAGLUTIDE,OZEMPIC,Other/Unknown,1148,93,50,49,332,target
+2021,Consumer,SEMAGLUTIDE,RYBELSUS,Other/Unknown,213,14,1,1,66,target
+2021,Consumer,SEMAGLUTIDE,WEGOVY,Other/Unknown,327,16,16,16,86,target
+2021,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,28,0,0,0,4,target
+2021,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Other/Unknown,315,20,4,2,47,target
+2021,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Other/Unknown,179,4,1,1,34,target
+2021,Healthcare professional,SEMAGLUTIDE,WEGOVY,Other/Unknown,53,6,2,2,16,target
+2021,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Other/Unknown,150,8,2,2,27,target
+2021,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Other/Unknown,119,1,0,0,30,target
+2021,Other/Unknown,SEMAGLUTIDE,WEGOVY,Other/Unknown,62,3,3,3,25,target
+2021,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,2,0,0,0,0,target
+2021,Consumer,SEMAGLUTIDE,OZEMPIC,Weight Loss,55,41,1,1,21,target
+2021,Consumer,SEMAGLUTIDE,RYBELSUS,Weight Loss,9,8,0,0,4,target
+2021,Consumer,SEMAGLUTIDE,WEGOVY,Weight Loss,77,12,2,2,33,target
+2021,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,14,0,0,0,0,target
+2021,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Weight Loss,33,27,1,1,6,target
+2021,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Weight Loss,1,0,0,0,1,target
+2021,Healthcare professional,SEMAGLUTIDE,WEGOVY,Weight Loss,17,1,0,0,5,target
+2021,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Weight Loss,8,5,0,0,3,target
+2021,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Weight Loss,1,1,0,0,0,target
+2021,Other/Unknown,SEMAGLUTIDE,WEGOVY,Weight Loss,16,0,0,0,8,target
+2022,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,12,0,0,0,2,control
+2022,Consumer,DULAGLUTIDE,TRULICITY,Diabetes,3234,35,133,35,448,control
+2022,Healthcare professional,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,5,0,0,0,2,control
+2022,Healthcare professional,DULAGLUTIDE,TRULICITY,Diabetes,175,0,5,1,21,control
+2022,Other/Unknown,DULAGLUTIDE,TRULICITY,Diabetes,125,0,6,1,24,control
+2022,Healthcare professional,DULAGLUTIDE,GENERIC/UNSPECIFIED,Dual Indication,1,0,0,0,0,control
+2022,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,12,0,0,0,4,control
+2022,Consumer,DULAGLUTIDE,TRULICITY,Other/Unknown,5147,63,163,48,667,control
+2022,Healthcare professional,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,3,0,0,0,0,control
+2022,Healthcare professional,DULAGLUTIDE,TRULICITY,Other/Unknown,245,1,6,1,25,control
+2022,Other/Unknown,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,2,0,0,0,0,control
+2022,Other/Unknown,DULAGLUTIDE,TRULICITY,Other/Unknown,229,1,4,1,30,control
+2022,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,1,1,0,0,1,control
+2022,Consumer,DULAGLUTIDE,TRULICITY,Weight Loss,39,36,1,0,15,control
+2022,Healthcare professional,DULAGLUTIDE,TRULICITY,Weight Loss,1,1,0,0,0,control
+2022,Other/Unknown,DULAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,1,1,0,0,0,control
+2022,Other/Unknown,DULAGLUTIDE,TRULICITY,Weight Loss,2,0,0,0,1,control
+2022,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,4,0,1,1,0,control
+2022,Consumer,LIRAGLUTIDE,SAXENDA,Diabetes,2,0,0,0,0,control
+2022,Consumer,LIRAGLUTIDE,VICTOZA,Diabetes,103,5,1,1,15,control
+2022,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,7,0,0,0,0,control
+2022,Healthcare professional,LIRAGLUTIDE,VICTOZA,Diabetes,41,1,1,1,5,control
+2022,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,2,0,0,0,1,control
+2022,Other/Unknown,LIRAGLUTIDE,SAXENDA,Diabetes,1,0,0,0,1,control
+2022,Other/Unknown,LIRAGLUTIDE,VICTOZA,Diabetes,38,0,1,1,20,control
+2022,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,2,0,0,0,0,control
+2022,Consumer,LIRAGLUTIDE,SAXENDA,Other/Unknown,240,6,8,7,48,control
+2022,Consumer,LIRAGLUTIDE,VICTOZA,Other/Unknown,214,8,4,4,48,control
+2022,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,9,0,0,0,1,control
+2022,Healthcare professional,LIRAGLUTIDE,SAXENDA,Other/Unknown,81,0,1,1,11,control
+2022,Healthcare professional,LIRAGLUTIDE,VICTOZA,Other/Unknown,34,2,1,1,2,control
+2022,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,3,0,0,0,0,control
+2022,Other/Unknown,LIRAGLUTIDE,SAXENDA,Other/Unknown,38,2,0,0,2,control
+2022,Other/Unknown,LIRAGLUTIDE,VICTOZA,Other/Unknown,21,2,0,0,6,control
+2022,Consumer,LIRAGLUTIDE,SAXENDA,Weight Loss,70,2,1,1,18,control
+2022,Consumer,LIRAGLUTIDE,VICTOZA,Weight Loss,24,18,0,0,6,control
+2022,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,4,0,0,0,1,control
+2022,Healthcare professional,LIRAGLUTIDE,SAXENDA,Weight Loss,45,3,0,0,7,control
+2022,Healthcare professional,LIRAGLUTIDE,VICTOZA,Weight Loss,7,6,0,0,3,control
+2022,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,1,0,0,0,0,control
+2022,Other/Unknown,LIRAGLUTIDE,SAXENDA,Weight Loss,13,0,0,0,6,control
+2022,Other/Unknown,LIRAGLUTIDE,VICTOZA,Weight Loss,6,3,0,0,2,control
+2022,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,244,3,14,11,73,control
+2022,Consumer,METFORMIN,GLUCOPHAGE,Diabetes,6,2,1,1,1,control
+2022,Consumer,METFORMIN,GLUMETZA,Diabetes,2,0,0,0,2,control
+2022,Healthcare professional,METFORMIN,FORTAMET,Diabetes,1,0,0,0,0,control
+2022,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,1514,23,50,15,115,control
+2022,Healthcare professional,METFORMIN,GLUCOPHAGE,Diabetes,10,0,2,0,3,control
+2022,Healthcare professional,METFORMIN,GLUMETZA,Diabetes,1,0,0,0,1,control
+2022,Lawyer,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,2,0,0,0,0,control
+2022,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,858,21,42,11,101,control
+2022,Other/Unknown,METFORMIN,GLUCOPHAGE,Diabetes,50,0,0,0,10,control
+2022,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,407,28,10,10,108,control
+2022,Consumer,METFORMIN,GLUCOPHAGE,Other/Unknown,11,1,2,2,0,control
+2022,Healthcare professional,METFORMIN,FORTAMET,Other/Unknown,1,0,0,0,1,control
+2022,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,797,23,55,21,99,control
+2022,Healthcare professional,METFORMIN,GLUCOPHAGE,Other/Unknown,4,0,0,0,0,control
+2022,Lawyer,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,4,0,0,0,0,control
+2022,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,789,63,78,7,82,control
+2022,Other/Unknown,METFORMIN,GLUCOPHAGE,Other/Unknown,6,0,0,0,2,control
+2022,Other/Unknown,METFORMIN,GLUMETZA,Other/Unknown,2,0,0,0,1,control
+2022,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,1,0,0,0,1,control
+2022,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,6,3,2,0,1,control
+2022,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,20,9,6,0,3,control
+2022,Other/Unknown,METFORMIN,GLUCOPHAGE,Weight Loss,1,1,0,0,0,control
+2022,Consumer,PHENTERMINE,ADIPEX,Other/Unknown,8,0,1,1,0,control
+2022,Consumer,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,23,0,1,1,1,control
+2022,Healthcare professional,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,6,0,0,0,0,control
+2022,Other/Unknown,PHENTERMINE,ADIPEX,Other/Unknown,3,0,0,0,0,control
+2022,Other/Unknown,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,20,1,1,1,0,control
+2022,Consumer,PHENTERMINE,ADIPEX,Weight Loss,6,0,0,0,0,control
+2022,Consumer,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,19,0,1,1,0,control
+2022,Consumer,PHENTERMINE,LOMAIRA,Weight Loss,1,0,1,1,0,control
+2022,Healthcare professional,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,3,0,0,0,0,control
+2022,Other/Unknown,PHENTERMINE,ADIPEX,Weight Loss,2,0,0,0,0,control
+2022,Other/Unknown,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,20,0,0,0,0,control
+2022,Consumer,RIMEGEPANT,GENERIC/UNSPECIFIED,Other/Unknown,1,0,0,0,0,control
+2022,Consumer,RIMEGEPANT,NURTEC,Other/Unknown,2528,65,14,13,284,control
+2022,Healthcare professional,RIMEGEPANT,GENERIC/UNSPECIFIED,Other/Unknown,1,0,0,0,0,control
+2022,Healthcare professional,RIMEGEPANT,NURTEC,Other/Unknown,169,13,0,0,23,control
+2022,Other/Unknown,RIMEGEPANT,NURTEC,Other/Unknown,248,10,0,0,26,control
+2022,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,2,0,0,0,1,target
+2022,Consumer,SEMAGLUTIDE,OZEMPIC,Diabetes,727,55,25,25,207,target
+2022,Consumer,SEMAGLUTIDE,RYBELSUS,Diabetes,118,5,2,2,35,target
+2022,Consumer,SEMAGLUTIDE,WEGOVY,Diabetes,8,5,0,0,1,target
+2022,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,36,0,0,0,5,target
+2022,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Diabetes,240,15,0,0,59,target
+2022,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Diabetes,161,0,0,0,25,target
+2022,Healthcare professional,SEMAGLUTIDE,WEGOVY,Diabetes,1,0,0,0,0,target
+2022,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,14,0,0,0,4,target
+2022,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Diabetes,77,4,1,1,30,target
+2022,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Diabetes,24,0,1,1,6,target
+2022,Consumer,SEMAGLUTIDE,OZEMPIC,Dual Indication,3,0,0,0,2,target
+2022,Consumer,SEMAGLUTIDE,RYBELSUS,Dual Indication,1,0,0,0,0,target
+2022,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Dual Indication,2,0,0,0,1,target
+2022,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,9,0,1,1,1,target
+2022,Consumer,SEMAGLUTIDE,OZEMPIC,Other/Unknown,1637,186,91,90,465,target
+2022,Consumer,SEMAGLUTIDE,RYBELSUS,Other/Unknown,223,13,2,2,60,target
+2022,Consumer,SEMAGLUTIDE,WEGOVY,Other/Unknown,724,39,31,31,179,target
+2022,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,20,1,0,0,3,target
+2022,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Other/Unknown,369,19,11,7,59,target
+2022,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Other/Unknown,199,5,1,1,26,target
+2022,Healthcare professional,SEMAGLUTIDE,WEGOVY,Other/Unknown,91,2,0,0,21,target
+2022,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,9,0,0,0,4,target
+2022,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Other/Unknown,184,9,3,3,27,target
+2022,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Other/Unknown,92,1,0,0,14,target
+2022,Other/Unknown,SEMAGLUTIDE,WEGOVY,Other/Unknown,67,1,0,0,15,target
+2022,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,3,0,1,1,0,target
+2022,Consumer,SEMAGLUTIDE,OZEMPIC,Weight Loss,193,145,8,8,63,target
+2022,Consumer,SEMAGLUTIDE,RYBELSUS,Weight Loss,12,11,0,0,1,target
+2022,Consumer,SEMAGLUTIDE,WEGOVY,Weight Loss,256,23,5,5,74,target
+2022,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,12,1,0,0,0,target
+2022,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Weight Loss,63,50,2,2,13,target
+2022,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Weight Loss,5,2,0,0,1,target
+2022,Healthcare professional,SEMAGLUTIDE,WEGOVY,Weight Loss,38,3,1,1,7,target
+2022,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,4,1,0,0,1,target
+2022,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Weight Loss,16,13,0,0,7,target
+2022,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Weight Loss,1,0,0,0,0,target
+2022,Other/Unknown,SEMAGLUTIDE,WEGOVY,Weight Loss,14,2,2,2,3,target
+2022,Consumer,TIRZEPATIDE,GENERIC/UNSPECIFIED,Diabetes,6,0,0,0,0,control
+2022,Consumer,TIRZEPATIDE,MOUNJARO,Diabetes,1110,18,26,16,239,control
+2022,Healthcare professional,TIRZEPATIDE,GENERIC/UNSPECIFIED,Diabetes,1,0,0,0,0,control
+2022,Healthcare professional,TIRZEPATIDE,MOUNJARO,Diabetes,42,1,1,0,14,control
+2022,Other/Unknown,TIRZEPATIDE,MOUNJARO,Diabetes,37,3,0,0,7,control
+2022,Consumer,TIRZEPATIDE,MOUNJARO,Dual Indication,3,0,0,0,1,control
+2022,Consumer,TIRZEPATIDE,GENERIC/UNSPECIFIED,Other/Unknown,4,0,0,0,1,control
+2022,Consumer,TIRZEPATIDE,MOUNJARO,Other/Unknown,2978,293,76,33,488,control
+2022,Healthcare professional,TIRZEPATIDE,GENERIC/UNSPECIFIED,Other/Unknown,1,0,0,0,1,control
+2022,Healthcare professional,TIRZEPATIDE,MOUNJARO,Other/Unknown,134,9,4,1,36,control
+2022,Other/Unknown,TIRZEPATIDE,GENERIC/UNSPECIFIED,Other/Unknown,1,0,0,0,0,control
+2022,Other/Unknown,TIRZEPATIDE,MOUNJARO,Other/Unknown,147,11,3,1,33,control
+2022,Consumer,TIRZEPATIDE,MOUNJARO,Weight Loss,431,402,12,11,78,control
+2022,Healthcare professional,TIRZEPATIDE,GENERIC/UNSPECIFIED,Weight Loss,1,0,0,0,0,control
+2022,Healthcare professional,TIRZEPATIDE,MOUNJARO,Weight Loss,15,12,0,0,3,control
+2022,Other/Unknown,TIRZEPATIDE,MOUNJARO,Weight Loss,15,15,1,0,1,control
+2023,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,12,0,0,0,4,control
+2023,Consumer,DULAGLUTIDE,TRULICITY,Diabetes,3061,23,82,20,466,control
+2023,Healthcare professional,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,6,0,0,0,1,control
+2023,Healthcare professional,DULAGLUTIDE,TRULICITY,Diabetes,103,1,2,1,14,control
+2023,Lawyer,DULAGLUTIDE,TRULICITY,Diabetes,1,0,0,0,0,control
+2023,Other/Unknown,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,4,0,0,0,0,control
+2023,Other/Unknown,DULAGLUTIDE,TRULICITY,Diabetes,85,0,5,1,14,control
+2023,Consumer,DULAGLUTIDE,TRULICITY,Dual Indication,1,0,0,0,0,control
+2023,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,8,0,1,0,0,control
+2023,Consumer,DULAGLUTIDE,TRULICITY,Other/Unknown,3928,102,121,32,440,control
+2023,Healthcare professional,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,5,0,0,0,1,control
+2023,Healthcare professional,DULAGLUTIDE,TRULICITY,Other/Unknown,156,3,4,1,16,control
+2023,Other/Unknown,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,1,0,0,0,0,control
+2023,Other/Unknown,DULAGLUTIDE,TRULICITY,Other/Unknown,215,3,5,0,23,control
+2023,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,2,1,0,0,0,control
+2023,Consumer,DULAGLUTIDE,TRULICITY,Weight Loss,81,70,7,2,18,control
+2023,Healthcare professional,DULAGLUTIDE,TRULICITY,Weight Loss,2,2,0,0,1,control
+2023,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,2,0,0,0,0,control
+2023,Consumer,LIRAGLUTIDE,SAXENDA,Diabetes,5,0,1,1,0,control
+2023,Consumer,LIRAGLUTIDE,VICTOZA,Diabetes,85,3,4,4,16,control
+2023,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,8,0,0,0,0,control
+2023,Healthcare professional,LIRAGLUTIDE,SAXENDA,Diabetes,1,0,0,0,0,control
+2023,Healthcare professional,LIRAGLUTIDE,VICTOZA,Diabetes,40,1,0,0,7,control
+2023,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,5,0,0,0,0,control
+2023,Other/Unknown,LIRAGLUTIDE,VICTOZA,Diabetes,34,1,0,0,21,control
+2023,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,6,0,0,0,0,control
+2023,Consumer,LIRAGLUTIDE,SAXENDA,Other/Unknown,219,9,6,6,45,control
+2023,Consumer,LIRAGLUTIDE,VICTOZA,Other/Unknown,141,8,6,5,22,control
+2023,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,4,1,0,0,0,control
+2023,Healthcare professional,LIRAGLUTIDE,SAXENDA,Other/Unknown,119,0,0,0,17,control
+2023,Healthcare professional,LIRAGLUTIDE,VICTOZA,Other/Unknown,33,0,2,2,6,control
+2023,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,4,1,0,0,1,control
+2023,Other/Unknown,LIRAGLUTIDE,SAXENDA,Other/Unknown,46,0,0,0,4,control
+2023,Other/Unknown,LIRAGLUTIDE,VICTOZA,Other/Unknown,21,0,0,0,6,control
+2023,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,4,0,0,0,3,control
+2023,Consumer,LIRAGLUTIDE,SAXENDA,Weight Loss,148,6,6,6,37,control
+2023,Consumer,LIRAGLUTIDE,VICTOZA,Weight Loss,20,14,0,0,5,control
+2023,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,3,0,0,0,0,control
+2023,Healthcare professional,LIRAGLUTIDE,SAXENDA,Weight Loss,71,2,3,3,11,control
+2023,Healthcare professional,LIRAGLUTIDE,VICTOZA,Weight Loss,6,6,0,0,1,control
+2023,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,2,0,0,0,0,control
+2023,Other/Unknown,LIRAGLUTIDE,SAXENDA,Weight Loss,20,1,1,0,2,control
+2023,Other/Unknown,LIRAGLUTIDE,VICTOZA,Weight Loss,3,0,0,0,2,control
+2023,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,293,9,14,14,64,control
+2023,Consumer,METFORMIN,GLUCOPHAGE,Diabetes,10,0,2,2,1,control
+2023,Consumer,METFORMIN,GLUMETZA,Diabetes,2,0,0,0,0,control
+2023,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,1473,23,92,17,185,control
+2023,Healthcare professional,METFORMIN,GLUCOPHAGE,Diabetes,18,0,0,0,0,control
+2023,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,1021,25,50,15,58,control
+2023,Other/Unknown,METFORMIN,GLUCOPHAGE,Diabetes,39,0,0,0,7,control
+2023,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,691,21,13,10,175,control
+2023,Consumer,METFORMIN,GLUCOPHAGE,Other/Unknown,13,0,1,1,2,control
+2023,Healthcare professional,METFORMIN,FORTAMET,Other/Unknown,1,0,0,0,0,control
+2023,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,1148,30,35,9,95,control
+2023,Healthcare professional,METFORMIN,GLUCOPHAGE,Other/Unknown,4,0,0,0,0,control
+2023,Healthcare professional,METFORMIN,GLUMETZA,Other/Unknown,3,0,0,0,1,control
+2023,Other/Unknown,METFORMIN,FORTAMET,Other/Unknown,1,0,0,0,1,control
+2023,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,756,35,73,3,84,control
+2023,Other/Unknown,METFORMIN,GLUCOPHAGE,Other/Unknown,10,0,1,0,0,control
+2023,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,4,3,0,0,1,control
+2023,Consumer,METFORMIN,GLUCOPHAGE,Weight Loss,3,3,0,0,0,control
+2023,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,12,9,0,0,0,control
+2023,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,23,14,2,1,0,control
+2023,Consumer,PHENTERMINE,ADIPEX,Other/Unknown,5,0,0,0,0,control
+2023,Consumer,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,47,2,2,1,3,control
+2023,Consumer,PHENTERMINE,LOMAIRA,Other/Unknown,4,0,1,1,0,control
+2023,Healthcare professional,PHENTERMINE,ADIPEX,Other/Unknown,1,0,0,0,0,control
+2023,Healthcare professional,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,7,0,0,0,0,control
+2023,Healthcare professional,PHENTERMINE,LOMAIRA,Other/Unknown,1,0,0,0,0,control
+2023,Other/Unknown,PHENTERMINE,ADIPEX,Other/Unknown,1,0,0,0,0,control
+2023,Other/Unknown,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,10,0,0,0,0,control
+2023,Consumer,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,16,0,0,0,2,control
+2023,Consumer,PHENTERMINE,LOMAIRA,Weight Loss,3,0,1,1,0,control
+2023,Healthcare professional,PHENTERMINE,ADIPEX,Weight Loss,1,0,0,0,0,control
+2023,Healthcare professional,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,1,0,0,0,0,control
+2023,Other/Unknown,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,32,0,1,1,0,control
+2023,Consumer,RIMEGEPANT,GENERIC/UNSPECIFIED,Other/Unknown,8,3,0,0,3,control
+2023,Consumer,RIMEGEPANT,NURTEC,Other/Unknown,1042,71,18,12,139,control
+2023,Healthcare professional,RIMEGEPANT,GENERIC/UNSPECIFIED,Other/Unknown,19,1,0,0,4,control
+2023,Healthcare professional,RIMEGEPANT,NURTEC,Other/Unknown,147,11,2,2,18,control
+2023,Other/Unknown,RIMEGEPANT,GENERIC/UNSPECIFIED,Other/Unknown,5,1,0,0,1,control
+2023,Other/Unknown,RIMEGEPANT,NURTEC,Other/Unknown,187,12,1,1,14,control
+2023,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,11,0,2,2,2,target
+2023,Consumer,SEMAGLUTIDE,OZEMPIC,Diabetes,1411,129,82,82,472,target
+2023,Consumer,SEMAGLUTIDE,RYBELSUS,Diabetes,132,8,4,4,48,target
+2023,Consumer,SEMAGLUTIDE,WEGOVY,Diabetes,7,4,0,0,2,target
+2023,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,24,0,0,0,5,target
+2023,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Diabetes,361,15,7,7,92,target
+2023,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Diabetes,149,1,0,0,25,target
+2023,Healthcare professional,SEMAGLUTIDE,WEGOVY,Diabetes,4,1,0,0,0,target
+2023,Lawyer,SEMAGLUTIDE,OZEMPIC,Diabetes,2,0,0,0,1,target
+2023,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,9,0,0,0,2,target
+2023,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Diabetes,127,10,1,0,37,target
+2023,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Diabetes,29,0,0,0,5,target
+2023,Consumer,SEMAGLUTIDE,OZEMPIC,Dual Indication,18,0,0,0,9,target
+2023,Consumer,SEMAGLUTIDE,WEGOVY,Dual Indication,2,0,0,0,0,target
+2023,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Dual Indication,1,0,0,0,0,target
+2023,Healthcare professional,SEMAGLUTIDE,WEGOVY,Dual Indication,1,0,0,0,0,target
+2023,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Dual Indication,1,0,0,0,0,target
+2023,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Dual Indication,1,0,0,0,0,target
+2023,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,44,2,4,4,15,target
+2023,Consumer,SEMAGLUTIDE,OZEMPIC,Other/Unknown,2386,393,138,130,654,target
+2023,Consumer,SEMAGLUTIDE,RYBELSUS,Other/Unknown,207,13,8,8,42,target
+2023,Consumer,SEMAGLUTIDE,WEGOVY,Other/Unknown,439,33,8,8,94,target
+2023,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,47,0,1,1,11,target
+2023,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Other/Unknown,631,59,12,11,72,target
+2023,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Other/Unknown,196,11,0,0,22,target
+2023,Healthcare professional,SEMAGLUTIDE,WEGOVY,Other/Unknown,201,3,0,0,25,target
+2023,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,21,0,1,0,5,target
+2023,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Other/Unknown,306,17,5,3,47,target
+2023,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Other/Unknown,82,5,1,1,11,target
+2023,Other/Unknown,SEMAGLUTIDE,WEGOVY,Other/Unknown,106,1,2,2,19,target
+2023,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,66,3,1,1,14,target
+2023,Consumer,SEMAGLUTIDE,OZEMPIC,Weight Loss,465,336,30,29,144,target
+2023,Consumer,SEMAGLUTIDE,RYBELSUS,Weight Loss,9,4,1,1,1,target
+2023,Consumer,SEMAGLUTIDE,WEGOVY,Weight Loss,311,15,3,3,93,target
+2023,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,18,0,1,1,1,target
+2023,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Weight Loss,135,90,8,8,30,target
+2023,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Weight Loss,10,8,2,1,3,target
+2023,Healthcare professional,SEMAGLUTIDE,WEGOVY,Weight Loss,159,5,2,1,26,target
+2023,Lawyer,SEMAGLUTIDE,OZEMPIC,Weight Loss,1,1,0,0,1,target
+2023,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,2,0,0,0,0,target
+2023,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Weight Loss,46,32,0,0,9,target
+2023,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Weight Loss,1,1,0,0,0,target
+2023,Other/Unknown,SEMAGLUTIDE,WEGOVY,Weight Loss,44,1,2,2,12,target
+2023,Consumer,TIRZEPATIDE,GENERIC/UNSPECIFIED,Diabetes,1,0,0,0,0,control
+2023,Consumer,TIRZEPATIDE,MOUNJARO,Diabetes,5451,105,91,38,976,control
+2023,Healthcare professional,TIRZEPATIDE,GENERIC/UNSPECIFIED,Diabetes,13,0,0,0,0,control
+2023,Healthcare professional,TIRZEPATIDE,MOUNJARO,Diabetes,141,3,4,2,26,control
+2023,Lawyer,TIRZEPATIDE,MOUNJARO,Diabetes,6,0,0,0,3,control
+2023,Other/Unknown,TIRZEPATIDE,GENERIC/UNSPECIFIED,Diabetes,3,1,0,0,1,control
+2023,Other/Unknown,TIRZEPATIDE,MOUNJARO,Diabetes,154,7,3,1,32,control
+2023,Consumer,TIRZEPATIDE,MOUNJARO,Dual Indication,6,0,0,0,1,control
+2023,Healthcare professional,TIRZEPATIDE,MOUNJARO,Dual Indication,1,0,0,0,0,control
+2023,Consumer,TIRZEPATIDE,GENERIC/UNSPECIFIED,Other/Unknown,7,1,1,1,1,control
+2023,Consumer,TIRZEPATIDE,MOUNJARO,Other/Unknown,11911,1422,217,90,1817,control
+2023,Consumer,TIRZEPATIDE,ZEPBOUND,Other/Unknown,9,0,1,1,3,control
+2023,Healthcare professional,TIRZEPATIDE,GENERIC/UNSPECIFIED,Other/Unknown,5,0,0,0,2,control
+2023,Healthcare professional,TIRZEPATIDE,MOUNJARO,Other/Unknown,341,29,11,7,54,control
+2023,Lawyer,TIRZEPATIDE,GENERIC/UNSPECIFIED,Other/Unknown,1,0,0,0,0,control
+2023,Lawyer,TIRZEPATIDE,MOUNJARO,Other/Unknown,1,0,0,0,0,control
+2023,Other/Unknown,TIRZEPATIDE,GENERIC/UNSPECIFIED,Other/Unknown,4,0,0,0,1,control
+2023,Other/Unknown,TIRZEPATIDE,MOUNJARO,Other/Unknown,464,48,11,5,48,control
+2023,Consumer,TIRZEPATIDE,GENERIC/UNSPECIFIED,Weight Loss,7,4,0,0,2,control
+2023,Consumer,TIRZEPATIDE,MOUNJARO,Weight Loss,1481,1381,24,15,255,control
+2023,Consumer,TIRZEPATIDE,ZEPBOUND,Weight Loss,7,0,0,0,0,control
+2023,Healthcare professional,TIRZEPATIDE,GENERIC/UNSPECIFIED,Weight Loss,4,0,0,0,0,control
+2023,Healthcare professional,TIRZEPATIDE,MOUNJARO,Weight Loss,34,31,0,0,7,control
+2023,Other/Unknown,TIRZEPATIDE,MOUNJARO,Weight Loss,51,48,3,0,11,control
+2024,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,15,1,0,0,6,control
+2024,Consumer,DULAGLUTIDE,TRULICITY,Diabetes,1902,15,10,3,253,control
+2024,Healthcare professional,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,6,0,0,0,1,control
+2024,Healthcare professional,DULAGLUTIDE,TRULICITY,Diabetes,50,1,1,1,5,control
+2024,Lawyer,DULAGLUTIDE,TRULICITY,Diabetes,140,0,3,0,134,control
+2024,Other/Unknown,DULAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,9,1,0,0,2,control
+2024,Other/Unknown,DULAGLUTIDE,TRULICITY,Diabetes,59,2,0,0,7,control
+2024,Consumer,DULAGLUTIDE,TRULICITY,Dual Indication,3,0,0,0,1,control
+2024,Healthcare professional,DULAGLUTIDE,TRULICITY,Dual Indication,1,0,0,0,1,control
+2024,Consumer,DULAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,11,0,0,0,4,control
+2024,Consumer,DULAGLUTIDE,TRULICITY,Other/Unknown,2971,50,37,16,274,control
+2024,Healthcare professional,DULAGLUTIDE,TRULICITY,Other/Unknown,97,0,1,1,12,control
+2024,Lawyer,DULAGLUTIDE,TRULICITY,Other/Unknown,74,2,0,0,70,control
+2024,Other/Unknown,DULAGLUTIDE,TRULICITY,Other/Unknown,119,1,2,0,11,control
+2024,Consumer,DULAGLUTIDE,TRULICITY,Weight Loss,39,33,2,1,6,control
+2024,Lawyer,DULAGLUTIDE,TRULICITY,Weight Loss,2,2,0,0,2,control
+2024,Other/Unknown,DULAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,1,1,0,0,0,control
+2024,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,4,0,0,0,1,control
+2024,Consumer,LIRAGLUTIDE,SAXENDA,Diabetes,6,5,0,0,0,control
+2024,Consumer,LIRAGLUTIDE,VICTOZA,Diabetes,107,8,3,3,20,control
+2024,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,4,0,0,0,1,control
+2024,Healthcare professional,LIRAGLUTIDE,SAXENDA,Diabetes,2,1,0,0,0,control
+2024,Healthcare professional,LIRAGLUTIDE,VICTOZA,Diabetes,23,0,0,0,6,control
+2024,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,5,0,0,0,0,control
+2024,Other/Unknown,LIRAGLUTIDE,SAXENDA,Diabetes,1,1,0,0,0,control
+2024,Other/Unknown,LIRAGLUTIDE,VICTOZA,Diabetes,43,1,0,0,24,control
+2024,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,3,0,0,0,0,control
+2024,Consumer,LIRAGLUTIDE,SAXENDA,Other/Unknown,203,19,1,1,46,control
+2024,Consumer,LIRAGLUTIDE,VICTOZA,Other/Unknown,157,12,6,6,24,control
+2024,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,6,0,0,0,0,control
+2024,Healthcare professional,LIRAGLUTIDE,SAXENDA,Other/Unknown,84,1,2,1,4,control
+2024,Healthcare professional,LIRAGLUTIDE,VICTOZA,Other/Unknown,27,1,1,1,4,control
+2024,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,6,1,0,0,0,control
+2024,Other/Unknown,LIRAGLUTIDE,SAXENDA,Other/Unknown,35,0,1,0,4,control
+2024,Other/Unknown,LIRAGLUTIDE,VICTOZA,Other/Unknown,21,0,2,2,8,control
+2024,Consumer,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,2,0,1,1,2,control
+2024,Consumer,LIRAGLUTIDE,SAXENDA,Weight Loss,141,4,1,1,22,control
+2024,Consumer,LIRAGLUTIDE,VICTOZA,Weight Loss,21,18,1,1,5,control
+2024,Healthcare professional,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,6,0,0,0,1,control
+2024,Healthcare professional,LIRAGLUTIDE,SAXENDA,Weight Loss,50,3,0,0,10,control
+2024,Other/Unknown,LIRAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,3,0,0,0,1,control
+2024,Other/Unknown,LIRAGLUTIDE,SAXENDA,Weight Loss,8,0,1,1,0,control
+2024,Other/Unknown,LIRAGLUTIDE,VICTOZA,Weight Loss,2,1,0,0,1,control
+2024,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,227,6,11,9,59,control
+2024,Consumer,METFORMIN,GLUCOPHAGE,Diabetes,9,0,0,0,2,control
+2024,Consumer,METFORMIN,GLUMETZA,Diabetes,2,0,0,0,0,control
+2024,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,1595,14,58,5,166,control
+2024,Healthcare professional,METFORMIN,GLUCOPHAGE,Diabetes,19,2,0,0,4,control
+2024,Healthcare professional,METFORMIN,GLUMETZA,Diabetes,2,0,0,0,0,control
+2024,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Diabetes,867,19,34,12,51,control
+2024,Other/Unknown,METFORMIN,GLUCOPHAGE,Diabetes,36,0,0,0,7,control
+2024,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,593,20,12,10,134,control
+2024,Consumer,METFORMIN,GLUCOPHAGE,Other/Unknown,4,0,0,0,1,control
+2024,Consumer,METFORMIN,GLUMETZA,Other/Unknown,3,0,0,0,1,control
+2024,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,825,21,23,14,74,control
+2024,Healthcare professional,METFORMIN,GLUCOPHAGE,Other/Unknown,6,0,0,0,1,control
+2024,Lawyer,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,2,0,0,0,0,control
+2024,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Other/Unknown,706,27,37,9,88,control
+2024,Other/Unknown,METFORMIN,GLUCOPHAGE,Other/Unknown,11,0,0,0,2,control
+2024,Other/Unknown,METFORMIN,GLUMETZA,Other/Unknown,1,0,0,0,0,control
+2024,Consumer,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,3,0,0,0,0,control
+2024,Healthcare professional,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,12,0,5,5,0,control
+2024,Other/Unknown,METFORMIN,GENERIC/UNSPECIFIED,Weight Loss,16,3,8,8,2,control
+2024,Consumer,PHENTERMINE,ADIPEX,Other/Unknown,1,0,0,0,0,control
+2024,Consumer,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,35,0,1,1,3,control
+2024,Healthcare professional,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,5,0,0,0,0,control
+2024,Healthcare professional,PHENTERMINE,LOMAIRA,Other/Unknown,2,2,0,0,0,control
+2024,Other/Unknown,PHENTERMINE,GENERIC/UNSPECIFIED,Other/Unknown,9,0,2,1,0,control
+2024,Consumer,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,13,0,0,0,0,control
+2024,Consumer,PHENTERMINE,LOMAIRA,Weight Loss,2,0,0,0,0,control
+2024,Healthcare professional,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,13,0,1,1,0,control
+2024,Other/Unknown,PHENTERMINE,GENERIC/UNSPECIFIED,Weight Loss,22,0,0,0,0,control
+2024,Consumer,RIMEGEPANT,GENERIC/UNSPECIFIED,Other/Unknown,22,0,0,0,4,control
+2024,Consumer,RIMEGEPANT,NURTEC,Other/Unknown,787,51,12,8,79,control
+2024,Healthcare professional,RIMEGEPANT,GENERIC/UNSPECIFIED,Other/Unknown,34,3,0,0,5,control
+2024,Healthcare professional,RIMEGEPANT,NURTEC,Other/Unknown,153,19,1,0,9,control
+2024,Other/Unknown,RIMEGEPANT,GENERIC/UNSPECIFIED,Other/Unknown,15,0,0,0,0,control
+2024,Other/Unknown,RIMEGEPANT,NURTEC,Other/Unknown,112,11,4,1,6,control
+2024,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,15,0,2,2,3,target
+2024,Consumer,SEMAGLUTIDE,OZEMPIC,Diabetes,2679,258,214,209,669,target
+2024,Consumer,SEMAGLUTIDE,RYBELSUS,Diabetes,212,11,4,4,56,target
+2024,Consumer,SEMAGLUTIDE,WEGOVY,Diabetes,25,15,1,1,5,target
+2024,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,51,0,0,0,11,target
+2024,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Diabetes,426,19,14,13,79,target
+2024,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Diabetes,173,4,3,2,30,target
+2024,Healthcare professional,SEMAGLUTIDE,WEGOVY,Diabetes,4,2,0,0,2,target
+2024,Lawyer,SEMAGLUTIDE,OZEMPIC,Diabetes,2,0,0,0,1,target
+2024,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Diabetes,33,1,0,0,13,target
+2024,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Diabetes,192,3,1,1,60,target
+2024,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Diabetes,32,0,1,1,5,target
+2024,Other/Unknown,SEMAGLUTIDE,WEGOVY,Diabetes,2,1,1,1,1,target
+2024,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Dual Indication,1,0,0,0,0,target
+2024,Consumer,SEMAGLUTIDE,OZEMPIC,Dual Indication,12,0,0,0,2,target
+2024,Consumer,SEMAGLUTIDE,RYBELSUS,Dual Indication,3,0,0,0,3,target
+2024,Consumer,SEMAGLUTIDE,WEGOVY,Dual Indication,3,0,0,0,1,target
+2024,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Dual Indication,2,0,0,0,0,target
+2024,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Dual Indication,6,0,0,0,2,target
+2024,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Dual Indication,2,0,0,0,1,target
+2024,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Dual Indication,1,0,0,0,0,target
+2024,Other/Unknown,SEMAGLUTIDE,WEGOVY,Dual Indication,1,0,0,0,0,target
+2024,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,105,7,15,14,32,target
+2024,Consumer,SEMAGLUTIDE,OZEMPIC,Other/Unknown,3567,570,263,253,711,target
+2024,Consumer,SEMAGLUTIDE,RYBELSUS,Other/Unknown,267,35,5,5,56,target
+2024,Consumer,SEMAGLUTIDE,WEGOVY,Other/Unknown,1047,78,27,26,209,target
+2024,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,83,2,6,5,19,target
+2024,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Other/Unknown,819,62,15,14,97,target
+2024,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Other/Unknown,183,12,1,1,24,target
+2024,Healthcare professional,SEMAGLUTIDE,WEGOVY,Other/Unknown,360,4,3,3,35,target
+2024,Lawyer,SEMAGLUTIDE,OZEMPIC,Other/Unknown,2,0,0,0,2,target
+2024,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Other/Unknown,75,7,6,6,34,target
+2024,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Other/Unknown,410,30,12,10,46,target
+2024,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Other/Unknown,89,4,0,0,5,target
+2024,Other/Unknown,SEMAGLUTIDE,WEGOVY,Other/Unknown,270,11,5,4,24,target
+2024,Consumer,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,113,5,9,9,25,target
+2024,Consumer,SEMAGLUTIDE,OZEMPIC,Weight Loss,823,583,68,63,224,target
+2024,Consumer,SEMAGLUTIDE,RYBELSUS,Weight Loss,40,30,1,1,9,target
+2024,Consumer,SEMAGLUTIDE,WEGOVY,Weight Loss,924,39,25,25,206,target
+2024,Healthcare professional,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,23,2,4,4,3,target
+2024,Healthcare professional,SEMAGLUTIDE,OZEMPIC,Weight Loss,139,98,6,6,14,target
+2024,Healthcare professional,SEMAGLUTIDE,RYBELSUS,Weight Loss,21,12,2,1,4,target
+2024,Healthcare professional,SEMAGLUTIDE,WEGOVY,Weight Loss,288,6,3,3,36,target
+2024,Other/Unknown,SEMAGLUTIDE,GENERIC/UNSPECIFIED,Weight Loss,14,2,0,0,3,target
+2024,Other/Unknown,SEMAGLUTIDE,OZEMPIC,Weight Loss,57,43,3,2,14,target
+2024,Other/Unknown,SEMAGLUTIDE,RYBELSUS,Weight Loss,8,6,0,0,0,target
+2024,Other/Unknown,SEMAGLUTIDE,WEGOVY,Weight Loss,126,8,0,0,22,target
+2024,Consumer,TIRZEPATIDE,GENERIC/UNSPECIFIED,Diabetes,21,0,1,0,8,control
+2024,Consumer,TIRZEPATIDE,MOUNJARO,Diabetes,6146,75,59,44,986,control
+2024,Consumer,TIRZEPATIDE,ZEPBOUND,Diabetes,56,27,2,2,3,control
+2024,Healthcare professional,TIRZEPATIDE,GENERIC/UNSPECIFIED,Diabetes,19,0,0,0,12,control
+2024,Healthcare professional,TIRZEPATIDE,MOUNJARO,Diabetes,158,6,1,0,27,control
+2024,Healthcare professional,TIRZEPATIDE,ZEPBOUND,Diabetes,2,1,0,0,0,control
+2024,Lawyer,TIRZEPATIDE,MOUNJARO,Diabetes,80,0,1,0,77,control
+2024,Other/Unknown,TIRZEPATIDE,GENERIC/UNSPECIFIED,Diabetes,11,0,0,0,1,control
+2024,Other/Unknown,TIRZEPATIDE,MOUNJARO,Diabetes,166,2,2,1,27,control
+2024,Other/Unknown,TIRZEPATIDE,ZEPBOUND,Diabetes,2,0,0,0,1,control
+2024,Consumer,TIRZEPATIDE,MOUNJARO,Dual Indication,18,0,0,0,6,control
+2024,Consumer,TIRZEPATIDE,ZEPBOUND,Dual Indication,2,0,0,0,1,control
+2024,Healthcare professional,TIRZEPATIDE,GENERIC/UNSPECIFIED,Dual Indication,2,0,0,0,0,control
+2024,Healthcare professional,TIRZEPATIDE,MOUNJARO,Dual Indication,3,0,0,0,0,control
+2024,Other/Unknown,TIRZEPATIDE,GENERIC/UNSPECIFIED,Dual Indication,2,0,0,0,1,control
+2024,Other/Unknown,TIRZEPATIDE,MOUNJARO,Dual Indication,4,0,0,0,0,control
+2024,Other/Unknown,TIRZEPATIDE,ZEPBOUND,Dual Indication,1,0,0,0,0,control
+2024,Consumer,TIRZEPATIDE,GENERIC/UNSPECIFIED,Other/Unknown,186,2,6,5,32,control
+2024,Consumer,TIRZEPATIDE,MOUNJARO,Other/Unknown,11578,634,178,141,1367,control
+2024,Consumer,TIRZEPATIDE,ZEPBOUND,Other/Unknown,6297,77,132,88,555,control
+2024,Healthcare professional,TIRZEPATIDE,GENERIC/UNSPECIFIED,Other/Unknown,33,0,0,0,15,control
+2024,Healthcare professional,TIRZEPATIDE,MOUNJARO,Other/Unknown,341,16,11,7,40,control
+2024,Healthcare professional,TIRZEPATIDE,ZEPBOUND,Other/Unknown,119,3,3,3,15,control
+2024,Lawyer,TIRZEPATIDE,MOUNJARO,Other/Unknown,38,1,0,0,34,control
+2024,Lawyer,TIRZEPATIDE,ZEPBOUND,Other/Unknown,2,0,0,0,2,control
+2024,Other/Unknown,TIRZEPATIDE,GENERIC/UNSPECIFIED,Other/Unknown,19,0,0,0,7,control
+2024,Other/Unknown,TIRZEPATIDE,MOUNJARO,Other/Unknown,369,14,6,3,48,control
+2024,Other/Unknown,TIRZEPATIDE,ZEPBOUND,Other/Unknown,226,6,3,3,24,control
+2024,Consumer,TIRZEPATIDE,GENERIC/UNSPECIFIED,Weight Loss,134,13,1,1,28,control
+2024,Consumer,TIRZEPATIDE,MOUNJARO,Weight Loss,1456,824,23,20,292,control
+2024,Consumer,TIRZEPATIDE,ZEPBOUND,Weight Loss,3397,11,50,36,513,control
+2024,Healthcare professional,TIRZEPATIDE,GENERIC/UNSPECIFIED,Weight Loss,36,2,2,1,19,control
+2024,Healthcare professional,TIRZEPATIDE,MOUNJARO,Weight Loss,93,34,5,4,19,control
+2024,Healthcare professional,TIRZEPATIDE,ZEPBOUND,Weight Loss,80,0,1,1,8,control
+2024,Lawyer,TIRZEPATIDE,MOUNJARO,Weight Loss,16,16,1,0,14,control
+2024,Other/Unknown,TIRZEPATIDE,GENERIC/UNSPECIFIED,Weight Loss,24,2,0,0,14,control
+2024,Other/Unknown,TIRZEPATIDE,MOUNJARO,Weight Loss,47,31,0,0,7,control
+2024,Other/Unknown,TIRZEPATIDE,ZEPBOUND,Weight Loss,102,0,0,0,17,control

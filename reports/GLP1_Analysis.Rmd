@@ -1,124 +1,238 @@
 ---
-title: "GLP-1 Agonist Pharmacovigilance & Financial Motive Analysis"
+title: "Semaglutide Utilization, Cost and Reporting Patterns"
 author: "Data Science Capstone"
 date: "`r Sys.Date()`"
 output:
+  pdf_document:
+    toc: true
   html_document:
     theme: cosmo
     toc: true
     toc_float: true
+subtitle: Medicare Part D, MEPS and FAERS
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 6)
 library(ggplot2)
 library(dplyr)
+library(tidyr)
 library(readr)
-library(survey) # Required for complex survey variance estimation
+library(scales)
+library(survey)
+
+# AHRQ Protocol: Adjust for "Lonely PSUs" (strata with only one primary sampling unit) 
+# by centering them at the grand mean to prevent variance calculation failures.
+options(survey.lonely.psu = "adjust")
+
+cms   <- read_csv("../data/processed/cms_volume_output.csv")
+faers <- read_csv("../data/processed/faers_cases.csv")
+meps  <- read_csv("../data/processed/meps_financial_output.csv")
+stats <- read_csv("../data/processed/stats_results.csv")
+
+target <- "SEMAGLUTIDE"
 ```
 
-## 1. Introduction
-This report investigates the utilization, unit economics, and safety profile of GLP-1 receptor agonists (Semaglutide). Initially, we hypothesized that financial incentives drove off-label cosmetic use, resulting in a disproportionate rise in inappropriate use and harm.
+## Question and scope
 
-However, through rigorous ontological separation of MedDRA adverse event terms and canonical case deduplication, we demonstrate that the initial safety signal was an artifact of definitional circularity.
+Did semaglutide use and cost grow in ways that make weight-loss prescribing commercially attractive, and do FAERS reports for weight-related use differ from diabetes reports in how often they describe medication errors?
 
-```{r load_data}
-cms_data <- read_csv("../data/processed/cms_volume_output.csv")
-faers_data <- read_csv("../data/processed/faers_full_ml_data.csv")
-meps_data <- read_csv("../data/processed/meps_financial_output.csv")
-```
+This is a descriptive, hypothesis-generating analysis of public data. None of the three sources measures marketing, and FAERS is a spontaneous reporting system, so nothing here estimates incidence or shows causation.
 
-## 2. The Result: Medicare Part D Volume
-Medicare Part D statutorily excludes weight-loss indications, so CMS volume reflects primarily diabetes use. Nonetheless, Semaglutide shows massive growth.
+| Source | What it measures | Years in this run |
+|---|---|---|
+| CMS Part D prescribers | Medicare claims (excludes weight-loss indications by statute) | `r paste(range(cms$year), collapse = "-")` |
+| MEPS prescribed medicines | Survey-weighted national fills and expenditure | `r paste(range(meps$year), collapse = "-")` |
+| FAERS | Spontaneous reports, one row per latest case version | `r paste(range(faers$year), collapse = "-")` |
 
-```{r volume_growth, fig.width=10, fig.height=6}
-ggplot(cms_data, aes(x = year, y = total_prescriptions / 1e6, color = generic_name, group = generic_name)) +
-  geom_line(linewidth = 1.5) +
-  geom_point(size = 3) +
+## 1. Did demand grow?
+
+```{r cms_volume}
+# Plot CMS claims on a log scale to compare growth rates across drugs of vastly different volumes
+ggplot(cms, aes(x = year, y = total_prescriptions, color = generic_name, group = generic_name)) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 2.5) +
+  scale_y_log10(labels = label_comma()) +
   theme_minimal(base_size = 14) +
-  labs(
-    title = "Prescription Volume Trends (2020-2024)",
-    subtitle = "Medicare Part D Total Claims (Primarily Diabetes Use)",
-    x = "Year",
-    y = "Total Prescriptions (Millions)",
-    color = "Drug Cohort"
-  ) +
+  labs(title = "Medicare Part D claims by drug",
+       subtitle = "Log scale, so growth rates are comparable across drugs of very different size",
+       x = "Year", y = "Total claims (log scale)", color = "Drug") +
   theme(legend.position = "bottom")
 ```
 
-## 3. The Motive: Unit Economics (Survey-Weighted)
-Using the Medical Expenditure Panel Survey (MEPS), we calculate the true national average cost per prescription. Because MEPS is a stratified cluster sample, we utilize the `survey` package with `VARSTR` and `VARPSU` to calculate design-based standard errors and 95% Confidence Intervals.
+```{r cms_ratio}
+# Calculate the ratio of Semaglutide claims to Metformin claims to show relative market penetration
+cms_ratio <- cms %>%
+  filter(generic_name %in% c(target, "METFORMIN")) %>%
+  select(year, generic_name, total_prescriptions) %>%
+  pivot_wider(names_from = generic_name, values_from = total_prescriptions) %>%
+  mutate(ratio = .data[[target]] / METFORMIN)
 
-```{r financial_motive, fig.width=10, fig.height=6}
-# Filter to 2024 (or latest available year in your subset)
-meps_latest <- meps_data %>% filter(year == max(year))
-
-# Build the complex survey design object on the FULL dataset
-meps_design <- svydesign(
-  id = ~varpsu,
-  strata = ~varstr,
-  weights = ~weight,
-  data = meps_latest,
-  nest = TRUE
-)
-
-# Subset to only our target/control drugs to preserve survey variance
-meps_sub_design <- subset(meps_design, generic_name != 'OTHER')
-
-# Calculate survey-weighted means and standard errors
-cost_estimates <- svyby(~spending, ~generic_name, meps_sub_design, svymean)
-
-ggplot(cost_estimates, aes(x = reorder(generic_name, spending), y = spending, fill = generic_name)) +
-  geom_bar(stat = "identity", width = 0.6) +
-  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0.2, size = 1) +
-  geom_text(aes(label = paste0("$", round(spending, 0))), hjust = -0.5, size = 5) +
-  coord_flip() +
+ggplot(cms_ratio, aes(x = year, y = ratio)) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 2.5) +
   theme_minimal(base_size = 14) +
-  labs(
-    title = "Unit Economics Comparison",
-    subtitle = "Average Cost per Prescription (MEPS Weighted National Estimates with 95% CIs)",
-    x = "",
-    y = "Average Cost per Prescription ($)",
-    fill = "Drug Cohort"
-  ) +
-  theme(legend.position = "none")
+  labs(title = "Semaglutide claims relative to metformin claims",
+       subtitle = "Metformin is the stable high-volume diabetes reference",
+       x = "Year", y = "Semaglutide claims per metformin claim")
 ```
 
-## 4. Pharmacovigilance: Resolving Definitional Circularity
-A naive analysis grouping "Off-label use" with "Medication Errors" yields a massive risk increase for the Weight Loss cohort. However, "Off-label use" is definitionally circular with prescribing Ozempic for weight loss.
+Part D excludes drugs prescribed for weight loss, so this series mostly reflects diabetes use. It shows how large demand became, not how much of it is cosmetic. Provider-drug cells under 11 claims are suppressed by CMS, which undercounts small drugs such as rimegepant.
 
-When we restrict the outcome strictly to operational harm (Medication Errors, Counterfeits, Overdoses), the signal flips. The Weight Loss cohort actually reports *fewer* medication errors than the Diabetes cohort.
+## 2. How expensive is a fill?
 
-```{r off_label_signal, fig.width=10, fig.height=6}
-# Calculate the percentage of cases involving actual medication errors
-misuse_summary <- faers_data %>%
+Average expenditure per fill, estimated with the MEPS design variables (`VARSTR`, `VARPSU`, `PERWT`). Each year gets its own design object, and the drug subset is taken from the design so the variances stay correct.
+
+```{r meps_cost}
+# Calculate survey-weighted means and standard errors for each year independently
+meps_est <- lapply(split(meps, meps$year), function(d) {
+  # Build the complex survey design object on the FULL dataset to preserve variance strata
+  des <- svydesign(id = ~varpsu, strata = ~varstr, weights = ~weight, data = d, nest = TRUE)
+  # Subset to our target drugs AFTER building the design
+  des <- subset(des, generic_name != "OTHER")
+  
+  # Calculate the weighted mean spending and standard error
+  est <- as.data.frame(svyby(~spending, ~generic_name, des, svymean))
+  n <- d %>% filter(generic_name != "OTHER") %>% count(generic_name, name = "n_fills")
+  left_join(est, n, by = "generic_name")
+}) %>%
+  bind_rows(.id = "year") %>%
+  mutate(year = as.integer(year),
+         ci_low = pmax(spending - 1.96 * se, 1),   # Floor at 1 keeps the log axis valid
+         ci_high = spending + 1.96 * se,
+         unstable = n_fills < 30) # Flag estimates based on fewer than 30 unweighted fills
+
+ggplot(meps_est, aes(x = year, y = spending, color = generic_name, group = generic_name)) +
+  geom_line(linewidth = 1) +
+  geom_pointrange(aes(ymin = ci_low, ymax = ci_high, shape = unstable), size = 0.6) +
+  scale_y_log10(labels = label_dollar()) +
+  scale_shape_manual(values = c(`FALSE` = 16, `TRUE` = 1), labels = c("n >= 30 fills", "n < 30 fills (unstable)")) +
+  theme_minimal(base_size = 14) +
+  labs(title = "Average expenditure per prescription fill",
+       subtitle = "MEPS survey-weighted means with 95% CIs, log scale",
+       x = "Year", y = "Expenditure per fill (log scale)", color = "Drug", shape = "") +
+  theme(legend.position = "bottom")
+```
+
+```{r meps_n}
+meps_est %>%
+  filter(year == max(year)) %>%
+  transmute(Drug = generic_name, `Unweighted fills` = n_fills,
+            `Mean $ per fill` = round(spending), `95% CI` = paste0("$", round(ci_low), " - $", round(ci_high))) %>%
+  knitr::kable(caption = paste("Latest MEPS year:", max(meps_est$year)))
+```
+
+Expenditure is the gross amount paid per fill, not manufacturer margin, and it is not normalized by days' supply. A high price for semaglutide does not by itself explain off-label demand: other high-priced branded drugs in the comparison, such as rimegepant, are in the same range.
+
+## 3. Who is being reported?
+
+```{r faers_mix}
+sema <- faers %>% filter(drug == target)
+
+# Show the emergence of the Weight Loss reporting stratum over time
+sema %>%
+  group_by(year, indication) %>%
+  summarise(cases = sum(total_cases), .groups = "drop") %>%
+  ggplot(aes(x = factor(year), y = cases, fill = indication)) +
+  geom_col() +
+  theme_minimal(base_size = 14) +
+  labs(title = "Semaglutide FAERS cases by reported indication",
+       subtitle = "Latest version of each case, primary suspect drug only",
+       x = "Year first received by FDA", y = "Cases", fill = "Indication")
+```
+
+```{r faers_unclassified}
+unclass <- sema %>%
+  summarise(share = sum(total_cases[indication %in% c("Other/Unknown", "Dual Indication")]) / sum(total_cases))
+```
+
+`r percent(unclass$share, accuracy = 1)` of semaglutide cases have no clean weight-loss or diabetes indication and are excluded from the contrast below. If missing indications differ by reporter or year, that exclusion can bias the comparison. Reporting volume also reflects media attention, shortages and litigation, so the yearly counts are not an incidence trend.
+
+## 4. Do weight-loss reports describe more medication errors?
+
+The primary outcome is a report that includes a medication error, counterfeit, misuse, wrong-technique, overdose or underdose term. Off-label use is left out as an outcome because it is close to a definition of weight-loss use of a diabetes-labelled product. GI events are shown as a calibration outcome: they are an expected class effect, so if weight-loss reports look elevated for GI events too, the difference may reflect how those reports are written, not inappropriate use.
+
+```{r faers_props}
+# Function to calculate Wilson Confidence Intervals for binomial proportions
+# Wilson CIs are superior to standard Wald CIs when proportions are close to 0 or 1
+wilson <- function(x, n, z = 1.96) {
+  p <- x / n
+  centre <- (p + z^2 / (2 * n)) / (1 + z^2 / n)
+  half <- z * sqrt(p * (1 - p) / n + z^2 / (4 * n^2)) / (1 + z^2 / n)
+  tibble(p = p, lo = centre - half, hi = centre + half)
+}
+
+props <- sema %>%
   filter(indication %in% c("Weight Loss", "Diabetes")) %>%
-  group_by(drug, indication) %>%
-  summarise(
-    total_cases = sum(total_cases),
-    med_error_cases = sum(med_error_cases),
-    pct_error = (med_error_cases / total_cases) * 100,
-    .groups = "drop"
-  ) %>%
-  mutate(cohort = paste(drug, "(", indication, ")"))
+  group_by(year, reporter_group, indication) %>%
+  summarise(across(c(total_cases, med_error_cases, gi_cases), sum), .groups = "drop") %>%
+  pivot_longer(c(med_error_cases, gi_cases), names_to = "outcome", values_to = "events") %>%
+  filter(total_cases >= 20) %>% # Drop sparse cells to prevent noisy visual spikes
+  mutate(outcome = recode(outcome, med_error_cases = "Medication error / counterfeit", gi_cases = "GI event (calibration)"))
 
-ggplot(misuse_summary, aes(x = reorder(cohort, pct_error), y = pct_error, fill = indication)) +
-  geom_bar(stat = "identity", width = 0.6) +
-  geom_text(aes(label = paste0(round(pct_error, 1), "%")), hjust = -0.2, size = 5) +
-  coord_flip() +
-  theme_minimal(base_size = 14) +
-  labs(
-    title = "True Medication Error & Counterfeit Signals",
-    subtitle = "Percentage of total cases reporting operational harm (excluding definitional off-label use)",
-    x = "",
-    y = "Percentage of Total Cases (%)",
-    fill = "Indication"
-  ) +
-  theme(legend.position = "bottom") +
-  scale_y_continuous(limits = c(0, max(misuse_summary$pct_error, na.rm=TRUE) * 1.2))
+props <- bind_cols(props, wilson(props$events, props$total_cases))
+
+# Facet by reporter group to visually demonstrate the "Weber effect" (media-stimulated reporting by consumers)
+ggplot(props, aes(x = year, y = p, color = indication, group = indication)) +
+  geom_line() +
+  geom_pointrange(aes(ymin = lo, ymax = hi), size = 0.4) +
+  facet_grid(outcome ~ reporter_group, scales = "free_y") +
+  scale_y_continuous(labels = label_percent()) +
+  theme_minimal(base_size = 13) +
+  labs(title = "Share of semaglutide reports with each outcome",
+       subtitle = "Wilson 95% CIs; cells with fewer than 20 cases are not shown",
+       x = "Year", y = "Share of cases", color = "Indication") +
+  theme(legend.position = "bottom")
 ```
 
-## 5. Limitations & Scientific Conclusions
-FAERS is a spontaneous reporting system and cannot estimate incidence. Our Inferential Grouped-Binomial GLM revealed that consumers are vastly more likely to report these events than healthcare professionals, indicating a strong "Weber effect" (media-stimulated reporting).
+## 5. How robust is the contrast?
 
-Furthermore, MEPS provides gross expenditure per fill, not manufacturer margin, and CMS Part D suppresses small prescriber-drug cells. Therefore, while the financial incentives (unit economics) are astronomically high, the available data cannot establish a causal chain that this drove marketing which resulted in harm. In fact, after canonical case deduplication and strict MedDRA ontological boundaries, the data suggests the cosmetic weight-loss cohort is at a *lower* risk for medication errors than the standard diabetes cohort.
+```{r forest, fig.height = 8}
+# Generate a Forest Plot to visualize the Odds Ratios and 95% CIs from the Python stats script
+forest <- stats %>%
+  filter(target == !!target) %>%
+  mutate(method = factor(method, levels = c("Crude ROR", "Adjusted OR (year + reporter)",
+                                            "Comparator GLP-1s only: WL vs DM", "Interaction: extra WL effect for target")))
+
+ggplot(forest, aes(x = odds_ratio, y = method, color = scope)) +
+  geom_vline(xintercept = 1, linetype = "dashed") + # Reference line for no effect (OR = 1)
+  geom_pointrange(aes(xmin = ci_low, xmax = ci_high), position = position_dodge(width = 0.6)) +
+  scale_x_log10() + # Log scale is standard for Odds Ratios to maintain symmetry
+  facet_wrap(~outcome, ncol = 1, scales = "free_y") +
+  theme_minimal(base_size = 13) +
+  labs(title = "Weight-loss vs diabetes reports: odds of each outcome",
+       subtitle = "Odds ratios above 1 mean weight-loss reports are more likely to include the event; log scale",
+       x = "Odds ratio (95% CI)", y = "", color = "Product scope") +
+  theme(legend.position = "bottom")
+```
+
+```{r headline}
+prim <- stats %>%
+  filter(target == !!target, method == "Adjusted OR (year + reporter)", scope == "All products", grepl("primary", outcome))
+gi <- stats %>%
+  filter(target == !!target, method == "Adjusted OR (year + reporter)", scope == "All products", grepl("GI", outcome))
+inter <- stats %>%
+  filter(target == !!target, grepl("Interaction", method), grepl("primary", outcome))
+
+# Helper function to translate statistical output into plain English text
+read_or <- function(r) {
+  if (nrow(r) == 0) return("not estimable")
+  dir <- ifelse(r$ci_low > 1, "higher", ifelse(r$ci_high < 1, "lower", "not clearly different"))
+  sprintf("%s (OR %.2f, 95%% CI %.2f-%.2f)", dir, r$odds_ratio, r$ci_low, r$ci_high)
+}
+```
+
+For the primary outcome, odds of a medication-error report in weight-loss vs diabetes reports, adjusted for year and reporter group, are **`r read_or(prim)`**. The GI calibration outcome is **`r read_or(gi)`**, and the extra weight-loss effect for semaglutide relative to other injectable GLP-1s is **`r read_or(inter)`**.
+
+How to read the pattern: a medication-error contrast that is elevated while GI events are not supports an outcome-specific difference. Both elevated suggests reporting style. A contrast that disappears after adjustment or in the interaction row suggests the difference is shared across the drug class or driven by reporter mix.
+
+## Limitations
+
+- FAERS is a spontaneous reporting system and cannot estimate incidence. Reporting is shaped by media attention, litigation and product shortages.
+- The indication is the reporter's stated reason for use. Weight loss does not mean off-label: Wegovy is approved for chronic weight management, and phentermine is approved for obesity.
+- Semaglutide exposure includes Ozempic, Wegovy, Rybelsus and compounded products that cannot be separated from manufactured ones. Rybelsus is oral and diabetes-only, which is why a sensitivity analysis excludes it.
+- Medication-error terms include dosing and device terms (overdose, underdose, wrong technique). A sensitivity outcome without overdose and underdose is shown in the forest plot.
+- Cases with no clean indication are excluded from the contrast, and the excluded share is reported above.
+- Medicare Part D excludes weight-loss indications, MEPS expenditure is gross payment per fill (not margin, not per day of supply), and no source contains a marketing measure. These data cannot show that marketing drove use or harm.
+- MEPS cells for low-volume drugs rest on few fills and are flagged in the cost figure.
+```
