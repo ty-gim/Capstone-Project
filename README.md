@@ -1,3 +1,9 @@
+# Key Findings & Architecture (TL;DR)
+**Objective:** Investigated whether the explosive marketing growth and unit economics of Semaglutide drove a disproportionate rise in medication errors for weight-loss users than use in diabetes or even in other glp-1s.
+**Architecture:** Built a reproducible, polyglot DAG pipeline using Snakemake. Engineered out-of-core SQL processing with DuckDB to handle gigabytes of data (CMS, FAERS, and MEPS databases), and utilized R's survey package to handle complex stratified cluster sampling (Taylor series linearization) for financial data.
+**Scientific Finding (Signal Inversion):** Disproved the initial hypothesis. After engineering canonical case deduplication and applying strict MedDRA ontological boundaries to remove definitional circularity, the data showed no evidence of excess medication-error reporting in the weight-loss cohort compared to the diabetes cohort (Adjusted OR 0.83, 95% CI 0.67-1.02). There was an initial perceived spike which ended up being due to an artifact of media-stimulated reporting (the Weber effect) driven by consumers. When normalizing for same delivery method and conditions for the drug, the hypothesis was found to no longer hold.
+**Development:** Pipeline architecture, SQL schema generation, and statistical modeling were accelerated and audited using multi-LLM orchestration (Claude 5.5 Sonnet for code review, GPT-6-Luna for prompt engineering, & Gemini 3.1 Pro for its free tier context window).
+
 # Semaglutide utilization, cost and reporting patterns
 
 Descriptive analysis of public data: do FAERS reports for weight-related semaglutide use differ from diabetes reports in how often they describe medication errors, and how did semaglutide volume and cost develop (Medicare Part D, MEPS).
